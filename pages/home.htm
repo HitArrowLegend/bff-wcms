@@ -6,13 +6,15 @@ is_hidden = 0
 <main id="content" class="main-content">
     {% if this.theme.content_inside_wrapper == "yes" %}
     <div class="content_wrapper">{% endif %}
-        {# YOUR CONTENT GOES THERE #}
-            
-            
-            <p>Content goes there</p>
+        <div class="content">
+            {# YOUR CONTENT GOES THERE #}
                 
                 
-        {# END OF CONTENT SECTION #}
+                <p>Content goes there</p>
+                    
+                    
+            {# END OF CONTENT SECTION #}
+        </div>
     {% if this.theme.sidebar_activated == "yes" %}
     {% if this.theme.content_inside_wrapper == "yes" %}
     {% if this.theme.sidebar_inside_content_wrapper == "no" %}

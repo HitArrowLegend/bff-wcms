@@ -9,8 +9,14 @@
 }
 
 @include layout($layout_type);
-@include content-wrapper($content_wrapper);
+@include content-wrapper;
+@include sidebar-wrapper;
 
+#content {
+    display: grid;
+
+    @include content-layout;
+}
 //
 // Testing Things
 // --------------------------------------------------

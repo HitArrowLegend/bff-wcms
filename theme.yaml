@@ -307,7 +307,7 @@ form:
             section_layout: 
                 label: Layout Settings
                 comment: Contains settings to manage the basic layout of your website
-                tab: Layout
+                tab: Page - Layout
                 type: section
                 span: storm
                 cssClass: col-lg-12
@@ -316,7 +316,7 @@ form:
                 label: Type of Layout
                 comment: Choose which type of layout you want your website to use:<ul><li class="help-block"style="display:list-item;margin-top:15px"><b>Default</b> extends the Navigation and Footer from and to the edge of the page, while encasing the rest of your page elements inside a container of fixed width</li><li class="help-block"style="display:list-item"><b>Fixed Width</b> encases all your entire website inside a container of fixed width</li><li class="help-block"style="display:list-item"><b>Full Width</b> extends your entire website from and to the edge of the page.</li><li class="help-block"style="display:list-item"><b>Custom Layout</b> allows you to set the width for your navigation, your footer and the rest of your website independantly</li></ul>
                 commentHtml: true
-                tab: Layout
+                tab: Page - Layout
                 type: dropdown
                 span: storm
                 cssClass: col-sm-8
@@ -331,7 +331,7 @@ form:
                 label: Max Page Width (in pixels)
                 comment: This setting will be applied to these following options:<ul><li class="help-block"style="display:list-item;margin-top:15px"><b>Default</b> and <b>Custom</b> - For the container in which the rest of your website is</li><li class="help-block"style="display:list-item"><b>Fixed Width</b> - For your entire page</li></ul>
                 commentHtml: true
-                tab: Layout
+                tab: Page - Layout
                 type: number
                 default: 1180
                 span: storm
@@ -344,13 +344,13 @@ form:
                 label: "Additional Options : Custom Layout"
                 comment: <b class="text-danger">Will be ignored if you didn't pick Custom to Layout Settings &gt; Type of Layout</b>
                 commentHtml: true
-                tab: Layout
+                tab: Page - Layout
                 type: section
 
             custom_nav_type:
                 label: Navigation Bar Layout
                 commentAbove: Choose which type you want your navigation bar to be on your website. Will be ignored if you picked "Default" or "Full Width" to Layout Settings > Type of Layout
-                tab: Layout
+                tab: Page - Layout
                 type: dropdown
                 span: storm
                 cssClass: col-lg-8
@@ -363,7 +363,7 @@ form:
             custom_nav_fixed_width:
                 label: Navigation Width (in pixels)
                 commentAbove: Will be ignored if you picked "Full Width" to "Navigation Bar Layout"
-                tab: Layout
+                tab: Page - Layout
                 type: number
                 default: 1180
                 span: storm
@@ -373,7 +373,7 @@ form:
             custom_footer_type:
                 label: Footer Layout
                 commentAbove: Choose which type you want your Footer to be on your website. Will be ignored if you picked "Default" or "Full Width" to Layout Settings > Type of Layout
-                tab: Layout
+                tab: Page - Layout
                 type: dropdown
                 span: storm
                 cssClass: col-lg-8
@@ -385,7 +385,7 @@ form:
             custom_footer_fixed_width:
                 label: Footer Width (in pixels)
                 commentAbove: Will be ignored if you picked "Full Width" to "Footer Layout"
-                tab: Layout
+                tab: Page - Layout
                 type: number
                 default: 1180
                 span: storm
@@ -399,12 +399,12 @@ form:
                 comment: This will encase your "&lt;main&gt;" element inside a stylable div.<p class="text-danger" style="margin-top:5px;font-size:13px"><b>This is not related to Layout Settings > Type of Layout > Default or Layout.</b></p><p class="text-danger" style="margin-top:5px;font-size:13px"><b>These settings are very sensitive. You need to fill all of them in order for the theme to work.</b></p> <p class=help-block>(These settings work like in CSS. Top only means all, Top + Right means Top/Botton + Right/Left and so on...).</p>
                 commentHtml: true
                 type: section
-                tab: Layout
+                tab: Content
 
             content_inside_wrapper:
                 label: Content Wrapper
                 commentAbove: Choose if you want your content to be wrapped around a specific div. By default, this option is not activated.
-                tab: Layout
+                tab: Content
                 type: dropdown
                 span: storm
                 cssClass: col-lg-12
@@ -417,7 +417,7 @@ form:
             content_wrapper_margin_top:
                 label: Margin-Top
                 type: number
-                tab: Layout
+                tab: Content
                 default: 0
                 span: storm
                 cssClass: col-xs-6 col-sm-3
@@ -425,7 +425,7 @@ form:
             content_wrapper_margin_right:
                 label: Margin-Right
                 type: number
-                tab: Layout
+                tab: Content
                 default: 0
                 span: storm
                 cssClass: col-xs-6 col-sm-3
@@ -433,7 +433,7 @@ form:
             content_wrapper_margin_bottom:
                 label: Margin-Bottom
                 type: number
-                tab: Layout
+                tab: Content
                 default: 0
                 span: storm
                 cssClass: col-xs-6 col-sm-3
@@ -441,7 +441,7 @@ form:
             content_wrapper_margin_left:
                 label: Margin-Left
                 type: number
-                tab: Layout
+                tab: Content
                 default: 0
                 span: storm
                 cssClass: col-xs-6 col-sm-3
@@ -449,7 +449,7 @@ form:
             content_wrapper_padding_top:
                 label: Padding-Top
                 type: number
-                tab: Layout
+                tab: Content
                 default: 20
                 span: storm
                 cssClass: col-xs-6 col-sm-3
@@ -458,7 +458,7 @@ form:
                 label: Padding-Right
                 type: number
                 default: 20
-                tab: Layout
+                tab: Content
                 span: storm
                 cssClass: col-xs-6 col-sm-3
                 assetVar: theme_content_wrapper_padding_right
@@ -466,7 +466,7 @@ form:
                 label: Padding-Bottom
                 type: number
                 default: 20
-                tab: Layout
+                tab: Content
                 span: storm
                 cssClass: col-xs-6 col-sm-3
                 assetVar: theme_content_wrapper_padding_bottom
@@ -474,58 +474,79 @@ form:
                 label: Padding-Left
                 type: number
                 default: 20
-                tab: Layout
+                tab: Content
                 span: storm
                 cssClass: col-xs-6 col-sm-3
                 assetVar: theme_content_wrapper_padding_left
+            content_wrapper_background:
+                label: Background Color
+                type: colorpicker
+                availableColors: []
+                allowEmpty: true
+                default: FFFFFF
+                tab: Content
+                span: storm
+                cssClass: col-xs-6 col-sm-3
+                assetVar: theme_content_wrapper_background
 
         #Sidebar
 
             section_sidebar:
                 label: Sidebar Settings
                 comment: Contains settings to manage the basic layout of your sidebar
-                tab: Layout
+                tab: Sidebar
                 type: section
                 
             sidebar_activated: 
                 label: Sidebar
                 commentAbove: Enabling this option will add a sidebar on your website
-                tab: Layout
+                tab: Sidebar
                 type: dropdown
                 span: storm
-                cssClass: col-md-4
+                cssClass: col-md-3
                 options:
                     yes: Enabled
                     no: Disabled
                 default: Disabled
+                assetVar: theme_sidebar_activated
             sidebar_position: 
                 label: Sidebar position
                 commentAbove: Choose which side you want your sidebar to be on
-                tab: Layout
+                tab: Sidebar
                 type: dropdown
                 span: storm
-                cssClass: col-md-4
+                cssClass: col-md-3
                 options: 
                     right: Right
                     left: Left
                 Default: Right
+                assetVar: theme_sidebar_position
             sidebar_inside_content_wrapper:
                 label: Sidebar inside Content Wrapper
                 commentAbove: Will be ignored if Content Wrapper > Content Wrapper is set to Disabled. Disabling this option will make the sidebar float next to the main content wrapper.
                 commentHtml: true
-                tab: Layout
+                tab: Sidebar
                 type: Dropdown
                 span: storm
-                cssClass: col-md-4
+                cssClass: col-md-3
                 options: 
                     yes: Yes
                     no: No
                 Default: Yes
+            sidebar_width:
+                label: Sidebar Width
+                commentAbove: Specify the Sidebar Width (in pixels)
+                tab: Sidebar
+                type: number
+                default: 250
+                span: storm
+                cssClass: col-md-3
+                assetVar: theme_sidebar_width
             sidebar_inside_own_wrapper: 
                 label: Sidebar Wrapper
                 comment: Enabling this option will add a wrapper around the sidebar only. Will be ignored if Sidebar > Sidebar inside Content Wrapper is set to Yes. 
                 commentHtml: true
-                tab: Layout
+                tab: Sidebar
                 type: Dropdown
                 span: storm
                 cssClass: col-md-12
@@ -533,56 +554,65 @@ form:
                     yes: Yes
                     no: No
                 default: No
+                assetVar: theme_sidebar_inside_own_wrapper
             sidebar_wrapper_margin_top:
                 label: Margin-Top
                 type: number
-                tab: Layout
+                tab: Sidebar
                 default: 0
                 span: storm
                 cssClass: col-xs-6 col-sm-3
+                assetVar: theme_sidebar_wrapper_margin_top
             sidebar_wrapper_margin_right:
                 label: Margin-Right
                 type: number
-                tab: Layout
+                tab: Sidebar
                 span: storm
                 cssClass: col-xs-6 col-sm-3
+                assetVar: theme_sidebar_wrapper_margin_right
             sidebar_wrapper_margin_bottom:
                 label: Margin-Bottom
                 type: number
-                tab: Layout
+                tab: Sidebar
                 span: storm
                 cssClass: col-xs-6 col-sm-3
+                assetVar: theme_sidebar_wrapper_margin_bottom
             sidebar_wrapper_margin_left:
                 label: Margin-Left
                 type: number
-                tab: Layout
+                tab: Sidebar
                 span: storm
                 cssClass: col-xs-6 col-sm-3
+                assetVar: theme_sidebar_wrapper_margin_left
             sidebar_wrapper_padding_top:
                 label: Padding-Top
                 type: number
-                tab: Layout
+                tab: Sidebar
                 default: 0
                 span: storm
                 cssClass: col-xs-6 col-sm-3
+                assetVar: theme_sidebar_wrapper_padding_top
             sidebar_wrapper_padding_right:
                 label: Padding-Right
                 type: number
-                tab: Layout
+                tab: Sidebar
                 span: storm
                 cssClass: col-xs-6 col-sm-3
+                assetVar: theme_sidebar_wrapper_padding_right
             sidebar_wrapper_padding_bottom:
                 label: Padding-Bottom
                 type: number
-                tab: Layout
+                tab: Sidebar
                 span: storm
                 cssClass: col-xs-6 col-sm-3
+                assetVar: theme_sidebar_wrapper_padding_bottom
             sidebar_wrapper_padding_left:
                 label: Padding-Left
                 type: number
-                tab: Layout
+                tab: Sidebar
                 span: storm
                 cssClass: col-xs-6 col-sm-3
+                assetVar: theme_sidebar_wrapper_padding_left
 
         # Typography
         
@@ -642,5 +672,4 @@ form:
 
 ## TO DO
 ##
-## Put Margins and Paddings from Content Wrapper in new tab
-## Put the Sidebar options into a different tab as well.
+## Uniformize the way options are written in this file
