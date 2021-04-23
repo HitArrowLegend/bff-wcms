@@ -1,0 +1,30 @@
+==
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Titre de la page</title>
+        <!-- Base Theme CSS -->
+        <link href="{{ ['assets/scss/theme.scss']|theme }}" rel="stylesheet">
+        <!-- Scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="http://team-legend.fr/themes/lgd-news/assets/js/copyright.js"></script>
+        {% framework extras %}
+        {% scripts %}
+    </head>
+    
+    <body>            
+        <div id="site_layout">
+            <header id="header_layout" class="page_header">
+                <nav>NAVIGATION</nav>
+            </header>
+            <section id="content_layout">
+                {% page %}
+        </section>
+            <footer id="footer_layout">
+                <div>FOOTER</div>
+            </footer>
+        </div>
+    </body>
+</html>

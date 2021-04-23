@@ -1,0 +1,42 @@
+#site_layout {
+    @include margins(0, 0, 0, 0);
+    @include paddings(0, 0, 0, 0);
+    background-color: $theme_page_background;
+    display: grid;
+    min-height: 100vh;
+    position: relative;
+    
+}
+
+@include layout($layout_type);
+
+//
+// Testing Things
+// --------------------------------------------------
+
+
+::selection {
+    color : $txt_selection_clr;
+    background: $txt_selection_bg;
+}
+
+a {
+    color: $link_clr;
+    font-size: 2rem;
+    font-weight: 500;
+    text-decoration: none;
+    
+    &:hover,
+    &:active { 
+        color: $link_hover_clr;
+    }
+}
+
+$contextual_colors: (muted: $muted, success: $success, important: $important, info: $info, warning: $warning, danger: $danger);
+
+@each $context, $colors in $contextual_colors {
+    .#{$context} {
+        color: #{$colors};
+        &-bg { background: #{$colors}; color: #FFFFFF; }
+    }
+}

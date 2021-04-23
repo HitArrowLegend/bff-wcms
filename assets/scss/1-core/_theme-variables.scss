@@ -1,0 +1,59 @@
+//   _______ _    _ ______ __  __ ______  __      __     _____  _____          ____  _      ______  _____ 
+//  |__   __| |  | |  ____|  \/  |  ____| \ \    / /\   |  __ \|_   _|   /\   |  _ \| |    |  ____|/ ____|
+//     | |  | |__| | |__  | \  / | |__     \ \  / /  \  | |__) | | |    /  \  | |_) | |    | |__  | (___  
+//     | |  |  __  |  __| | |\/| |  __|     \ \/ / /\ \ |  _  /  | |   / /\ \ |  _ <| |    |  __|  \___ \ 
+//     | |  | |  | | |____| |  | | |____     \  / ____ \| | \ \ _| |_ / ____ \| |_) | |____| |____ ____) |
+//     |_|  |_|  |_|______|_|  |_|______|     \/_/    \_\_|  \_\_____/_/    \_\____/|______|______|_____/ 
+//
+//
+// C O L O R S
+// 
+// Colors Branding
+// --------------------------------------------------
+//
+//
+$brand_primary :       $theme_primary_color;
+$brand_secondary :     $theme_secondary_color;
+$brand_accent :        $theme_accent_color;
+//
+//
+// Layout Colors
+// --------------------------------------------------
+//
+$main_bg :             $theme_page_background;
+$content_bg :          $theme_content_background;
+//
+//
+// Contextual Colors
+// --------------------------------------------------
+//
+$txt_clr :             $theme_text_color;
+$link_clr :            $theme_link_color;
+$link-hover-clr :      darken($link_clr, 15%);
+//
+$secondary_text_clr :  $theme_secondary_text_color;
+$txt_light :           $theme_text_color_light;
+//
+$muted :               $theme_muted;
+$success :             $theme_success;
+$important :           $theme_important;
+$info :                $theme_info;
+$warning :             $theme_warning;
+$danger :              $theme_danger;
+//
+//
+// Misc
+// --------------------------------------------------
+//
+$txt_selection_clr :   $theme_text_selection_color;
+$txt_selection_bg :    $theme_text_selection_background;
+//
+// 
+// E N D   O F   C O L O R
+// --------------------------------------------------
+// L A Y O U T S
+//
+// 
+//
+$layout_type : $theme_layout_type;
+$page_width : $theme_page_width;

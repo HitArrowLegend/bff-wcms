@@ -1,0 +1,650 @@
+name: 'BFF WCMS'
+description: 'Big F****ing Framework'
+author: 'OG'
+homepage: ''
+code: '1'
+
+## Configuration
+
+
+
+form:
+    fields:
+        site_name:
+            label: Style Properties
+            type: section
+
+    tabs:
+        fields:
+        
+        # Readme
+            readme: 
+                label: Read Me
+                comment: Just a basic Read Me
+                tab: README
+                type: section
+            
+            readme_content: 
+                label: Updates
+                type: partial
+                path: themes/bff-wcms/partials/theme_related/README.htm
+                tab: README
+        
+        # General
+        # Contains besic details about the brand
+        
+            section_general: 
+                label: General Informations
+                comment: Manage details about your brand
+                tab: General
+                type: section
+            website_name:
+                label: Website Name
+                commentAbove: Variable name is website_name
+                default: My Website
+                type: text
+                tab: General
+                span: storm
+                cssClass: col-lg-12
+            website_fb:
+                label: Facebook
+                commentAbove: Variable name is website_fb
+                default: My Facebook
+                type: text
+                tab: General
+                span: storm
+                cssClass: col-sm-12 col-md-4 col-lg-3
+            website_twitter:
+                label: Twitter
+                commentAbove: Variable name is website_twitter
+                default: My Twitter
+                type: text
+                tab: General
+                span: storm
+                cssClass: col-sm-12 col-md-4 col-lg-3
+            website_ig:
+                label: Instagram
+                commentAbove: Variable name is website_ig
+                default: My Instagram
+                type: text
+                tab: General
+                span: storm
+                cssClass: col-sm-12 col-md-4 col-lg-3
+            website_yt:
+                label: Youtube
+                commentAbove: Variable name is website_yt
+                default: My Youtube
+                type: text
+                tab: General
+                span: storm
+                cssClass: col-sm-12 col-md-4 col-lg-3
+                
+        # Color Section
+        
+            section_color_branding: 
+                label: Color Branding
+                comment: Contains settings to manage your color branding. Darker and lighter shades will be generated automatically
+                tab: Color Palette
+                type: section
+            primary_color:
+                label: Primary Color
+                commentAbove: Variable name is theme_primary_color
+                assetVar: 'theme_primary_color'
+                type: colorpicker
+                availableColors: []
+                allowEmpty: true
+                tab: Color Palette
+                span: storm
+                cssClass: col-sm-6 col-md-3
+            secondary_color:
+                label: Secondary Color
+                commentAbove: Variable name is theme_secondary_color  
+                assetVar: 'theme_secondary_color'
+                type: colorpicker
+                availableColors: []
+                allowEmpty: true
+                tab: Color Palette
+                span: storm
+                cssClass: col-sm-6 col-md-3
+            accent_color:
+                label: Accent Color
+                commentAbove: Variable name is theme_accent_color
+                assetVar: 'theme_accent_color'
+                type: colorpicker
+                availableColors: []
+                allowEmpty: true
+                tab: Color Palette
+                span: storm
+                cssClass: col-sm-6 col-md-3
+            
+        # 
+            
+            section_layout_color: 
+                label: Layout Colors
+                comment: Contains settings to manage all the colors of your website
+                tab: Color Palette
+                type: section
+            page_background:
+                label: Page Background
+                commentAbove: Variable name is theme_page_background
+                assetVar: 'theme_page_background'
+                type: colorpicker
+                availableColors: []
+                allowEmpty: true
+                tab: Color Palette
+                span: storm
+                cssClass: col-sm-6 col-md-3
+            content_background:
+                label: Content Background
+                commentAbove: Variable name is theme_content_background
+                assetVar: 'theme_content_background'
+                type: colorpicker
+                availableColors: []
+                allowEmpty: true
+                tab: Color Palette
+                span: storm
+                cssClass: col-sm-6 col-md-3
+
+        # Text Color
+
+            section_contextual_colors: 
+                label: Contextual Colors
+                comment: Contains settings to manage contextual colors
+                tab: Color Palette
+                type: section
+              
+            text_color:
+                label: Text Color
+                commentAbove: "Variable name is theme_text_color. Default value is #2F3640"
+                assetVar: 'theme_text_color'
+                type: colorpicker
+                availableColors: []
+                allowEmpty: true
+                default: '#2F3640'
+                tab: Color Palette
+                span: storm
+                cssClass: col-sm-6 col-md-3
+            link_color:
+                label: Link Color
+                commentAbove: "Variable name is theme_link_color. Default value is #2F3640"
+                assetVar: 'theme_link_color'
+                type: colorpicker
+                availableColors: []
+                allowEmpty: true
+                default: '#2F3640'
+                tab: Color Palette
+                span: storm
+                cssClass: col-sm-6 col-md-3
+            secondary_text_color:
+                label: Secondary Text Color
+                commentAbove: "Variable name is theme_secondary_text_color. Default value is #353B48"
+                assetVar: 'theme_secondary_text_color'
+                type: colorpicker
+                availableColors: []
+                allowEmpty: true
+                default: '#353B48'
+                tab: Color Palette
+                span: storm
+                cssClass: col-sm-6 col-md-3
+            
+            text_color_light:
+                label: Text Color Light
+                commentAbove: "Variable name is theme_text_color_light. Default value is #DCDDE1"
+                assetVar: 'theme_text_color_light'
+                type: colorpicker
+                availableColors: []
+                allowEmpty: true
+                default: '#DCDDE1'
+                tab: Color Palette
+                span: storm
+                cssClass: col-sm-6 col-md-3
+                
+            muted_color:
+                label: Muted Color
+                commentAbove: "Variable name is theme_muted. Default value is #7F8FA6"
+                assetVar: 'theme_muted'
+                type: colorpicker
+                availableColors: []
+                allowEmpty: true
+                default: '#7F8FA6'
+                tab: Color Palette
+                span: storm
+                cssClass: col-sm-6 col-md-3
+                
+            important_color:
+                label: Important Color
+                commentAbove: "Variable name is theme_important. Default value is #00A8FF"
+                assetVar: 'theme_important'
+                type: colorpicker
+                availableColors: []
+                allowEmpty: true
+                default: '#00A8FF'
+                tab: Color Palette
+                span: storm
+                cssClass: col-sm-6 col-md-3 
+                
+            success_color:
+                label: Success Color
+                commentAbove: "Variable name is theme_success. Default value is #44BD32"
+                assetVar: 'theme_success'
+                type: colorpicker
+                availableColors: []
+                allowEmpty: true
+                default: '#44BD32'
+                tab: Color Palette
+                span: storm
+                cssClass: col-sm-6 col-md-3
+                
+            info_color:
+                label: Info Color
+                commentAbove: "Variable name is theme_info. Default value is #9C88FF"
+                assetVar: 'theme_info'
+                type: colorpicker
+                availableColors: []
+                allowEmpty: true
+                default: '#9C88FF'
+                tab: Color Palette
+                span: storm
+                cssClass: col-sm-6 col-md-3
+                
+            warning_color:
+                label: Warning Color
+                commentAbove: "Variable name is theme_warning. Default value is #FBC531"
+                assetVar: 'theme_warning'
+                type: colorpicker
+                availableColors: []
+                allowEmpty: true
+                default: '#FBC531'
+                tab: Color Palette
+                span: storm
+                cssClass: col-sm-6 col-md-3 
+                
+            danger_color:
+                label: Danger Color
+                commentAbove: "Variable name is theme_danger. Default value is #E84118"
+                assetVar: 'theme_danger'
+                type: colorpicker
+                availableColors: []
+                allowEmpty: true
+                default: '#E84118'
+                tab: Color Palette
+                span: storm
+                cssClass: col-sm-6 col-md-3
+                
+        #
+        
+            section_misc_color: 
+                label: Misc Settings
+                comment: Contains various other settings
+                tab: Color Palette
+                type: section
+                
+            text_selection_color:
+                label: Text Selection Color
+                commentAbove: "Variable name is theme_text_selection_color. Default value is #FFFFFF"
+                assetVar: 'theme_text_selection_color'
+                type: colorpicker
+                availableColors: []
+                allowEmpty: true
+                default: '#FFFFFF'
+                tab: Color Palette
+                span: storm
+                cssClass: col-sm-6 col-md-3
+            text_selection_background:
+                label: Text Selection Background
+                commentAbove: "Variable name is theme_text_selection_background. Default value is #468EFE"
+                assetVar: 'theme_text_selection_background'
+                type: colorpicker
+                availableColors: []
+                allowEmpty: true
+                default: '#468EFE'
+                tab: Color Palette
+                span: storm
+                cssClass: col-sm-6 col-md-3
+                
+        # Layout
+        
+            section_layout: 
+                label: Layout Settings
+                comment: Contains settings to manage the basic layout of your website
+                tab: Layout
+                type: section
+                span: storm
+                cssClass: col-lg-12
+
+            layout_type:
+                label: Type of Layout
+                comment: Choose which type of layout you want your website to use:<ul><li class="help-block"style="display:list-item;margin-top:15px"><b>Default</b> extends the Navigation and Footer from and to the edge of the page, while encasing the rest of your page elements inside a container of fixed width</li><li class="help-block"style="display:list-item"><b>Fixed Width</b> encases all your entire website inside a container of fixed width</li><li class="help-block"style="display:list-item"><b>Full Width</b> extends your entire website from and to the edge of the page.</li><li class="help-block"style="display:list-item"><b>Custom Layout</b> allows you to set the width for your navigation, your footer and the rest of your website independantly</li></ul>
+                commentHtml: true
+                tab: Layout
+                type: dropdown
+                span: storm
+                cssClass: col-sm-8
+                options:
+                    fixed_Width: Fixed Width
+                    full_Width: Full Width
+                    default: Default
+                    custom: Custom Layout
+                default: default
+                assetVar: theme_layout_type  
+            layout_type_max-page-width:
+                label: Max Page Width (in pixels)
+                comment: This setting will be applied to these following options:<ul><li class="help-block"style="display:list-item;margin-top:15px"><b>Default</b> and <b>Custom</b> - For the container in which the rest of your website is</li><li class="help-block"style="display:list-item"><b>Fixed Width</b> - For your entire page</li></ul>
+                commentHtml: true
+                tab: Layout
+                type: number
+                default: 1180
+                span: storm
+                cssClass: col-sm-4
+                assetVar: theme_page_width
+
+            ## Examples
+
+            examples:
+                label: 
+                tab: Layout
+                type: partial
+                path: themes/bff-wcms/partials/theme_examples/examples.htm
+                span: storm
+                cssClass: col-xs-12 col-lg-12
+
+            
+            ## Add options to put content inside a wrapper (with margins and padding + background color)
+            
+        # Custom Options    
+
+            section_custom_options:
+                label: "Additional Options : Custom Layout"
+                comment: <b class="text-danger">Will be ignored if you didn't pick Custom to Layout Settings &gt; Type of Layout</b>
+                commentHtml: true
+                tab: Layout
+                type: section
+
+            custom_nav_type:
+                label: Navigation Bar Layout
+                commentAbove: Choose which type you want your navigation bar to be on your website. Will be ignored if you picked "Default" or "Full Width" to Layout Settings > Type of Layout
+                tab: Layout
+                type: dropdown
+                span: storm
+                cssClass: col-lg-8
+                options: 
+                    fixed_width: Fixed Width
+                    full_width: Full Width
+                default: full_width
+                assetVar: theme_custom_nav_type
+
+            custom_nav_fixed_width:
+                label: Navigation Width (in pixels)
+                commentAbove: Will be ignored if you picked "Full Width" to "Navigation Bar Layout"
+                tab: Layout
+                type: number
+                default: 1180
+                span: storm
+                cssClass: col-lg-4
+                assetVar: theme_custom_nav_fixed_width
+
+            custom_footer_type:
+                label: Footer Layout
+                commentAbove: Choose which type you want your Footer to be on your website. Will be ignored if you picked "Default" or "Full Width" to Layout Settings > Type of Layout
+                tab: Layout
+                type: dropdown
+                span: storm
+                cssClass: col-lg-8
+                options: 
+                    fixed_width: Fixed Width
+                    full_width: Full Width
+                default: full_width
+                assetVar: theme_custom_footer_type
+            custom_footer_fixed_width:
+                label: Footer Width (in pixels)
+                commentAbove: Will be ignored if you picked "Full Width" to "Footer Layout"
+                tab: Layout
+                type: number
+                default: 1180
+                span: storm
+                cssClass: col-lg-4
+                assetVar: theme_custom_footer_fixed_width
+
+        # Full Width Wrapping Options
+
+            section_content_wrapper:
+                label: Content Wrapper
+                comment: This will encase your "&lt;main&gt;" element inside a stylable div.<p class="text-danger" style="margin-top:5px;font-size:13px"><b>This is not related to Layout Settings > Type of Layout > Default or Layout.</b></p><p class="text-danger" style="margin-top:5px;font-size:13px"><b>These settings are very sensitive. You need to fill all of them in order for the theme to work.</b></p> <p class=help-block>(These settings work like in CSS. Top only means all, Top + Right means Top/Botton + Right/Left and so on...).</p>
+                commentHtml: true
+                type: section
+                tab: Layout
+
+            content_inside_wrapper:
+                label: Content Wrapper
+                commentAbove: Choose if you want your content to be wrapped around a specific div. By default, this option is not activated.
+                tab: Layout
+                type: dropdown
+                span: storm
+                cssClass: col-lg-12
+                options:
+                    yes: Enabled
+                    no: Disabled
+                default: wrapped
+            
+            content_wrapper_margin_top:
+                label: Margin-Top
+                type: number
+                tab: Layout
+                default: 0
+                span: storm
+                cssClass: col-xs-6 col-sm-3
+            content_wrapper_margin_right:
+                label: Margin-Right
+                type: number
+                tab: Layout
+                default: 0
+                span: storm
+                cssClass: col-xs-6 col-sm-3
+            content_wrapper_margin_bottom:
+                label: Margin-Bottom
+                type: number
+                tab: Layout
+                default: 0
+                span: storm
+                cssClass: col-xs-6 col-sm-3
+            content_wrapper_margin_left:
+                label: Margin-Left
+                type: number
+                tab: Layout
+                default: 0
+                span: storm
+                cssClass: col-xs-6 col-sm-3
+            content_wrapper_padding_top:
+                label: Padding-Top
+                type: number
+                tab: Layout
+                default: 20
+                span: storm
+                cssClass: col-xs-6 col-sm-3
+            content_wrapper_padding_right:
+                label: Padding-Right
+                type: number
+                default: 20
+                tab: Layout
+                span: storm
+                cssClass: col-xs-6 col-sm-3
+            content_wrapper_padding_bottom:
+                label: Padding-Bottom
+                type: number
+                default: 20
+                tab: Layout
+                span: storm
+                cssClass: col-xs-6 col-sm-3
+            content_wrapper_padding_left:
+                label: Padding-Left
+                type: number
+                default: 20
+                tab: Layout
+                span: storm
+                cssClass: col-xs-6 col-sm-3
+
+        #Sidebar
+
+            section_sidebar:
+                label: Sidebar Settings
+                comment: Contains settings to manage the basic layout of your sidebar
+                tab: Layout
+                type: section
+                
+            sidebar_activated: 
+                label: Sidebar
+                commentAbove: Enabling this option will add a sidebar on your website
+                tab: Layout
+                type: dropdown
+                span: storm
+                cssClass: col-md-4
+                options:
+                    yes: Enabled
+                    no: Disabled
+                default: Disabled
+            sidebar_position: 
+                label: Sidebar position
+                commentAbove: Choose which side you want your sidebar to be on
+                tab: Layout
+                type: dropdown
+                span: storm
+                cssClass: col-md-4
+                options: 
+                    right: Right
+                    left: Left
+                Default: Right
+            sidebar_inside_content_wrapper:
+                label: Sidebar inside Content Wrapper
+                commentAbove: Will be ignored if Content Wrapper > Content Wrapper is set to Disabled. Disabling this option will make the sidebar float next to the main content wrapper.
+                commentHtml: true
+                tab: Layout
+                type: Dropdown
+                span: storm
+                cssClass: col-md-4
+                options: 
+                    yes: Yes
+                    no: No
+                Default: Yes
+            sidebar_inside_own_wrapper: 
+                label: Sidebar Wrapper
+                comment: Enabling this option will add a wrapper around the sidebar only. Will be ignored if Sidebar > Sidebar inside Content Wrapper is set to Yes. 
+                commentHtml: true
+                tab: Layout
+                type: Dropdown
+                span: storm
+                cssClass: col-md-12
+                options: 
+                    yes: Yes
+                    no: No
+                default: No
+            sidebar_wrapper_margin_top:
+                label: Margin-Top
+                type: number
+                tab: Layout
+                default: 0
+                span: storm
+                cssClass: col-xs-6 col-sm-3
+            sidebar_wrapper_margin_right:
+                label: Margin-Right
+                type: number
+                tab: Layout
+                span: storm
+                cssClass: col-xs-6 col-sm-3
+            sidebar_wrapper_margin_bottom:
+                label: Margin-Bottom
+                type: number
+                tab: Layout
+                span: storm
+                cssClass: col-xs-6 col-sm-3
+            sidebar_wrapper_margin_left:
+                label: Margin-Left
+                type: number
+                tab: Layout
+                span: storm
+                cssClass: col-xs-6 col-sm-3
+            sidebar_wrapper_padding_top:
+                label: Padding-Top
+                type: number
+                tab: Layout
+                default: 0
+                span: storm
+                cssClass: col-xs-6 col-sm-3
+            sidebar_wrapper_padding_right:
+                label: Padding-Right
+                type: number
+                tab: Layout
+                span: storm
+                cssClass: col-xs-6 col-sm-3
+            sidebar_wrapper_padding_bottom:
+                label: Padding-Bottom
+                type: number
+                tab: Layout
+                span: storm
+                cssClass: col-xs-6 col-sm-3
+            sidebar_wrapper_padding_left:
+                label: Padding-Left
+                type: number
+                tab: Layout
+                span: storm
+                cssClass: col-xs-6 col-sm-3
+
+        # Typography
+        
+            section_typography: 
+                label: Typography Settings
+                comment: Contains settings to manage the basic layout of your website
+                tab: Typography
+                type: section
+        
+        # Logo
+        
+            section_logo: 
+                label: Logo Settings
+                comment: Contains settings to manage the basic layout of your website
+                tab: Logo
+                type: section
+        
+        # Navigation
+        
+            section_navigation: 
+                label: Navigation Settings
+                comment: Contains settings to manage the basic layout of your website
+                tab: Navigation
+                type: section
+                
+        # User / Mod Bar
+        
+            section_usermod_bar: 
+                label: User / Mod Bar Settings
+                comment: Contains settings to manage the basic layout of your website
+                tab: User / Mod Bar
+                type: section
+                
+        # Sidebar
+        
+            section_sidebar: 
+                label: Sidebar Settings
+                comment: Contains settings to manage the basic layout of your website
+                tab: Sidebar
+                type: section
+                
+        # Footer
+        
+            section_footer: 
+                label: Footer Settings
+                comment: Contains settings to manage the basic layout of your website
+                tab: Footer
+                type: section
+                
+        # Widgets
+        
+            section_widgets: 
+                label: Widgets Settings
+                comment: Contains settings to manage the basic layout of your website
+                tab: Widgets
+                type: section
+
+## TO DO
+##
+## Put Margins and Paddings from Content Wrapper in new tab
+## Put the Sidebar options into a different tab as well.

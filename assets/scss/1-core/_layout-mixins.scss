@@ -1,0 +1,121 @@
+@mixin layout($layout_type) {
+    @if ($layout_type == fixed_Width) {
+        #site_layout {
+            grid-template-rows: auto 1fr auto;
+        }
+        #header_layout,
+        #content_layout,
+        #footer_layout {
+            display: grid ;
+            grid-template-columns: 1fr $theme_page_width+px 1fr; 
+        }
+        #header_layout {
+            grid-template-areas: ". Navigation-Container .";
+
+            nav { grid-area: Navigation-Container; }
+        }
+        #content_layout {
+            grid-template-areas: ". Main-Container .";
+
+            div { grid-area: Main-Container; }
+        }
+        #footer_layout {
+            grid-template-areas: ". Footer-Container .";
+
+            div { grid-area: Footer-Container; }
+        }
+    }
+    @else if ($layout_type == full_Width) {
+        
+        #site_layout {
+            grid-template-areas: "Header" 
+                                 "Content" 
+                                 "Footer";
+            grid-template-rows: auto 1fr auto;
+
+            & #header_layout,
+            & #content_layout,
+            & #footer_layout {
+                display: grid ;
+            }
+        }
+    }
+    @else if ($layout_type == default) {
+        
+        #site_layout {
+            grid-template-areas: "Header" 
+                                 "Content" 
+                                 "Footer";
+            grid-template-rows: auto 1fr auto;
+
+            & #header_layout,
+            & #content_layout,
+            & #footer_layout {
+                display: grid ;
+            }
+            #content_layout {
+                grid-template-areas: ". Main-Container .";
+                grid-template-columns: 1fr $theme_page_width+px 1fr; 
+
+                >div { grid-area: Main-Container; }
+            }
+        }
+    }
+    @else if ($layout_type == custom) {
+
+        $custom_nav_type: $theme_custom_nav_type;
+        $custom_footer_type: $theme_custom_footer_type;
+        
+        #site_layout {
+            grid-template-areas: "Header" 
+                                 "Content" 
+                                 "Footer";
+            grid-template-rows: auto 1fr auto;
+
+            & #header_layout,
+            & #content_layout,
+            & #footer_layout {
+                display: grid ;
+            }
+            
+            @if ($custom_nav_type == fixed_width) {
+                #header_layout {
+                    grid-template-areas: ". Navigation-Container .";
+                    grid-template-columns: 1fr $theme_custom_nav_fixed_width+px 1fr;
+
+                    nav { grid-area: Navigation-Container; }
+                }
+            }
+            @else if ($custom_nav_type == full_width) {
+                #header_layout {
+                    grid-template-areas: "Navigation-Container";
+
+                    nav { grid-area: Navigation-Container; }
+                }
+            }
+            
+            #content_layout {
+                grid-template-areas: ". Main-Container .";
+                grid-template-columns: 1fr $theme_page_width+px 1fr; 
+
+                div { grid-area: Main-Container; }
+            }
+
+            @if ($custom_footer_type == fixed_width) {
+                #footer_layout {
+                    grid-template-areas: ". Footer-Container .";
+                    grid-template-columns: 1fr $theme_custom_footer_fixed_width+px 1fr;
+
+                    div { grid-area: Footer-Container; }
+                }
+            }
+            @else if ($custom_footer_type == full_width) {
+                #Footer_Layout {
+                    grid-template-areas: "Footer-Container";
+
+                    div { grid-area: Footer-Container; }
+                }
+            }
+        }
+    }
+}
