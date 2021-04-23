@@ -147,7 +147,9 @@
         .content_wrapper {
             @include margins($theme_content_wrapper_margin_top, $theme_content_wrapper_margin_right, $theme_content_wrapper_margin_bottom, $theme_content_wrapper_margin_left);
             @include paddings($theme_content_wrapper_padding_top, $theme_content_wrapper_padding_right, $theme_content_wrapper_padding_bottom, $theme_content_wrapper_padding_left);
-        
+
+            background-color: $content_wrapper_background;
+
             @if ($sidebar_activated == yes) {
                 @if ($theme_sidebar_inside_content_wrapper == no) {
                     grid-area: Content;
@@ -170,7 +172,9 @@
             .sidebar_wrapper {
                 @include margins($theme_sidebar_wrapper_margin_top, $theme_sidebar_wrapper_margin_right, $theme_sidebar_wrapper_margin_bottom, $theme_sidebar_wrapper_margin_left);
                 @include paddings($theme_sidebar_wrapper_padding_top, $theme_sidebar_wrapper_padding_right, $theme_sidebar_wrapper_padding_bottom, $theme_content_wrapper_padding_left);
-                
+
+                background-color: $sidebar_wrapper_background;
+
                 grid-area: Sidebar;
             }
         }

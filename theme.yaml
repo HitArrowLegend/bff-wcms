@@ -614,6 +614,16 @@ form:
                 span: storm
                 cssClass: col-xs-6 col-sm-3
                 assetVar: theme_sidebar_wrapper_padding_left
+            sidebar_wrapper_background:
+                label: Background Color
+                type: colorpicker
+                availableColors: []
+                allowEmpty: true
+                default: FFFFFF
+                tab: Sidebar
+                span: storm
+                cssClass: col-xs-6 col-sm-3
+                assetVar: theme_sidebar_wrapper_background
 
         # Typography
         
