@@ -150,7 +150,7 @@
         
             @if ($sidebar_activated == yes) {
                 @if ($theme_sidebar_inside_content_wrapper == no) {
-                    @include position(Content);
+                    grid-area: Content;
                 }
             }
         }
@@ -158,17 +158,11 @@
     @else {
         @if ($sidebar_activated == yes) {
             .content {
-                @include position(Content);
+                grid-area: Content;
             }
         }
     }
 }
-
-
-@mixin position($markup) {
-    grid-area: $markup;
-}
-
 
 @mixin sidebar-wrapper {
     @if ($sidebar_activated == yes) {
@@ -176,17 +170,17 @@
             .sidebar_wrapper {
                 @include margins($theme_sidebar_wrapper_margin_top, $theme_sidebar_wrapper_margin_right, $theme_sidebar_wrapper_margin_bottom, $theme_sidebar_wrapper_margin_left);
                 @include paddings($theme_sidebar_wrapper_padding_top, $theme_sidebar_wrapper_padding_right, $theme_sidebar_wrapper_padding_bottom, $theme_content_wrapper_padding_left);
-                @include position(Sidebar);
+                
+                grid-area: Sidebar;
             }
         }
         @else {
             .sidebar {
-                @include position(Sidebar);
+                grid-area: Sidebar;
             }
         }
     }
 }
-
 
 @mixin content-layout {
     @if ($sidebar_position == left) {
