@@ -413,7 +413,7 @@ form:
                     no: Disabled
                 default: wrapped
                 assetVar: $theme_content_inside_wrapper
-                
+
             content_wrapper_margin_top:
                 label: Margin-Top
                 type: number
