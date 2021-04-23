@@ -488,6 +488,20 @@ form:
                 span: storm
                 cssClass: col-xs-6 col-sm-3
                 assetVar: theme_content_wrapper_background
+            content_wrapper_box_shadow:
+                label: Box Shadow
+                type: text
+                tab: Content
+                span: storm
+                cssClass: col-xs-6 col-sm-3
+                assetVar: theme_content_wrapper_box_shadow
+            content_wrapper_border:
+                label: Border
+                type: text
+                tab: Content
+                span: storm
+                cssClass: col-xs-6 col-sm-3
+                assetVar: theme_content_wrapper_border
 
         #Sidebar
 
@@ -624,6 +638,27 @@ form:
                 span: storm
                 cssClass: col-xs-6 col-sm-3
                 assetVar: theme_sidebar_wrapper_background
+            sidebar_wrapper_box_shadow:
+                label: Box Shadow
+                type: text
+                tab: Sidebar
+                span: storm
+                cssClass: col-xs-6 col-sm-3
+                assetVar: theme_sidebar_box_shadow
+            sidebar_wrapper_border:
+                label: Border
+                type: text
+                tab: Sidebar
+                span: storm
+                cssClass: col-xs-6 col-sm-3
+                assetVar: theme_sidebar_border
+            sidebar_space_between_content:
+                label: Space between Sidebar and Content
+                type: number
+                tab: Sidebar
+                span: storm
+                cssClass: col-xs-6 col-sm-3
+                assetVar: theme_sidebar_space_between_content
 
         # Typography
         

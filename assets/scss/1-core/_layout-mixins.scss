@@ -148,7 +148,9 @@
             @include margins($theme_content_wrapper_margin_top, $theme_content_wrapper_margin_right, $theme_content_wrapper_margin_bottom, $theme_content_wrapper_margin_left);
             @include paddings($theme_content_wrapper_padding_top, $theme_content_wrapper_padding_right, $theme_content_wrapper_padding_bottom, $theme_content_wrapper_padding_left);
 
-            background-color: $content_wrapper_background;
+            @include css(background, $content_wrapper_background);
+            @include css(box-shadow, $content_wrapper_box_shadow);
+            @include css(border, $content_wrapper_border);
 
             @if ($sidebar_activated == yes) {
                 @if ($theme_sidebar_inside_content_wrapper == no) {
@@ -173,7 +175,9 @@
                 @include margins($theme_sidebar_wrapper_margin_top, $theme_sidebar_wrapper_margin_right, $theme_sidebar_wrapper_margin_bottom, $theme_sidebar_wrapper_margin_left);
                 @include paddings($theme_sidebar_wrapper_padding_top, $theme_sidebar_wrapper_padding_right, $theme_sidebar_wrapper_padding_bottom, $theme_content_wrapper_padding_left);
 
-                background-color: $sidebar_wrapper_background;
+                @include css(background, $sidebar_wrapper_background);
+                @include css(box-shadow, $sidebar_box_shadow);
+                @include css(border, $sidebar_border);
 
                 grid-area: Sidebar;
             }
@@ -191,10 +195,14 @@
         display: grid;
         grid-template-columns: $sidebar_width+px auto;
         grid-template-areas: "Sidebar Content";
+
+        @include css(gap, $sidebar_space_between_content);
     }
     @else {
         display: grid;
         grid-template-columns: auto $sidebar_width+px;
         grid-template-areas: "Content Sidebar";
+
+        @include css(gap, $sidebar_space_between_content);
     }
 }

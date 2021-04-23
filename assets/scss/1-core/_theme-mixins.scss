@@ -66,8 +66,10 @@
     }
 }
 
-@mixin background($color) {
-    @if ($color != null) {
-        background-color: $color;
+@mixin css($rule, $value) {
+    @if ($value == "") {
+    }
+    @else {
+        #{$rule}: $value;
     }
 }
