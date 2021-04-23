@@ -26,7 +26,7 @@ is_hidden = 0
             {% endif %}
         {% endif %}
         
-        {% if this.theme.sidebar_inside_content_wrapper == "no" %}
+        {% if this.theme.sidebar_inside_content_wrapper == "no" or this.theme.content_inside_wrapper == "no" %}
         {% if this.theme.sidebar_inside_own_wrapper == "yes" %}
         <div class="sidebar_wrapper">
         {% endif %}

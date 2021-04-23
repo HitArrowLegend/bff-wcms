@@ -171,19 +171,18 @@
 
 
 @mixin sidebar-wrapper {
-        @if ($sidebar_activated == yes) {
-            @if ($sidebar_wrapper == yes) {
-                .sidebar_wrapper {
-                    @include margins($theme_sidebar_wrapper_margin_top, $theme_sidebar_wrapper_margin_right, $theme_sidebar_wrapper_margin_bottom, $theme_sidebar_wrapper_margin_left);
-                    @include paddings($theme_sidebar_wrapper_padding_top, $theme_sidebar_wrapper_padding_right, $theme_sidebar_wrapper_padding_bottom, $theme_content_wrapper_padding_left);
-                    @include position(Sidebar);
-                }
+    @if ($sidebar_activated == yes) {
+        @if ($sidebar_wrapper == yes) {
+            .sidebar_wrapper {
+                @include margins($theme_sidebar_wrapper_margin_top, $theme_sidebar_wrapper_margin_right, $theme_sidebar_wrapper_margin_bottom, $theme_sidebar_wrapper_margin_left);
+                @include paddings($theme_sidebar_wrapper_padding_top, $theme_sidebar_wrapper_padding_right, $theme_sidebar_wrapper_padding_bottom, $theme_content_wrapper_padding_left);
+                @include position(Sidebar);
             }
         }
-    
-    @else {
-        .sidebar {
-            @include position(Sidebar);
+        @else {
+            .sidebar {
+                @include position(Sidebar);
+            }
         }
     }
 }
