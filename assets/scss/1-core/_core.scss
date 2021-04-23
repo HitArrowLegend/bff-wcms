@@ -9,14 +9,10 @@
 }
 
 @include layout($layout_type);
-@include content-wrapper;
+@include main-layout;
 @include sidebar-wrapper;
+@include content-wrapper;
 
-#content {
-    display: grid;
-
-    @include content-layout;
-}
 //
 // Testing Things
 // --------------------------------------------------

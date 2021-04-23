@@ -523,7 +523,7 @@ form:
                 assetVar: theme_sidebar_position
             sidebar_inside_content_wrapper:
                 label: Sidebar inside Content Wrapper
-                commentAbove: Will be ignored if Content Wrapper > Content Wrapper is set to Disabled. Disabling this option will make the sidebar float next to the main content wrapper.
+                commentAbove: Setting this option to "No" will make the sidebar float next to the main content wrapper.
                 commentHtml: true
                 tab: Sidebar
                 type: Dropdown
@@ -533,6 +533,7 @@ form:
                     yes: Yes
                     no: No
                 Default: Yes
+                assetVar: theme_sidebar_inside_content_wrapper
             sidebar_width:
                 label: Sidebar Width
                 commentAbove: Specify the Sidebar Width (in pixels)
