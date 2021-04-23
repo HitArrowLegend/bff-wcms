@@ -337,19 +337,6 @@ form:
                 span: storm
                 cssClass: col-sm-4
                 assetVar: theme_page_width
-
-            ## Examples
-
-            examples:
-                label: 
-                tab: Layout
-                type: partial
-                path: themes/bff-wcms/partials/theme_examples/examples.htm
-                span: storm
-                cssClass: col-xs-12 col-lg-12
-
-            
-            ## Add options to put content inside a wrapper (with margins and padding + background color)
             
         # Custom Options    
 
