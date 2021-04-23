@@ -425,7 +425,8 @@ form:
                     yes: Enabled
                     no: Disabled
                 default: wrapped
-            
+                assetVar: $theme_content_inside_wrapper
+                
             content_wrapper_margin_top:
                 label: Margin-Top
                 type: number
@@ -433,6 +434,7 @@ form:
                 default: 0
                 span: storm
                 cssClass: col-xs-6 col-sm-3
+                assetVar: theme_content_wrapper_margin_top
             content_wrapper_margin_right:
                 label: Margin-Right
                 type: number
@@ -440,6 +442,7 @@ form:
                 default: 0
                 span: storm
                 cssClass: col-xs-6 col-sm-3
+                assetVar: theme_content_wrapper_margin_right
             content_wrapper_margin_bottom:
                 label: Margin-Bottom
                 type: number
@@ -447,6 +450,7 @@ form:
                 default: 0
                 span: storm
                 cssClass: col-xs-6 col-sm-3
+                assetVar: theme_content_wrapper_margin_bottom
             content_wrapper_margin_left:
                 label: Margin-Left
                 type: number
@@ -454,6 +458,7 @@ form:
                 default: 0
                 span: storm
                 cssClass: col-xs-6 col-sm-3
+                assetVar: theme_content_wrapper_margin_left
             content_wrapper_padding_top:
                 label: Padding-Top
                 type: number
@@ -461,6 +466,7 @@ form:
                 default: 20
                 span: storm
                 cssClass: col-xs-6 col-sm-3
+                assetVar: theme_content_wrapper_padding_top
             content_wrapper_padding_right:
                 label: Padding-Right
                 type: number
@@ -468,6 +474,7 @@ form:
                 tab: Layout
                 span: storm
                 cssClass: col-xs-6 col-sm-3
+                assetVar: theme_content_wrapper_padding_right
             content_wrapper_padding_bottom:
                 label: Padding-Bottom
                 type: number
@@ -475,6 +482,7 @@ form:
                 tab: Layout
                 span: storm
                 cssClass: col-xs-6 col-sm-3
+                assetVar: theme_content_wrapper_padding_bottom
             content_wrapper_padding_left:
                 label: Padding-Left
                 type: number
@@ -482,6 +490,7 @@ form:
                 tab: Layout
                 span: storm
                 cssClass: col-xs-6 col-sm-3
+                assetVar: theme_content_wrapper_padding_left
 
         #Sidebar
 

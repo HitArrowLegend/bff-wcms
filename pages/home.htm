@@ -3,30 +3,36 @@ url = "/"
 layout = "main-layout"
 is_hidden = 0
 ==
-<div class="main-container">
-    {% if this.theme.content_inside_wrapper == "yes" %}<div class="content_wrapper">{% endif %}
-        <div class="content">
+<main id="content" class="main-content">
+    {% if this.theme.content_inside_wrapper == "yes" %}
+    <div class="content_wrapper">{% endif %}
         {# YOUR CONTENT GOES THERE #}
-            <p>Content goes there</p>
-        {# END OF CONTENT SECTION #}
-        </div>
-        
-        {% if this.theme.sidebar_activated == "yes" %}
-            {% if this.theme.content_inside_wrapper == "yes" %}
-                {% if this.theme.sidebar_inside_content_wrapper == "no" %}</div> 
-                    {% if this.theme.sidebar_inside_own_wrapper == "yes" %}
-                        <div class="sidebar_wrapper">
-                    {% endif %}
-                {% endif %}
-            {% endif %}
             
-                 <div class="sidebar">
-                    {# YOUR SIDEBAR CONTENT GOES THERE #}
-                        <p>Sidebar goes there</p>
-                    {# END OF SIDEBAR SECTION #}
-                </div>
+            
+            <p>Content goes there</p>
                 
-            {% if this.theme.sidebar_own_wrapper == "yes" %}</div>{% endif %}
-        {% endif %}
-        
-{% if (this.theme.content_inside_wrapper == "wrapped") or (this.theme.sidebar_content_wrapper == "no") %}</div>{% endif %}
+                
+        {# END OF CONTENT SECTION #}
+    {% if this.theme.sidebar_activated == "yes" %}
+    {% if this.theme.content_inside_wrapper == "yes" %}
+    {% if this.theme.sidebar_inside_content_wrapper == "no" %}
+    </div> 
+    {% if this.theme.sidebar_inside_own_wrapper == "yes" %}
+    <div class="sidebar_wrapper">{% endif %}
+    {% endif %}
+    {% endif %}
+                
+        <div class="sidebar{% if this.theme.sidebar_position == "left"%}-left{% endif %}">
+            {# YOUR SIDEBAR CONTENT GOES THERE #}
+                    
+                    
+                <p>Sidebar goes there</p>
+                        
+                        
+            {# END OF SIDEBAR SECTION #}
+        </div>
+                
+    {% if this.theme.sidebar_own_wrapper == "yes" %}
+    </div>{% endif %}
+    {% endif %}    
+</main>

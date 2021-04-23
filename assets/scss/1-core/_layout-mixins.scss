@@ -17,7 +17,7 @@
         #content_layout {
             grid-template-areas: ". Main-Container .";
 
-            div { grid-area: Main-Container; }
+            main { grid-area: Main-Container; }
         }
         #footer_layout {
             grid-template-areas: ". Footer-Container .";
@@ -57,7 +57,7 @@
                 grid-template-areas: ". Main-Container .";
                 grid-template-columns: 1fr $theme_page_width+px 1fr; 
 
-                >div { grid-area: Main-Container; }
+                >main { grid-area: Main-Container; }
             }
         }
     }
@@ -98,7 +98,7 @@
                 grid-template-areas: ". Main-Container .";
                 grid-template-columns: 1fr $theme_page_width+px 1fr; 
 
-                div { grid-area: Main-Container; }
+                main { grid-area: Main-Container; }
             }
 
             @if ($custom_footer_type == fixed_width) {
@@ -116,6 +116,15 @@
                     div { grid-area: Footer-Container; }
                 }
             }
+        }
+    }
+}
+
+@mixin content-wrapper {
+    @if ($content-wrapper == yes) {
+        .content_wrapper {
+            @include margins($theme_content_wrapper_margin_top, $theme_content_wrapper_margin_right, $theme_content_wrapper_margin_bottom, $theme_content_wrapper_margin_left);
+            @include paddings($theme_content_wrapper_padding_top,$theme_content_wrapper_padding_right,$theme_content_wrapper_padding_bottom,$theme_content_wrapper_padding_left);
         }
     }
 }
