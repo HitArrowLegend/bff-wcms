@@ -667,6 +667,30 @@ form:
                 comment: Contains settings to manage the basic layout of your website
                 tab: Typography
                 type: section
+            general_font_family: 
+                label: Main Font Family
+                comment: Can be left empty
+                type: text
+                tab: Typography
+                assetVar: theme_general_font_family
+                span: left
+                comment: variable is theme_general_font_family
+            general_font_size: 
+                label: Main Font Size (in pixels)
+                comment: Can be left empty
+                type: number
+                tab: Typography
+                assetVar: theme_general_font_size
+                span: right
+                comment: variable is theme_general_font_size
+            general_font_color:
+                label: Main Font Color
+                comment: Can be left empty
+                type: colorpicker
+                availableColors: ['#1ABC9C', '#14A085', '#2FCC71','#26AE60','#3498DB','#2980B9','#9B59B6','#8D44AD','#34495E','#2B3E50','#F1C40F','#F39C13', '#E67E23', '#D35400', '#E74B3C', '#C03A2B', '#ECF0F1', '#BDC3C7', '#95A4A6', '#7E8C8D', '']
+                tab: Typography
+                assetVar: theme_general_font_color
+                comment: variable is theme_general_font_color
         
         # Logo
         
@@ -675,14 +699,134 @@ form:
                 comment: Contains settings to manage the basic layout of your website
                 tab: Logo
                 type: section
+            logo_font_family: 
+                label: Logo Font Family
+                comment: Can be left empty. Variable is theme_logo_font_family
+                type: text
+                tab: Logo
+                assetVar: theme_logo_font_family
+                span: left
+            logo_font_size: 
+                label: Logo Font Size (in em)
+                comment: Can be left empty. Variable is theme_logo_font_size
+                type: number
+                tab: Logo
+                assetVar: theme_logo_font_size
+                span: right
+            logo_font_color:
+                label: Logo Font Color
+                comment: Can be left empty. Variable is theme_logo_font_color
+                type: colorpicker
+                availableColors: ['#1ABC9C', '#14A085', '#2FCC71','#26AE60','#3498DB','#2980B9','#9B59B6','#8D44AD','#34495E','#2B3E50','#F1C40F','#F39C13', '#E67E23', '#D35400', '#E74B3C', '#C03A2B', '#ECF0F1', '#BDC3C7', '#95A4A6', '#7E8C8D', '']
+                tab: Logo
+                assetVar: theme_logo_font_color
         
         # Navigation
-        
-            section_navigation: 
-                label: Navigation Settings
-                comment: Contains settings to manage the basic layout of your website
-                tab: Navigation
+            section_navigation_links: 
+                label: Navigation - Links
+                comment: Contains settings to create your navigation
+                tab: Navigation - Links
                 type: section
+            navigation_links:
+                type: repeater
+                tab: Navigation - Links
+                prompt: Add Elements
+                form: 
+                    fields: 
+                        name:
+                            label: Name
+                            type: text
+                        url:
+                            label: URL
+                            type: text
+                            span: left
+                        slug:
+                            label: Slug
+                            type: text
+                            span: right
+
+            section_navigation_style: 
+                label: Navigation - Style Settings
+                comment: Contains settings to style your navigation
+                tab: Navigation - Style
+                type: section
+            navigation_height: 
+                label: Navigation Height (in pixels)
+                comment: Can be left empty. Variable is theme_navigation_height
+                type: number
+                tab: Navigation - Style
+                assetVar: theme_navigation_height
+                span: storm
+                cssClass: col-xs-6 col-sm-3
+            navigation_mobile_height: 
+                label: Navigation Mobile Height (in pixels)
+                comment: Can be left empty. Variable is theme_navigation_mobile_height
+                type: number
+                tab: Navigation - Style
+                assetVar: theme_navigation_mobile_height
+                span: storm
+                cssClass: col-xs-6 col-sm-3
+                        ##
+            section_navigation_background:
+                label: Navigation Background Color
+                type: section
+                tab: Navigation - Style
+            navigation_background: 
+                type: colorpicker
+                availableColors: ['#1ABC9C', '#14A085', '#2FCC71','#26AE60','#3498DB','#2980B9','#9B59B6','#8D44AD','#34495E','#2B3E50','#F1C40F','#F39C13', '#E67E23', '#D35400', '#E74B3C', '#C03A2B', '#ECF0F1', '#BDC3C7', '#95A4A6', '#7E8C8D', '']
+                tab: Navigation - Style
+                default: rgb(27,28,41)
+                assetVar: 'theme_navBackgroundColor'
+                comment: Can be left empty. Variable is theme_navBackgroundColor
+            ##
+            section_navigation_boxshadow:
+                label: Box Shadow
+                type: section
+                tab: Navigation - Style
+            navigation_boxshadow: 
+                type: text
+                default: "inset 0px 0px 51px 0px rgb(255 255 255 / 10%), 0px 6px 18px 0px rgb(0 0 0 / 10%)"
+                tab: Navigation - Style
+                assetVar: theme_navigation_boxshadow
+                comment: Can be left empty. Variable is theme_navigation_boxshadow
+            # Logo Section
+
+            ##
+            section_navlinks_font:
+                label: Navlinks Font Properties
+                type: section
+                tab: Navigation - Style
+            navlinks_font_family: 
+                label: Navlinks Font Family
+                comment: Can be left empty. Variable is theme_navlinks_font_family
+                type: text
+                tab: Navigation - Style
+                assetVar: theme_navlinks_font_family
+                span: left
+            navlinks_font_size: 
+                label: Navlinks Font Size (in pixels)
+                comment: Can be left empty. Variable is theme_navlinks_font_size
+                type: number
+                tab: Navigation - Style
+                assetVar: theme_navlinks_font_size
+                span: right
+            navlinks_font_color:
+                label: Navlinks Font Color
+                comment: Can be left empty. Variable is theme_navlinks_font_color
+                type: colorpicker
+                availableColors: ['#1ABC9C', '#14A085', '#2FCC71','#26AE60','#3498DB','#2980B9','#9B59B6','#8D44AD','#34495E','#2B3E50','#F1C40F','#F39C13', '#E67E23', '#D35400', '#E74B3C', '#C03A2B', '#ECF0F1', '#BDC3C7', '#95A4A6', '#7E8C8D', '']
+                tab: Navigation - Style
+                assetVar: theme_navlinks_font_color
+                span: left
+            navlinks_font_weight: 
+                label: Navlinks Font Weight (100 - 900)
+                comment: Can be left empty. Variable is theme_navlinks_font_weight
+                type: number
+                tab: Navigation - Style
+                assetVar: theme_navlinks_font_weight
+                span: right    
+
+
                 
         # User / Mod Bar
         
