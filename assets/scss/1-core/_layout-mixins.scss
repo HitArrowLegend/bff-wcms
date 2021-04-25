@@ -7,7 +7,7 @@
         #content_layout,
         #footer_layout {
             display: grid ;
-            grid-template-columns: 1fr $theme_page_width+px 1fr; 
+            grid-template-columns: 1fr $theme_page_width+$page_width_unit 1fr; 
         }
         #header_layout {
             grid-template-areas: ". Navigation-Container .";

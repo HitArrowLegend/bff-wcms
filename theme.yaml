@@ -335,8 +335,21 @@ form:
                 type: number
                 default: 1180
                 span: storm
-                cssClass: col-sm-4
+                cssClass: col-sm-3
                 assetVar: theme_page_width
+            layout_type_max-page-width_unit:
+                label: Unit
+                comment: Choose a unit
+                tab: Page - Layout
+                type: dropdown
+                span: storm
+                cssClass: col-sm-1
+                options: 
+                    px: px
+                    em: em
+                    percent: %
+                default: px
+                assetVar: theme_page_width_unit
             
         # Custom Options    
 
