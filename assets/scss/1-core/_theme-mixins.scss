@@ -67,10 +67,8 @@
 }
 
 @mixin css($rule, $value) {
-    @if ($value == "") {
+    @if ($value != "") {
+       #{$rule}: $value;
     }
-    @else {
-        #{$rule}: $value;
-    }
-}
+  }
 
