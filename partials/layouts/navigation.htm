@@ -1,2 +1,34 @@
 [viewBag]
 ==
+<nav id="navigation">
+    <div class="logo">
+        <a href="/drums" class="logo-link"><span>{{ this.theme.website_name }}</span></a>
+    </div>
+    {% if this.page.id == 'tag-view' %}
+        <ul id="menu" class="list extended">
+    {% else %}
+        <ul id="menu" class="list" role="list">
+    {% endif %}
+    
+    
+        {% if this.page.id == 'tag-view' %}
+            <li class="list-item">
+                <a href="{{ postsWithTag.tag.slug }} active">{{ postsWithTag.tag.name }}</a>
+            </li>
+        {% endif %}
+        
+        {% for item in this.theme.navigation_links %}
+            {% if item.name %}
+            <li class="list-item">
+                <a href="{{ item.url }}" class="{% if this.page.id == item.url %}active{% else %}link{% endif %}">{{ item.name }}</a>
+            </li>
+            {% endif %}
+        {% endfor %}
+        
+    </ul>
+    
+    <div class="burger" onclick="" style="cursor: pointer"> 
+        <div class="slice top"></div>
+        <div class="slice bottom"></div>
+    </div>
+</nav>

@@ -43,3 +43,25 @@ $contextual_colors: (muted: $muted, success: $success, important: $important, in
         &-bg { background: #{$colors}; color: #FFFFFF; }
     }
 }
+
+//
+// Testing things with navigation. Will not be hardcoded at the end
+// --------------------------------------------------
+
+#navigation {
+    display: flex;
+    align-items: center;
+    gap: 1em;  // Add Variable
+    justify-content: space-between; // Add Variable
+    line-height: 2em;
+    height: 80px; // Add Variable
+
+    #menu {
+        display: inline-flex;
+        flex-direction: row;
+        gap: 1em; // Add Variable
+    }
+    .burger {
+        display:none;
+    }
+}
