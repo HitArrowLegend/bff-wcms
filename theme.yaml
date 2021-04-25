@@ -1143,3 +1143,6 @@ form:
 ## TO DO
 ##
 ## Uniformize the way options are written in this file
+## Add Navigation variables and options
+## Use Flex for navigation and add variables for that
+## 
