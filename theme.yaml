@@ -469,7 +469,7 @@ form:
                 options: 
                     px: px
                     em: em
-                    percent: %
+                    %: %
                 default: px
                 assetVar: theme_content_wrapper_margin_top_unit
             content_wrapper_margin_right:
@@ -628,27 +628,30 @@ form:
                 assetVar: theme_content_wrapper_padding_left_unit
             content_wrapper_background:
                 label: Background Color
+                commentAbove: Choose a background color
                 type: colorpicker
                 availableColors: []
                 allowEmpty: true
                 default: FFFFFF
                 tab: Content
                 span: storm
-                cssClass: col-xs-6 col-sm-3
+                cssClass: col-xs-6 col-sm-2
                 assetVar: theme_content_wrapper_background
             content_wrapper_box_shadow:
                 label: Box Shadow
+                commentAbove: CSS Rule for your box_shadow
                 type: text
                 tab: Content
                 span: storm
-                cssClass: col-xs-6 col-sm-3
+                cssClass: col-xs-6 col-sm-5
                 assetVar: theme_content_wrapper_box_shadow
             content_wrapper_border:
                 label: Border
+                commentAbove: CSS Rule for your border
                 type: text
                 tab: Content
                 span: storm
-                cssClass: col-xs-6 col-sm-3
+                cssClass: col-xs-6 col-sm-5
                 assetVar: theme_content_wrapper_border
 
         #Sidebar
@@ -805,9 +808,22 @@ form:
                 type: number
                 tab: Sidebar
                 span: storm
-                cssClass: col-xs-6 col-sm-3
+                default: 2
+                cssClass: col-xs-6 col-sm-2
                 assetVar: theme_sidebar_space_between_content
-
+            sidebar_space_between_content_unit:
+                label: Unit
+                comment: Pick a Unit
+                tab: Sidebar
+                type: dropdown
+                span: storm
+                cssClass: col-sm-1
+                options:
+                    px: px
+                    em: em
+                    percent: %
+                default: em
+                assetVar: theme_sidebar_space_between_content_unit
         # Typography
         
             section_typography: 
@@ -892,7 +908,11 @@ form:
                             label: Slug
                             type: text
                             span: right
-
+                default: '[
+                    {"name":"Bio","url":"#","slug":""},
+                    {"name":"Gallery","url":"#","slug":""},
+                    {"name":"About Us","url":"#","slug":""},
+                    {"name":"Contact","url":"#","slug":""}]'
             section_navigation_style: 
                 label: Navigation - Style Settings
                 comment: Contains settings to style your navigation

@@ -74,6 +74,13 @@ $content_wrapper_border:$theme_content_wrapper_border;
 $sidebar_wrapper_background: $theme_sidebar_wrapper_background;
 $sidebar_box_shadow: $theme_sidebar_box_shadow;
 $sidebar_border: $theme_sidebar_border;
-$sidebar_space_between_content: $theme_sidebar_space_between_content+px;
+$sidebar_space_between_content: $theme_sidebar_space_between_content+$theme_sidebar_space_between_content_unit;
+//
+$content_wrapper_margin_top: $theme_content_wrapper_margin_top+$theme_content_wrapper_margin_top_unit;
+$content_wrapper_margin_right: $theme_content_wrapper_margin_right+$theme_content_wrapper_margin_right_unit;
+$content_wrapper_margin_bottom: $theme_content_wrapper_margin_bottom+$theme_content_wrapper_margin_bottom_unit;
+$content_wrapper_margin_left: $theme_content_wrapper_margin_left+$theme_content_wrapper_margin_left_unit;
+
+
 
 
