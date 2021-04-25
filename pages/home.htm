@@ -4,10 +4,8 @@ layout = "main-layout"
 is_hidden = 0
 ==
 <main id="content" class="main-content">
-
     {% if this.theme.content_inside_wrapper == "yes" %}
     <div class="content_wrapper">{% endif %}
-    
         <div class="content">
             {# YOUR CONTENT GOES THERE #}
                 
@@ -25,14 +23,11 @@ is_hidden = 0
                 </div>
             {% endif %}
         {% endif %}
-        
         {% if this.theme.sidebar_inside_content_wrapper == "no" or this.theme.content_inside_wrapper == "no" %}
         {% if this.theme.sidebar_inside_own_wrapper == "yes" %}
         <div class="sidebar_wrapper">
         {% endif %}
         {% endif %}
-    
-                
         <div class="sidebar">
             {# YOUR SIDEBAR CONTENT GOES THERE #}
                     
@@ -44,11 +39,9 @@ is_hidden = 0
         </div>
         {% if this.theme.sidebar_inside_wrapper == "no" %}
                 {% if this.theme.sidebar_inside_content_wrapper == "no" %}
-
         {% if this.theme.sidebar_own_wrapper == "yes" %}
         </div>{% endif %}{% endif %}{% endif %}
     {% endif %}
-    
     {% if this.theme.content_inside_wrapper == "yes" %}
         {% if this.theme.sidebar_inside_content_wrapper == "yes" %}
             </div>
