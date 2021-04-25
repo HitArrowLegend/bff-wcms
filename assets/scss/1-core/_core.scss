@@ -1,5 +1,5 @@
 #site_layout {
-    @include margins(0, 0, 0, 0);
+    @include margins(0, px, 0, px, 0,px, 0, px);
     @include paddings(0, 0, 0, 0);
     background-color: $theme_page_background;
     display: grid;

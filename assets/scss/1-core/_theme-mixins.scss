@@ -1,33 +1,33 @@
 // Universal Margins
 
-@mixin margins($margin-top, $margin-right, $margin-bottom, $margin-left) {
+@mixin margins($margin-top, $margin-top-unit, $margin-right, $margin-right-unit, $margin-bottom, $margin-bottom-unit, $margin-left, $margin-left-unit) {
     @if ($margin-top == $margin-right == $margin-bottom == $margin-left == 0) {
     }
     @else if (($margin-top == 0) and ($margin-right == 0) and ($margin-bottom == 0) and ($margin-left > 0)) {
-        margin-left: $margin-left+px;
+        margin-left: $margin-left+$margin-left-unit;
     }
     @else if (($margin-top == 0) and ($margin-left == 0) and ($margin-bottom == 0) and ($margin-right > 0)) {
-        margin-right: $margin-right+px;
+        margin-right: $margin-right+$margin-right-unit;
     }
     @else if (($margin-right == 0) and ($margin-left == 0) and ($margin-bottom == 0) and ($margin-top > 0)) {
-        margin-top: $margin-top+px;
+        margin-top: $margin-top+$margin-top-unit;
     }
     @else if (($margin-top == 0) and  ($margin-right == 0) and ($margin-left == 0) and ($margin-bottom > 0)) {
-        margin-bottom: $margin-bottom+px;
+        margin-bottom: $margin-bottom+$margin-bottom-unit;
     }
     @else if (($margin-top > 0) or ($margin-right > 0) or ($margin-bottom > 0) or ($margin-left > 0)) {
         
         @if (($margin-right == $margin-left) and ($margin-right != $margin-top) and ($margin-top != $margin-bottom)) {
-            margin: $margin-top+px $margin-right+px $margin-bottom+px;
+            margin: $margin-top+$margin-top-unit $margin-right+$margin-right-unit $margin-bottom+$margin-bottom-unit;
         }
         @else if (($margin-top == $margin-bottom) and ($margin-right == $margin-left)) and ($margin-top != $margin-right) {
-            margin: $margin-top+px $margin-right+px;
+            margin: $margin-top+$margin-top-unit $margin-right+$margin-right-unit;
         }
         @else if (($margin-top == $margin-bottom) and ($margin-right == $margin-left) and ($margin-top == $margin-right)) {
-            margin: $margin-top+px;
+            margin: $margin-top+$margin-top-unit;
         }
         @else {
-            margin: $margin-top+px $margin-right+px $margin-bottom+px $margin-left+px;
+            margin: $margin-top+$margin-top-unit $margin-right+$margin-right-unit $margin-bottom+$margin-bottom-unit $margin-left+$margin-left-unit;
         }
     }
 }

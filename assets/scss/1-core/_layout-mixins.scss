@@ -145,7 +145,7 @@
 @mixin content-wrapper {
     @if ($content_wrapper == yes) {
         .content_wrapper {
-            @include margins($theme_content_wrapper_margin_top, $theme_content_wrapper_margin_right, $theme_content_wrapper_margin_bottom, $theme_content_wrapper_margin_left);
+            @include margins($theme_content_wrapper_margin_top, $theme_content_wrapper_margin_top_unit, $theme_content_wrapper_margin_right, $theme_content_wrapper_margin_right_unit, $theme_content_wrapper_margin_bottom,$theme_content_wrapper_margin_bottom_unit, $theme_content_wrapper_margin_left, $theme_content_wrapper_margin_left_unit);
             @include paddings($theme_content_wrapper_padding_top, $theme_content_wrapper_padding_right, $theme_content_wrapper_padding_bottom, $theme_content_wrapper_padding_left);
 
             @include css(background, $content_wrapper_background);
