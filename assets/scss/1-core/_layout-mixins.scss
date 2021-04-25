@@ -173,7 +173,7 @@
         @if ($sidebar_wrapper == yes) {
             .sidebar_wrapper {
                 @include margins($theme_sidebar_wrapper_margin_top, $theme_sidebar_wrapper_margin_right, $theme_sidebar_wrapper_margin_bottom, $theme_sidebar_wrapper_margin_left);
-                @include paddings($theme_sidebar_wrapper_padding_top, $theme_sidebar_wrapper_padding_right, $theme_sidebar_wrapper_padding_bottom, $theme_content_wrapper_padding_left);
+                @include paddings($theme_sidebar_wrapper_padding_top, $theme_sidebar_wrapper_padding_right, $theme_sidebar_wrapper_padding_bottom, $theme_sidebar_wrapper_padding_left);
 
                 @include css(background, $sidebar_wrapper_background);
                 @include css(box-shadow, $sidebar_box_shadow);

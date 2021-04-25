@@ -581,7 +581,7 @@ form:
                     em: em
                     percent: %
                 default: px
-                assetVar: content_wrapper_padding_right_unit
+                assetVar: theme_content_wrapper_padding_right_unit
             content_wrapper_padding_bottom:
                 label: Padding-Bottom
                 commentAbove: Define a length
@@ -727,22 +727,61 @@ form:
                 tab: Sidebar
                 default: 0
                 span: storm
-                cssClass: col-xs-6 col-sm-3
+                cssClass: col-xs-5 col-sm-2
                 assetVar: theme_sidebar_wrapper_margin_top
+            sidebar_wrapper_margin_top_unit: 
+                label: Unit
+                commentAbove: Choose a unit
+                tab: Content
+                type: dropdown
+                span: storm
+                cssClass: col-sm-1
+                options: 
+                    px: px
+                    em: em
+                    percent: %
+                default: px
+                assetVar: theme_sidebar_wrapper_margin_top_unit
             sidebar_wrapper_margin_right:
                 label: Margin-Right
                 type: number
                 tab: Sidebar
                 span: storm
-                cssClass: col-xs-6 col-sm-3
+                cssClass: col-xs-5 col-sm-2
                 assetVar: theme_sidebar_wrapper_margin_right
+            sidebar_wrapper_margin_right_unit: 
+                label: Unit
+                commentAbove: Choose a unit
+                tab: Content
+                type: dropdown
+                span: storm
+                cssClass: col-sm-1
+                options: 
+                    px: px
+                    em: em
+                    percent: %
+                default: px
+                assetVar: theme_sidebar_wrapper_margin_right_unit
             sidebar_wrapper_margin_bottom:
                 label: Margin-Bottom
                 type: number
                 tab: Sidebar
                 span: storm
-                cssClass: col-xs-6 col-sm-3
+                cssClass: col-xs-5 col-sm-2
                 assetVar: theme_sidebar_wrapper_margin_bottom
+            sidebar_wrapper_margin_bottom_unit:
+                label: Unit
+                commentAbove: Choose a unit
+                tab: Content
+                type: dropdown
+                span: storm
+                cssClass: col-sm-1
+                options: 
+                    px: px
+                    em: em
+                    percent: %
+                default: px
+                assetVar: theme_sidebar_wrapper_margin_bottom_unit
             sidebar_wrapper_margin_left:
                 label: Margin-Left
                 type: number
@@ -750,6 +789,19 @@ form:
                 span: storm
                 cssClass: col-xs-6 col-sm-3
                 assetVar: theme_sidebar_wrapper_margin_left
+            sidebar_wrapper_margin_left_unit:
+                label: Unit
+                commentAbove: Choose a unit
+                tab: Content
+                type: dropdown
+                span: storm
+                cssClass: col-sm-1
+                options: 
+                    px: px
+                    em: em
+                    percent: %
+                default: px
+                assetVar: theme_sidebar_wrapper_margin_left_unit
             sidebar_wrapper_padding_top:
                 label: Padding-Top
                 type: number
@@ -758,6 +810,19 @@ form:
                 span: storm
                 cssClass: col-xs-6 col-sm-3
                 assetVar: theme_sidebar_wrapper_padding_top
+            sidebar_wrapper_padding_top_unit:
+                label: Unit
+                commentAbove: Choose a unit
+                tab: Content
+                type: dropdown
+                span: storm
+                cssClass: col-sm-1
+                options: 
+                    px: px
+                    em: em
+                    percent: %
+                default: px
+                assetVar: theme_sidebar_wrapper_padding_top_unit
             sidebar_wrapper_padding_right:
                 label: Padding-Right
                 type: number
@@ -765,6 +830,19 @@ form:
                 span: storm
                 cssClass: col-xs-6 col-sm-3
                 assetVar: theme_sidebar_wrapper_padding_right
+            sidebar_wrapper_padding_right_unit:
+                label: Unit
+                commentAbove: Choose a unit
+                tab: Content
+                type: dropdown
+                span: storm
+                cssClass: col-sm-1
+                options: 
+                    px: px
+                    em: em
+                    percent: %
+                default: px
+                assetVar: theme_sidebar_wrapper_padding_right_unit
             sidebar_wrapper_padding_bottom:
                 label: Padding-Bottom
                 type: number
@@ -772,6 +850,19 @@ form:
                 span: storm
                 cssClass: col-xs-6 col-sm-3
                 assetVar: theme_sidebar_wrapper_padding_bottom
+            sidebar_wrapper_padding_bottom_unit:
+                label: Unit
+                commentAbove: Choose a unit
+                tab: Content
+                type: dropdown
+                span: storm
+                cssClass: col-sm-1
+                options: 
+                    px: px
+                    em: em
+                    percent: %
+                default: px
+                assetVar: theme_sidebar_wrapper_padding_bottom_unit
             sidebar_wrapper_padding_left:
                 label: Padding-Left
                 type: number
@@ -779,6 +870,19 @@ form:
                 span: storm
                 cssClass: col-xs-6 col-sm-3
                 assetVar: theme_sidebar_wrapper_padding_left
+            sidebar_wrapper_padding_left_unit:
+                label: Unit
+                commentAbove: Choose a unit
+                tab: Content
+                type: dropdown
+                span: storm
+                cssClass: col-sm-1
+                options: 
+                    px: px
+                    em: em
+                    percent: %
+                default: px
+                assetVar: theme_sidebar_wrapper_padding_left_unit
             sidebar_wrapper_background:
                 label: Background Color
                 type: colorpicker
