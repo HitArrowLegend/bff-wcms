@@ -724,6 +724,7 @@ form:
             sidebar_wrapper_margin_top:
                 label: Margin-Top
                 type: number
+                commentAbove: Define a length
                 tab: Sidebar
                 default: 0
                 span: storm
@@ -732,7 +733,7 @@ form:
             sidebar_wrapper_margin_top_unit: 
                 label: Unit
                 commentAbove: Choose a unit
-                tab: Content
+                tab: Sidebar
                 type: dropdown
                 span: storm
                 cssClass: col-sm-1
@@ -744,6 +745,7 @@ form:
                 assetVar: theme_sidebar_wrapper_margin_top_unit
             sidebar_wrapper_margin_right:
                 label: Margin-Right
+                commentAbove: Define a length
                 type: number
                 tab: Sidebar
                 span: storm
@@ -752,7 +754,7 @@ form:
             sidebar_wrapper_margin_right_unit: 
                 label: Unit
                 commentAbove: Choose a unit
-                tab: Content
+                tab: Sidebar
                 type: dropdown
                 span: storm
                 cssClass: col-sm-1
@@ -764,6 +766,7 @@ form:
                 assetVar: theme_sidebar_wrapper_margin_right_unit
             sidebar_wrapper_margin_bottom:
                 label: Margin-Bottom
+                commentAbove: Define a length
                 type: number
                 tab: Sidebar
                 span: storm
@@ -772,7 +775,7 @@ form:
             sidebar_wrapper_margin_bottom_unit:
                 label: Unit
                 commentAbove: Choose a unit
-                tab: Content
+                tab: Sidebar
                 type: dropdown
                 span: storm
                 cssClass: col-sm-1
@@ -784,15 +787,16 @@ form:
                 assetVar: theme_sidebar_wrapper_margin_bottom_unit
             sidebar_wrapper_margin_left:
                 label: Margin-Left
+                commentAbove: Define a length
                 type: number
                 tab: Sidebar
                 span: storm
-                cssClass: col-xs-6 col-sm-3
+                cssClass: col-xs-5 col-sm-2
                 assetVar: theme_sidebar_wrapper_margin_left
             sidebar_wrapper_margin_left_unit:
                 label: Unit
                 commentAbove: Choose a unit
-                tab: Content
+                tab: Sidebar
                 type: dropdown
                 span: storm
                 cssClass: col-sm-1
@@ -804,16 +808,17 @@ form:
                 assetVar: theme_sidebar_wrapper_margin_left_unit
             sidebar_wrapper_padding_top:
                 label: Padding-Top
+                commentAbove: Define a length
                 type: number
                 tab: Sidebar
                 default: 0
                 span: storm
-                cssClass: col-xs-6 col-sm-3
+                cssClass: col-xs-5 col-sm-2
                 assetVar: theme_sidebar_wrapper_padding_top
             sidebar_wrapper_padding_top_unit:
                 label: Unit
                 commentAbove: Choose a unit
-                tab: Content
+                tab: Sidebar
                 type: dropdown
                 span: storm
                 cssClass: col-sm-1
@@ -825,15 +830,16 @@ form:
                 assetVar: theme_sidebar_wrapper_padding_top_unit
             sidebar_wrapper_padding_right:
                 label: Padding-Right
+                commentAbove: Define a length
                 type: number
                 tab: Sidebar
                 span: storm
-                cssClass: col-xs-6 col-sm-3
+                cssClass: col-xs-5 col-sm-2
                 assetVar: theme_sidebar_wrapper_padding_right
             sidebar_wrapper_padding_right_unit:
                 label: Unit
                 commentAbove: Choose a unit
-                tab: Content
+                tab: Sidebar
                 type: dropdown
                 span: storm
                 cssClass: col-sm-1
@@ -845,15 +851,16 @@ form:
                 assetVar: theme_sidebar_wrapper_padding_right_unit
             sidebar_wrapper_padding_bottom:
                 label: Padding-Bottom
+                commentAbove: Define a length
                 type: number
                 tab: Sidebar
                 span: storm
-                cssClass: col-xs-6 col-sm-3
+                cssClass: col-xs-5 col-sm-2
                 assetVar: theme_sidebar_wrapper_padding_bottom
             sidebar_wrapper_padding_bottom_unit:
                 label: Unit
                 commentAbove: Choose a unit
-                tab: Content
+                tab: Sidebar
                 type: dropdown
                 span: storm
                 cssClass: col-sm-1
@@ -865,15 +872,16 @@ form:
                 assetVar: theme_sidebar_wrapper_padding_bottom_unit
             sidebar_wrapper_padding_left:
                 label: Padding-Left
+                commentAbove: Define a length
                 type: number
                 tab: Sidebar
                 span: storm
-                cssClass: col-xs-6 col-sm-3
+                cssClass: col-xs-5 col-sm-2
                 assetVar: theme_sidebar_wrapper_padding_left
             sidebar_wrapper_padding_left_unit:
                 label: Unit
                 commentAbove: Choose a unit
-                tab: Content
+                tab: Sidebar
                 type: dropdown
                 span: storm
                 cssClass: col-sm-1
