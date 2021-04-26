@@ -146,7 +146,7 @@
     @if ($content_wrapper == yes) {
         .content_wrapper {
             @include margins($content_wrapper_margin_top, $content_wrapper_margin_right, $content_wrapper_margin_bottom, $content_wrapper_margin_left);
-            @include paddings($theme_content_wrapper_padding_top, $theme_content_wrapper_padding_right, $theme_content_wrapper_padding_bottom, $theme_content_wrapper_padding_left);
+            @include paddings($content_wrapper_padding_top, $content_wrapper_padding_right, $content_wrapper_padding_bottom, $content_wrapper_padding_left);
 
             @include css(background, $content_wrapper_background);
             @include css(box-shadow, $content_wrapper_box_shadow);
@@ -172,8 +172,8 @@
     @if ($sidebar_activated == yes) {
         @if ($sidebar_wrapper == yes) {
             .sidebar_wrapper {
-                @include margins($theme_sidebar_wrapper_margin_top, $theme_sidebar_wrapper_margin_right, $theme_sidebar_wrapper_margin_bottom, $theme_sidebar_wrapper_margin_left);
-                @include paddings($theme_sidebar_wrapper_padding_top, $theme_sidebar_wrapper_padding_right, $theme_sidebar_wrapper_padding_bottom, $theme_sidebar_wrapper_padding_left);
+                @include margins($sidebar_wrapper_margin_top, $sidebar_wrapper_margin_right, $sidebar_wrapper_margin_bottom, $sidebar_wrapper_margin_left);
+                @include paddings($sidebar_wrapper_padding_top, $sidebar_wrapper_padding_right, $sidebar_wrapper_padding_bottom, $sidebar_wrapper_padding_left);
 
                 @include css(background, $sidebar_wrapper_background);
                 @include css(box-shadow, $sidebar_box_shadow);

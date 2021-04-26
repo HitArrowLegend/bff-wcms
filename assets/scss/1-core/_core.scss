@@ -5,7 +5,6 @@
     display: grid;
     min-height: 100vh;
     position: relative;
-    
 }
 
 @include layout($layout_type);
@@ -48,13 +47,18 @@ $contextual_colors: (muted: $muted, success: $success, important: $important, in
 // Testing things with navigation. Will not be hardcoded at the end
 // --------------------------------------------------
 
+#header_layout {
+    background: $theme_navBackgroundColor;
+}
+
 #navigation {
     display: flex;
     align-items: center;
     gap: 1em;  // Add Variable
     justify-content: space-between; // Add Variable
-    line-height: 2em;
-    height: 80px; // Add Variable
+    line-height: 1;
+    height: $theme_navigation_height+$theme_navigation_height_unit;
+    @include paddings($navigation_padding_top, $navigation_padding_right, $navigation_padding_bottom, $navigation_padding_left);
 
     #menu {
         display: inline-flex;

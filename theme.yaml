@@ -347,7 +347,8 @@ form:
                 options: 
                     px: px
                     em: em
-                    percent: %
+                    rem: rem
+                    %: %
                 default: px
                 assetVar: theme_page_width_unit
             
@@ -392,7 +393,8 @@ form:
                 options: 
                     px: px
                     em: em
-                    percent: %
+                    rem: rem
+                    %: %
                 default: px
             custom_footer_type:
                 label: Footer Layout
@@ -425,7 +427,8 @@ form:
                 options: 
                     px: px
                     em: em
-                    percent: %
+                    rem: rem
+                    %: %
                 default: px
 
         # Full Width Wrapping Options
@@ -469,6 +472,7 @@ form:
                 options: 
                     px: px
                     em: em
+                    rem: rem
                     %: %
                 default: px
                 assetVar: theme_content_wrapper_margin_top_unit
@@ -491,7 +495,8 @@ form:
                 options: 
                     px: px
                     em: em
-                    percent: %
+                    rem: rem
+                    %: %
                 default: px
                 assetVar: theme_content_wrapper_margin_right_unit
             content_wrapper_margin_bottom:
@@ -513,7 +518,8 @@ form:
                 options: 
                     px: px
                     em: em
-                    percent: %
+                    rem: rem
+                    %: %
                 default: px
                 assetVar: theme_content_wrapper_margin_bottom_unit
             content_wrapper_margin_left:
@@ -535,7 +541,8 @@ form:
                 options: 
                     px: px
                     em: em
-                    percent: %
+                    rem: rem
+                    %: %
                 default: px
                 assetVar: theme_content_wrapper_margin_left_unit
             content_wrapper_padding_top:
@@ -557,7 +564,8 @@ form:
                 options: 
                     px: px
                     em: em
-                    percent: %
+                    rem: rem
+                    %: %
                 default: px
                 assetVar: theme_content_wrapper_padding_top_unit
             content_wrapper_padding_right:
@@ -579,7 +587,8 @@ form:
                 options: 
                     px: px
                     em: em
-                    percent: %
+                    rem: rem
+                    %: %
                 default: px
                 assetVar: theme_content_wrapper_padding_right_unit
             content_wrapper_padding_bottom:
@@ -601,7 +610,8 @@ form:
                 options: 
                     px: px
                     em: em
-                    percent: %
+                    rem: rem
+                    %: %
                 default: px
                 assetVar: theme_content_wrapper_padding_bottom_unit
             content_wrapper_padding_left:
@@ -623,7 +633,8 @@ form:
                 options: 
                     px: px
                     em: em
-                    percent: %
+                    rem: rem
+                    %: %
                 default: px
                 assetVar: theme_content_wrapper_padding_left_unit
             content_wrapper_background:
@@ -710,7 +721,7 @@ form:
                 assetVar: theme_sidebar_width
             sidebar_inside_own_wrapper: 
                 label: Sidebar Wrapper
-                comment: Enabling this option will add a wrapper around the sidebar only. Will be ignored if Sidebar > Sidebar inside Content Wrapper is set to Yes. 
+                commentAbove: Enabling this option will add a wrapper around the sidebar only. Will be ignored if Sidebar > Sidebar inside Content Wrapper is set to Yes. 
                 commentHtml: true
                 tab: Sidebar
                 type: Dropdown
@@ -740,7 +751,8 @@ form:
                 options: 
                     px: px
                     em: em
-                    percent: %
+                    rem: rem
+                    %: %
                 default: px
                 assetVar: theme_sidebar_wrapper_margin_top_unit
             sidebar_wrapper_margin_right:
@@ -761,7 +773,8 @@ form:
                 options: 
                     px: px
                     em: em
-                    percent: %
+                    rem: rem
+                    %: %
                 default: px
                 assetVar: theme_sidebar_wrapper_margin_right_unit
             sidebar_wrapper_margin_bottom:
@@ -782,7 +795,8 @@ form:
                 options: 
                     px: px
                     em: em
-                    percent: %
+                    rem: rem
+                    %: %
                 default: px
                 assetVar: theme_sidebar_wrapper_margin_bottom_unit
             sidebar_wrapper_margin_left:
@@ -803,7 +817,8 @@ form:
                 options: 
                     px: px
                     em: em
-                    percent: %
+                    rem: rem
+                    %: %
                 default: px
                 assetVar: theme_sidebar_wrapper_margin_left_unit
             sidebar_wrapper_padding_top:
@@ -825,7 +840,8 @@ form:
                 options: 
                     px: px
                     em: em
-                    percent: %
+                    rem: rem
+                    %: %
                 default: px
                 assetVar: theme_sidebar_wrapper_padding_top_unit
             sidebar_wrapper_padding_right:
@@ -846,7 +862,8 @@ form:
                 options: 
                     px: px
                     em: em
-                    percent: %
+                    rem: rem
+                    %: %
                 default: px
                 assetVar: theme_sidebar_wrapper_padding_right_unit
             sidebar_wrapper_padding_bottom:
@@ -867,7 +884,8 @@ form:
                 options: 
                     px: px
                     em: em
-                    percent: %
+                    rem: rem
+                    %: %
                 default: px
                 assetVar: theme_sidebar_wrapper_padding_bottom_unit
             sidebar_wrapper_padding_left:
@@ -888,7 +906,8 @@ form:
                 options: 
                     px: px
                     em: em
-                    percent: %
+                    rem: rem
+                    %: %
                 default: px
                 assetVar: theme_sidebar_wrapper_padding_left_unit
             sidebar_wrapper_background:
@@ -933,7 +952,8 @@ form:
                 options:
                     px: px
                     em: em
-                    percent: %
+                    rem: rem
+                    %: %
                 default: em
                 assetVar: theme_sidebar_space_between_content_unit
         # Typography
@@ -968,7 +988,40 @@ form:
                 assetVar: theme_general_font_color
                 comment: variable is theme_general_font_color
         
-        # Logo
+
+        
+        # Navigation
+            section_navigation_links: 
+                label: Navigation - Links
+                comment: Contains settings to create your navigation
+                tab: Navigation - Links
+                type: section
+            navigation_links:
+                type: repeater
+                tab: Navigation - Links
+                prompt: Add Elements
+                form: 
+                    fields: 
+                        name:
+                            label: Name
+                            type: text
+                        url:
+                            label: URL
+                            type: text
+                            span: left
+                        slug:
+                            label: Slug
+                            type: text
+                            span: right
+                default: '[
+                    {"name":"Blog","url":"blog","slug":""},
+                    {"name":"Bio","url":"#","slug":""},
+                    {"name":"Gallery","url":"#","slug":""},
+                    {"name":"About Us","url":"#","slug":""},
+                    {"name":"Contact","url":"#","slug":""}]'
+
+
+            # Logo
         
             section_logo: 
                 label: Logo Settings
@@ -995,36 +1048,8 @@ form:
                 type: colorpicker
                 availableColors: ['#1ABC9C', '#14A085', '#2FCC71','#26AE60','#3498DB','#2980B9','#9B59B6','#8D44AD','#34495E','#2B3E50','#F1C40F','#F39C13', '#E67E23', '#D35400', '#E74B3C', '#C03A2B', '#ECF0F1', '#BDC3C7', '#95A4A6', '#7E8C8D', '']
                 tab: Logo
-                assetVar: theme_logo_font_color
-        
-        # Navigation
-            section_navigation_links: 
-                label: Navigation - Links
-                comment: Contains settings to create your navigation
-                tab: Navigation - Links
-                type: section
-            navigation_links:
-                type: repeater
-                tab: Navigation - Links
-                prompt: Add Elements
-                form: 
-                    fields: 
-                        name:
-                            label: Name
-                            type: text
-                        url:
-                            label: URL
-                            type: text
-                            span: left
-                        slug:
-                            label: Slug
-                            type: text
-                            span: right
-                default: '[
-                    {"name":"Bio","url":"#","slug":""},
-                    {"name":"Gallery","url":"#","slug":""},
-                    {"name":"About Us","url":"#","slug":""},
-                    {"name":"Contact","url":"#","slug":""}]'
+                assetVar: theme_logo_font_colors
+
             section_navigation_style: 
                 label: Navigation - Style Settings
                 comment: Contains settings to style your navigation
@@ -1032,21 +1057,52 @@ form:
                 type: section
             navigation_height: 
                 label: Navigation Height (in pixels)
-                comment: Can be left empty. Variable is theme_navigation_height
+                commentAbove: Can be left empty. Variable is theme_navigation_height
                 type: number
                 tab: Navigation - Style
                 assetVar: theme_navigation_height
+                default: 80
                 span: storm
-                cssClass: col-xs-6 col-sm-3
+                cssClass: col-xs-5 col-sm-3
+            navigation_height_unit:
+                label: Unit
+                commentAbove: Choose a unit
+                tab: Navigation - Style
+                type: dropdown
+                span: storm
+                cssClass: col-sm-1
+                options: 
+                    px: px
+                    em: em
+                    rem: rem
+                    %: %
+                default: px
+                assetVar: theme_navigation_height_unit
             navigation_mobile_height: 
                 label: Navigation Mobile Height (in pixels)
-                comment: Can be left empty. Variable is theme_navigation_mobile_height
+                commentAbove: Can be left empty. Variable is theme_navigation_mobile_height
                 type: number
                 tab: Navigation - Style
                 assetVar: theme_navigation_mobile_height
                 span: storm
-                cssClass: col-xs-6 col-sm-3
+                cssClass: col-xs-5 col-sm-2
+            navigation_mobile_height_unit:
+                label: Unit
+                commentAbove: Choose a unit
+                tab: Navigation - Style
+                type: dropdown
+                span: storm
+                cssClass: col-sm-1
+                options: 
+                    px: px
+                    em: em
+                    rem: rem
+                    %: %
+                default: em
+                assetVar: theme_navigation_mobile_height_unit
+        
                         ##
+
             section_navigation_background:
                 label: Navigation Background Color
                 type: section
@@ -1058,6 +1114,193 @@ form:
                 default: rgb(27,28,41)
                 assetVar: 'theme_navBackgroundColor'
                 comment: Can be left empty. Variable is theme_navBackgroundColor
+
+
+            navigation_margin_top:
+                label: Margin-Top
+                type: number
+                commentAbove: Define a length
+                tab: Navigation - Style
+                default: 0
+                span: storm
+                cssClass: col-xs-5 col-sm-2
+                assetVar: theme_navigation_margin_top
+            navigation_margin_top_unit: 
+                label: Unit
+                commentAbove: Choose a unit
+                tab: Navigation - Style
+                type: dropdown
+                span: storm
+                cssClass: col-sm-1
+                options: 
+                    px: px
+                    em: em
+                    rem: rem
+                    %: %
+                default: em
+                assetVar: theme_navigation_margin_top_unit
+            navigation_margin_right:
+                label: Margin-Right
+                commentAbove: Define a length
+                type: number
+                tab: Navigation - Style
+                default: 0
+                span: storm
+                cssClass: col-xs-5 col-sm-2
+                assetVar: theme_navigation_margin_right
+            navigation_margin_right_unit: 
+                label: Unit
+                commentAbove: Choose a unit
+                tab: Navigation - Style
+                type: dropdown
+                span: storm
+                cssClass: col-sm-1
+                options: 
+                    px: px
+                    em: em
+                    rem: rem
+                    %: %
+                default: em
+                assetVar: theme_navigation_margin_right_unit
+            navigation_margin_bottom:
+                label: Margin-Bottom
+                commentAbove: Define a length
+                type: number
+                default: 0
+                tab: Navigation - Style
+                span: storm
+                cssClass: col-xs-5 col-sm-2
+                assetVar: theme_navigation_margin_bottom
+            navigation_margin_bottom_unit:
+                label: Unit
+                commentAbove: Choose a unit
+                tab: Navigation - Style
+                type: dropdown
+                span: storm
+                cssClass: col-sm-1
+                options: 
+                    px: px
+                    em: em
+                    rem: rem
+                    %: %
+                default: em
+                assetVar: theme_navigation_margin_bottom_unit
+            navigation_margin_left:
+                label: Margin-Left
+                commentAbove: Define a length
+                type: number
+                default: 0
+                tab: Navigation - Style
+                span: storm
+                cssClass: col-xs-5 col-sm-2
+                assetVar: theme_navigation_margin_left
+            navigation_margin_left_unit:
+                label: Unit
+                commentAbove: Choose a unit
+                tab: Navigation - Style
+                type: dropdown
+                span: storm
+                cssClass: col-sm-1
+                options: 
+                    px: px
+                    em: em
+                    rem: rem
+                    %: %
+                default: em
+                assetVar: theme_navigation_margin_left_unit
+            navigation_padding_top:
+                label: Padding-Top
+                commentAbove: Define a length
+                type: number
+                tab: Navigation - Style
+                default: 0
+                span: storm
+                cssClass: col-xs-5 col-sm-2
+                assetVar: theme_navigation_padding_top
+            navigation_padding_top_unit:
+                label: Unit
+                commentAbove: Choose a unit
+                tab: Navigation - Style
+                type: dropdown
+                span: storm
+                cssClass: col-sm-1
+                options: 
+                    px: px
+                    em: em
+                    rem: rem
+                    %: %
+                default: em
+                assetVar: theme_navigation_padding_top_unit
+            navigation_padding_right:
+                label: Padding-Right
+                commentAbove: Define a length
+                type: number
+                tab: Navigation - Style
+                default: 2
+                span: storm
+                cssClass: col-xs-5 col-sm-2
+                assetVar: theme_navigation_padding_right
+            navigation_padding_right_unit:
+                label: Unit
+                commentAbove: Choose a unit
+                tab: Navigation - Style
+                type: dropdown
+                span: storm
+                cssClass: col-sm-1
+                options: 
+                    px: px
+                    em: em
+                    rem: rem
+                    %: %
+                default: em
+                assetVar: theme_navigation_padding_right_unit
+            navigation_padding_bottom:
+                label: Padding-Bottom
+                commentAbove: Define a length
+                type: number
+                tab: Navigation - Style
+                default: 0
+                span: storm
+                cssClass: col-xs-5 col-sm-2
+                assetVar: theme_navigation_padding_bottom
+            navigation_padding_bottom_unit:
+                label: Unit
+                commentAbove: Choose a unit
+                tab: Navigation - Style
+                type: dropdown
+                span: storm
+                cssClass: col-sm-1
+                options: 
+                    px: px
+                    em: em
+                    rem: rem
+                    %: %
+                default: em
+                assetVar: theme_navigation_padding_bottom_unit
+            navigation_padding_left:
+                label: Padding-Left
+                commentAbove: Define a length
+                type: number
+                tab: Navigation - Style
+                default: 2
+                span: storm
+                cssClass: col-xs-5 col-sm-2
+                assetVar: theme_navigation_padding_left
+            navigation_padding_left_unit:
+                label: Unit
+                commentAbove: Choose a unit
+                tab: Navigation - Style
+                type: dropdown
+                span: storm
+                cssClass: col-sm-1
+                options: 
+                    px: px
+                    em: em
+                    rem: rem
+                    %: %
+                default: em
+                assetVar: theme_navigation_padding_left_unit
+
             ##
             section_navigation_boxshadow:
                 label: Box Shadow
@@ -1069,7 +1312,6 @@ form:
                 tab: Navigation - Style
                 assetVar: theme_navigation_boxshadow
                 comment: Can be left empty. Variable is theme_navigation_boxshadow
-            # Logo Section
 
             ##
             section_navlinks_font:
@@ -1104,9 +1346,8 @@ form:
                 type: number
                 tab: Navigation - Style
                 assetVar: theme_navlinks_font_weight
-                span: right    
-
-
+                span: right
+                
                 
         # User / Mod Bar
         
@@ -1143,6 +1384,7 @@ form:
 ## TO DO
 ##
 ## Uniformize the way options are written in this file
-## Add Navigation variables and options
-## Use Flex for navigation and add variables for that
-## 
+## Add Navigation variables and options / Half way done
+## Use Flex for navigation and add variables for that / not done
+## Fix Background color for main container and wrapper. Add options for both.
+## Work on typography

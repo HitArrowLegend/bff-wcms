@@ -1,7 +1,15 @@
-title = "Home"
-url = "/"
+title = "Blog"
+url = "/blog"
 layout = "main-layout"
 is_hidden = 0
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
 ==
 <main id="content" class="main-content">
     {% if this.theme.content_inside_wrapper == "yes" %}
@@ -10,7 +18,7 @@ is_hidden = 0
             {# YOUR CONTENT GOES THERE #}
                 
                 
-                <p>Content goes there</p>
+                {% component 'blogPosts' %}
                     
                     
             {# END OF CONTENT SECTION #}
@@ -32,7 +40,7 @@ is_hidden = 0
             {# YOUR SIDEBAR CONTENT GOES THERE #}
                    
                     
-                <p>Sidebar goes there</p>
+                
                         
                         
             {# END OF SIDEBAR SECTION #}
