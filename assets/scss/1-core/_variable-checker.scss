@@ -1,3 +1,6 @@
+@if ($theme_layout_gap == null) {
+    $theme_layout_gap: 0;
+}
 @if ($theme_sidebar_space_between_content == null) {
     $theme_sidebar_space_between_content: 0;
 }

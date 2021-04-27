@@ -1,7 +1,12 @@
 @mixin layout($layout_type) {
     @if ($layout_type == fixed_Width) {
         #site_layout {
+            grid-template-areas: "Header" 
+                                 "Content" 
+                                 "Footer";
             grid-template-rows: auto 1fr auto;
+
+            @include css(gap, $layout_gap);
         }
         #header_layout,
         #content_layout,
@@ -33,6 +38,8 @@
                                  "Footer";
             grid-template-rows: auto 1fr auto;
 
+            @include css(gap, $layout_gap);
+
             & #header_layout,
             & #content_layout,
             & #footer_layout {
@@ -47,6 +54,8 @@
                                  "Content" 
                                  "Footer";
             grid-template-rows: auto 1fr auto;
+
+            @include css(gap, $layout_gap);
 
             & #header_layout,
             & #content_layout,
@@ -71,6 +80,8 @@
                                  "Content" 
                                  "Footer";
             grid-template-rows: auto 1fr auto;
+
+            @include css(gap, $layout_gap);
 
             & #header_layout,
             & #content_layout,

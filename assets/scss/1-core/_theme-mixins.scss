@@ -1,3 +1,11 @@
+// CSS checker for empty values
+
+@mixin css($rule, $value) {
+    @if ($value != "") and (strip-unit($value) != 0) {
+       #{$rule}: $value;
+    }
+}
+
 // Universal Margins
 
 @mixin margins($margin-top, $margin-right, $margin-bottom, $margin-left) {
@@ -63,11 +71,3 @@
         }
     }
 }
-
-// CSS checker for empty values
-
-@mixin css($rule, $value) {
-    @if ($value != "") {
-       #{$rule}: $value;
-    }
-  }

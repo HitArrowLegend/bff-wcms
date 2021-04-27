@@ -319,7 +319,7 @@ form:
                 tab: Page - Layout
                 type: dropdown
                 span: storm
-                cssClass: col-sm-8
+                cssClass: col-sm-5
                 options:
                     fixed_Width: Fixed Width
                     full_Width: Full Width
@@ -327,6 +327,29 @@ form:
                     custom: Custom Layout
                 default: default
                 assetVar: theme_layout_type  
+            layout_gap:
+                label: Gap between the Navigation, the Content and the Footer
+                comment: Choose a length
+                tab: Page - Layout
+                type: number
+                default: 2
+                span: storm
+                cssClass: col-sm-2
+                assetVar: theme_layout_gap
+            layout_gap_unit:
+                label: Unit
+                comment: Choose a unit
+                tab: Page - Layout
+                type: dropdown
+                span: storm
+                cssClass: col-sm-1
+                options: 
+                    px: px
+                    em: em
+                    rem: rem
+                    %: %
+                default: em
+                assetVar: theme_layout_gap_unit
             layout_type_max-page-width:
                 label: Max Page Width (in pixels)
                 comment: This setting will be applied to these following options:<ul><li class="help-block"style="display:list-item;margin-top:15px"><b>Default</b> and <b>Custom</b> - For the container in which the rest of your website is</li><li class="help-block"style="display:list-item"><b>Fixed Width</b> - For your entire page</li></ul>
