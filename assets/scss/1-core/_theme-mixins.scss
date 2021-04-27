@@ -1,38 +1,25 @@
 // Universal Margins
 
 @mixin margins($margin-top, $margin-right, $margin-bottom, $margin-left) {
-    @if ($margin-top == null) {
-        $margin-top : 0;
+    @if ((strip-unit($margin-top) == 0) and (strip-unit($margin-right) == 0) and (strip-unit($margin-bottom) == 0) and (strip-unit($margin-left) == 0)) {
     }
-    @if ($margin-right == null) {
-        $margin-right : 0;
-    }
-    @if ($margin-bottom == null) {
-        $margin-bottom : 0;
-    }
-    @if ($margin-left == null) {
-        $margin-left : 0;
-    }
-    @if ($margin-top == $margin-right == $margin-bottom == $margin-left == 0) {
-    }
-    @else if (($margin-top == 0) and ($margin-right == 0) and ($margin-bottom == 0) and ($margin-left > 0)) {
+    @else if ((strip-unit($margin-top) == 0) and (strip-unit($margin-right) == 0) and (strip-unit($margin-bottom) == 0) and (strip-unit($margin-left) > 0)) {
         margin-left: $margin-left;
     }
-    @else if (($margin-top == 0) and ($margin-left == 0) and ($margin-bottom == 0) and ($margin-right > 0)) {
+    @else if ((strip-unit($margin-top) == 0) and (strip-unit($margin-left) == 0) and (strip-unit($margin-bottom) == 0) and (strip-unit($margin-right) > 0)) {
         margin-right: $margin-right;
     }
-    @else if (($margin-right == 0) and ($margin-left == 0) and ($margin-bottom == 0) and ($margin-top > 0)) {
+    @else if ((strip-unit($margin-right) == 0) and (strip-unit($margin-left) == 0) and (strip-unit($margin-bottom) == 0) and (strip-unit($margin-top) > 0)) {
         margin-top: $margin-top;
     }
-    @else if (($margin-top == 0) and  ($margin-right == 0) and ($margin-left == 0) and ($margin-bottom > 0)) {
+    @else if ((strip-unit($margin-top) == 0) and (strip-unit($margin-right) == 0) and (strip-unit($margin-left) == 0) and (strip-unit($margin-bottom) > 0)) {
         margin-bottom: $margin-bottom;
     }
-    @else if (($margin-top > 0) or ($margin-right > 0) or ($margin-bottom > 0) or ($margin-left > 0)) {
-        
+    @else {
         @if (($margin-right == $margin-left) and ($margin-right != $margin-top) and ($margin-top != $margin-bottom)) {
             margin: $margin-top $margin-right $margin-bottom;
         }
-        @else if (($margin-top == $margin-bottom) and ($margin-right == $margin-left)) and ($margin-top != $margin-right) {
+        @else if (($margin-top == $margin-bottom) and ($margin-right == $margin-left) and ($margin-top != $margin-right)) {
             margin: $margin-top $margin-right;
         }
         @else if (($margin-top == $margin-bottom) and ($margin-right == $margin-left) and ($margin-top == $margin-right)) {
@@ -47,38 +34,25 @@
 // Universal Paddings
 
 @mixin paddings($padding-top, $padding-right, $padding-bottom, $padding-left) {
-    @if ($padding-top == null) {
-        $padding-top : 0;
+    @if ((strip-unit($padding-top) == 0) and (strip-unit($padding-right) == 0) and (strip-unit($padding-bottom) == 0) and (strip-unit($padding-left) == 0)) {
     }
-    @if ($padding-right == null) {
-        $padding-right : 0;
-    }
-    @if ($padding-bottom == null) {
-        $padding-bottom : 0;
-    }
-    @if ($padding-left == null) {
-        $padding-left : 0;
-    }
-    @if ($padding-top == $padding-right == $padding-bottom == $padding-left == 0) {
-    }
-    @else if (($padding-top == 0) and ($padding-right == 0) and ($padding-bottom == 0) and ($padding-left > 0)) {
+    @else if ((strip-unit($padding-top) == 0) and (strip-unit($padding-right) == 0) and (strip-unit($padding-bottom) == 0) and (strip-unit($padding-left) > 0)) {
         padding-left: $padding-left;
     }
-    @else if (($padding-top == 0) and ($padding-left == 0) and ($padding-bottom == 0) and ($padding-right > 0)) {
+    @else if ((strip-unit($padding-top) == 0) and (strip-unit($padding-left) == 0) and (strip-unit($padding-bottom) == 0) and (strip-unit($padding-right) > 0)) {
         padding-right: $padding-right;
     }
-    @else if (($padding-right == 0) and ($padding-left == 0) and ($padding-bottom == 0) and ($padding-top > 0)) {
+    @else if ((strip-unit($padding-right) == 0) and (strip-unit($padding-left) == 0) and (strip-unit($padding-bottom) == 0) and (strip-unit($padding-top) > 0)) {
         padding-top: $padding-top;
     }
-    @else if (($padding-top == 0) and  ($padding-right == 0) and ($padding-left == 0) and ($padding-bottom > 0)) {
+    @else if ((strip-unit($padding-top) == 0) and (strip-unit($padding-right) == 0) and (strip-unit($padding-left) == 0) and (strip-unit($padding-bottom) > 0)) {
         padding-bottom: $padding-bottom;
     }
-    @else if (($padding-top > 0) or ($padding-right > 0) or ($padding-bottom > 0) or ($padding-left > 0)) {
-        
+    @else {
         @if (($padding-right == $padding-left) and ($padding-right != $padding-top) and ($padding-top != $padding-bottom)) {
             padding: $padding-top $padding-right $padding-bottom;
         }
-        @else if (($padding-top == $padding-bottom) and ($padding-right == $padding-left)) and ($padding-top != $padding-right) {
+        @else if (($padding-top == $padding-bottom) and ($padding-right == $padding-left) and ($padding-top != $padding-right)) {
             padding: $padding-top $padding-right;
         }
         @else if (($padding-top == $padding-bottom) and ($padding-right == $padding-left) and ($padding-top == $padding-right)) {
@@ -89,6 +63,8 @@
         }
     }
 }
+
+// CSS checker for empty values
 
 @mixin css($rule, $value) {
     @if ($value != "") {

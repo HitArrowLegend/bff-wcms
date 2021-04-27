@@ -1112,8 +1112,8 @@ form:
                 availableColors: ['#1ABC9C', '#14A085', '#2FCC71','#26AE60','#3498DB','#2980B9','#9B59B6','#8D44AD','#34495E','#2B3E50','#F1C40F','#F39C13', '#E67E23', '#D35400', '#E74B3C', '#C03A2B', '#ECF0F1', '#BDC3C7', '#95A4A6', '#7E8C8D', '']
                 tab: Navigation - Style
                 default: rgb(27,28,41)
-                assetVar: 'theme_navBackgroundColor'
-                comment: Can be left empty. Variable is theme_navBackgroundColor
+                assetVar: 'theme_navigation_background_color'
+                comment: Can be left empty. Variable is theme_navigation_background_color
 
 
             navigation_margin_top:
@@ -1310,8 +1310,8 @@ form:
                 type: text
                 default: "inset 0px 0px 51px 0px rgb(255 255 255 / 10%), 0px 6px 18px 0px rgb(0 0 0 / 10%)"
                 tab: Navigation - Style
-                assetVar: theme_navigation_boxshadow
-                comment: Can be left empty. Variable is theme_navigation_boxshadow
+                assetVar: theme_navigation_box_shadow
+                comment: Can be left empty. Variable is theme_navigation_box_shadow
 
             ##
             section_navlinks_font:
@@ -1342,8 +1342,18 @@ form:
                 span: left
             navlinks_font_weight: 
                 label: Navlinks Font Weight (100 - 900)
-                comment: Can be left empty. Variable is theme_navlinks_font_weight
-                type: number
+                comment: Variable is theme_navlinks_font_weight
+                type: dropdown
+                options:
+                    100: "100"
+                    200: "200"
+                    300: "300"
+                    400: "400"
+                    500: "500"
+                    600: "600"
+                    700: "700"
+                    800: "800"
+                    900: "900"
                 tab: Navigation - Style
                 assetVar: theme_navlinks_font_weight
                 span: right

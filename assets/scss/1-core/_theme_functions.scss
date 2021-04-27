@@ -1,0 +1,21 @@
+@function strip-unit($number) {
+    @if not unitless($number) {
+      @return $number / ($number * 0 + 1);
+    }
+    @return $number;
+}
+
+@function unit($unit) {
+    @if ($unit == "em") {
+        @return 1em;
+    }
+    @else if ($unit == "px") {
+        @return 1px;
+    }    
+    @else if ($unit == "rem") {
+        @return 1rem;
+    }
+    @else if ($unit == "%") {
+        @return 1%;
+    }
+}
