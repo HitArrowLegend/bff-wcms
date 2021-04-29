@@ -76,3 +76,6 @@
 @if ($theme_navigation_padding_left == null) {
     $theme_navigation_padding_top: 0;
 }
+@if ($theme_navigation_mobile_height == null) {
+    $theme_navigation_mobile_height: 0;
+}

@@ -301,6 +301,70 @@ form:
                 tab: Color Palette
                 span: storm
                 cssClass: col-sm-6 col-md-3
+        # Colors 
+            # text_section
+            # text_color
+            # dimmed_text_color
+            # muted_text_color
+            # link_section
+            # link_color
+            # link_active
+            # link_hover_color
+            # link_visited
+            # page_section
+            # page_background
+            # content_background
+            # sidebar_background
+            # button_section
+            # button_activate
+            # button_text_color
+            # button_border_style
+            # button_border_width
+            # button_border_color
+            # button_primary_background
+            # button_secondary_background
+            # cta_button_activate
+            # cta_button_text_color
+            # cta_button_background
+            # cta_button_border_style
+            # cta_button_border_width
+            # cta_button_border_color
+            # input_section
+            # text_input_color
+            # text_input_background
+            # input_focused_background
+            # success_section
+            # success_text_color
+            # success_background
+            # success_border_style
+            # success_border_width
+            # success_border_color
+            # warning_section
+            # warning_text_color
+            # warning_background
+            # warning_border_style
+            # warning_border_width
+            # warning_border_color
+            # danger_section
+            # danger_text_color
+            # danger_background
+            # danger_border_style
+            # danger_border_width
+            # danger_border_color
+            # info_section
+            # info_text_color
+            # info_background
+            # info_border_style
+            # info_border_width
+            # info_border_color
+            # important_section
+            # important_text_color
+            # important_background
+            # important_border_style
+            # important_border_width
+            # important_border_color
+            # misc_section
+            # chrome_tab_background
                 
         # Layout
         
@@ -1021,9 +1085,76 @@ form:
                 tab: Typography
                 assetVar: theme_general_font_color
                 comment: variable is theme_general_font_color
-        
 
+            # typography
+            # UI Main Font
+            # UI Secondary Font
+            # Logo Font
+            # Navigation Links Font            
+            # Title Heading Font
+            # size section
+            # h1_size
+            # h1_unit
+            # h2 
+            # h2
+            # h3
+            # h3
+            # h4
+            # h4
+            # h5
+            # h5
+            # h6
+            # h6
+            # main_size
+            # main_unit
+            # small_size
+            # small_unit
+            # large_size
+            # large_unit
+            # display_1_use yes no
+            # display_1_size
+            # display_1_size
+            # display_2_use yes no
+            # display_2_size
+            # display_2_size
+            # display_3_use yes no
+            # display_3_size
+            # display_3_size
+            # display_4_use yes no
+            # display_4_size
+            # display_4_size
+            # weight_section
+            # main_weight
+            # light_weight
+            # large_weight
+            # Spacing_section
+            # line_height
+            # blockquote_section
+            # blockquote_background
+            # blockquote_paddings
+            # blockquote_font_size
+            # blockquote_color
+            # blockquote_text_align
+            # blockquote_footer
+            # blockquote_footer_font_size
+            # blockquote_footer_color
+            # blockquote_footer_style
+            # blockquote_footer_cite
+            # blockquote_footer_cite_font_size
+            # blockquote_footer_cite_style
         
+        # buttons_settings
+        # button_paddings
+        # buttons_border_radius
+
+        # Layout
+        # layout_responsive_settings
+        # extra_small_breakpoint
+        # small_breakpoint
+        # medium_breakpoint
+        # large_breakpoint
+        # extra_large_breakpoint
+
         # Navigation
             section_navigation_links: 
                 label: Navigation - Links
@@ -1335,6 +1466,8 @@ form:
                 default: em
                 assetVar: theme_navigation_padding_left_unit
 
+            #navigation fixed on top yes no
+
             ##
             section_navigation_boxshadow:
                 label: Box Shadow
@@ -1399,14 +1532,6 @@ form:
                 label: User / Mod Bar Settings
                 comment: Contains settings to manage the basic layout of your website
                 tab: User / Mod Bar
-                type: section
-                
-        # Sidebar
-        
-            section_sidebar: 
-                label: Sidebar Settings
-                comment: Contains settings to manage the basic layout of your website
-                tab: Sidebar
                 type: section
                 
         # Footer

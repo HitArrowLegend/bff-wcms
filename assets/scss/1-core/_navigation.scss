@@ -1,6 +1,6 @@
 #header_layout {
     @include css(background-color, $theme_navigation_background_color);
-    @include css(box-shadow,$theme_navigation_box_shadow);
+    @include css(box-shadow, $theme_navigation_box_shadow);
 }
 
 #navigation {
@@ -8,11 +8,11 @@
     align-items: center;
     gap: 1em; // Add Variable
     justify-content: space-between; // Add Variable
-    min-height: $theme_navigation_height+$theme_navigation_height_unit;
+    min-height: $navigation_height;
 
     @include paddings($navigation_padding_top, $navigation_padding_right, $navigation_padding_bottom, $navigation_padding_left); 
     // a { 
-    //     @include css(color, $theme_navFontColor);
+        //@include css(color, $theme_navFontColor);
     // }
     .logo { 
         grid-area: Logo;   
@@ -23,10 +23,8 @@
             @include css(color, $theme_logo_font_colors);
             @include css(font-size, $logo_font_size);
             transition: font-size 0.2s ease-in-out;
-                    //@include fontsize($theme_logoFontSize);
-                    //@include logo-font($theme_logoFontFamily);
-
-
+            //@include fontsize($theme_logoFontSize);
+            //@include logo-font($theme_logoFontFamily);
         }
     }   
     
@@ -54,12 +52,7 @@
 @media all and (max-width: 980px) { // Add Variable
 
     #navigation {
-        grid-template-areas:"Logo Burger";
-        
-        &.wrapper {
-            width: 100%;
-            min-height: $theme_navigation_mobile_height+$theme_navigation_mobile_height_unit;
-        }
+        min-height: $navigation_mobile_height;
         
         & .logo-link {
             //font-size: $logo-size-mobile;
@@ -73,9 +66,9 @@
             &.list {
                 background: $theme_page_background;
                 position: absolute;
-                top: $theme_navigation_mobile_height+$theme_navigation_mobile_height_unit;
+                top: $navigation_mobile_height;
                 left: 0;
-                height: calc(100vh - #{$theme_navigation_mobile_height}+$theme_navigation_mobile_height_unit);
+                height: calc(100vh - #{$navigation_mobile_height});
                 //@include navslide($nav-way);
                 
                 // This changes the speed when the nav is closing. 0 makes it disappear instantly.
@@ -127,10 +120,7 @@
         }
         
         .burger { 
-            display: inherit;
-            cursor: pointer;
-            grid-area: Burger;
-            justify-self: end;
+            display: block;
             transition: .2s ease-in-out;
             
             &.active {

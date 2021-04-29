@@ -107,6 +107,12 @@ $navigation_padding_right: $theme_navigation_padding_right * unit($theme_navigat
 $navigation_padding_bottom: $theme_navigation_padding_bottom * unit($theme_navigation_padding_bottom_unit);
 $navigation_padding_left: $theme_navigation_padding_left * unit($theme_navigation_padding_left_unit);
 //
+$navigation_mobile_height: $theme_navigation_mobile_height * unit($theme_navigation_mobile_height_unit);
+$navigation_height: $theme_navigation_height * unit($theme_navigation_height_unit);
+
+
+
+
 $logo_font_size: $theme_logo_font_size+em; // Change Variable Unit
 $navlinks_font_size: $theme_navlinks_font_size+em; // Change Variable Unit
 $content_wrapper_full_height: $theme_content_wrapper_full_height;
