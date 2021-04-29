@@ -687,6 +687,17 @@ form:
                 span: storm
                 cssClass: col-xs-6 col-sm-5
                 assetVar: theme_content_wrapper_border
+            content_wrapper_full_height:
+                label: Content Wrapper Full Height
+                commentAbove: Will be ignored if the Sidebar is not inside the Content Wrapper. THis option make the Content Wrapper use the full height of the website.
+                type: dropdown
+                options:
+                    yes: Yes
+                    no: No
+                tab: Content
+                span: storm
+                cssClass: col-xs-6 col-sm-5
+                assetVar: theme_content_wrapper_full_height
 
         #Sidebar
 

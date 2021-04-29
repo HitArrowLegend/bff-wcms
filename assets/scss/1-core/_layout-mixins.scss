@@ -167,6 +167,11 @@
                 @if ($theme_sidebar_inside_content_wrapper == no) {
                     grid-area: Content;
                 }
+                @else {
+                    @if ($content_wrapper_full_height == yes) {
+                        height: 100%;
+                    }
+                }
             }
         }
     }
