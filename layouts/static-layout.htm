@@ -1,0 +1,77 @@
+[staticPage]
+useContent = 1
+default = 0
+==
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Base Theme CSS -->
+        <link href="{{ ['assets/scss/theme.scss']|theme }}" rel="stylesheet">
+        <!-- Scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="http://team-legend.fr/themes/lgd-news/assets/js/copyright.js"></script>
+        {% framework extras %}
+        {% scripts %}
+    </head>
+    
+    <body>            
+        <div id="site_layout">
+            <header id="header_layout" class="page_header">
+                {% partial 'layouts/navigation' %}
+            </header>
+            <section id="content_layout">
+                <main id="content" class="main-content">
+                    {% if this.theme.content_inside_wrapper == "yes" %}
+                    <div class="content_wrapper">{% endif %}
+                        <div class="content">
+                            {# YOUR CONTENT GOES THERE #}
+        
+                                
+                                {% page %}
+                                    
+                                    
+                            {# END OF CONTENT SECTION #}
+                        </div>
+                        
+                        
+                    {% if this.theme.sidebar_activated == "yes" %}
+                        {% if this.theme.content_inside_wrapper == "yes" %}
+                            {% if this.theme.sidebar_inside_content_wrapper == "no" %}
+                                </div>
+                            {% endif %}
+                        {% endif %}
+                        {% if this.theme.sidebar_inside_content_wrapper == "no" or this.theme.content_inside_wrapper == "no" %}
+                        {% if this.theme.sidebar_inside_own_wrapper == "yes" %}
+                        <div class="sidebar_wrapper">
+                        {% endif %}
+                        {% endif %}
+                        <div class="sidebar">
+                            {# YOUR SIDEBAR CONTENT GOES THERE #}
+                                   
+                                    
+                                {% placeholder sidebar %}
+                                        
+                                        
+                            {# END OF SIDEBAR SECTION #}
+                        </div>
+                        {% if this.theme.sidebar_inside_wrapper == "no" %}
+                                {% if this.theme.sidebar_inside_content_wrapper == "no" %}
+                        {% if this.theme.sidebar_own_wrapper == "yes" %}
+                        </div>{% endif %}{% endif %}{% endif %}
+                    {% endif %}
+                    {% if this.theme.content_inside_wrapper == "yes" %}
+                        {% if this.theme.sidebar_inside_content_wrapper == "yes" %}
+                            </div>
+                        {% endif %}
+                    {% endif %}
+                </main>
+        </section>
+            <footer id="footer_layout">
+                <div>FOOTER</div>
+            </footer>
+            <script src="{{ 'assets/js/app.js'|theme }}"></script>
+        </div>
+    </body>
+</html>

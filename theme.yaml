@@ -528,17 +528,27 @@ form:
                 tab: Content
 
             content_inside_wrapper:
-                label: Content Wrapper
-                commentAbove: Choose if you want your content to be wrapped around a specific div. By default, this option is not activated.
-                tab: Content
-                type: dropdown
+                label: Activate content wrapper
+                CommentAbove: Choose if you want your content to be wrapped around a specific div. By default, this option is not activated.
                 span: storm
-                cssClass: col-lg-12
-                options:
-                    yes: Enabled
-                    no: Disabled
-                default: wrapped
+                tab: Content
+                cssClass: col-md-12
+                type: switch
+                default: 0
                 assetVar: $theme_content_inside_wrapper
+
+            # content_inside_wrapper:
+            #     label: Content Wrapper
+            #     commentAbove: Choose if you want your content to be wrapped around a specific div. By default, this option is not activated.
+            #     tab: Content
+            #     type: dropdown
+            #     span: storm
+            #     cssClass: col-lg-12
+            #     options:
+            #         yes: Enabled
+            #         no: Disabled
+            #     default: wrapped
+            #     assetVar: $theme_content_inside_wrapper
 
             content_wrapper_margin_top:
                 label: Margin-Top
@@ -549,6 +559,10 @@ form:
                 span: storm
                 cssClass: col-xs-5 col-sm-2
                 assetVar: theme_content_wrapper_margin_top
+                trigger:
+                    action: show
+                    field: content_inside_wrapper
+                    condition: checked
             content_wrapper_margin_top_unit:    
                 label: Unit
                 commentAbove: Choose a unit
@@ -563,6 +577,10 @@ form:
                     %: %
                 default: px
                 assetVar: theme_content_wrapper_margin_top_unit
+                trigger:
+                    action: show
+                    field: content_inside_wrapper
+                    condition: checked
             content_wrapper_margin_right:
                 label: Margin-Right
                 commentAbove: Define a length
@@ -572,6 +590,10 @@ form:
                 span: storm
                 cssClass: col-xs-5 col-sm-2
                 assetVar: theme_content_wrapper_margin_right
+                trigger:
+                    action: show
+                    field: content_inside_wrapper
+                    condition: checked
             content_wrapper_margin_right_unit: 
                 label: Unit
                 commentAbove: Choose a unit
@@ -586,6 +608,10 @@ form:
                     %: %
                 default: px
                 assetVar: theme_content_wrapper_margin_right_unit
+                trigger:
+                    action: show
+                    field: content_inside_wrapper
+                    condition: checked
             content_wrapper_margin_bottom:
                 label: Margin-Bottom
                 commentAbove: Define a length
@@ -595,6 +621,10 @@ form:
                 span: storm
                 cssClass: col-xs-5 col-sm-2
                 assetVar: theme_content_wrapper_margin_bottom
+                trigger:
+                    action: show
+                    field: content_inside_wrapper
+                    condition: checked
             content_wrapper_margin_bottom_unit:
                 label: Unit
                 commentAbove: Choose a unit
@@ -609,6 +639,10 @@ form:
                     %: %
                 default: px
                 assetVar: theme_content_wrapper_margin_bottom_unit
+                trigger:
+                    action: show
+                    field: content_inside_wrapper
+                    condition: checked
             content_wrapper_margin_left:
                 label: Margin-Left
                 commentAbove: Define a length
@@ -618,6 +652,10 @@ form:
                 span: storm
                 cssClass: col-xs-5 col-sm-2
                 assetVar: theme_content_wrapper_margin_left
+                trigger:
+                    action: show
+                    field: content_inside_wrapper
+                    condition: checked
             content_wrapper_margin_left_unit:
                 label: Unit
                 commentAbove: Choose a unit
@@ -632,6 +670,10 @@ form:
                     %: %
                 default: px
                 assetVar: theme_content_wrapper_margin_left_unit
+                trigger:
+                    action: show
+                    field: content_inside_wrapper
+                    condition: checked
             content_wrapper_padding_top:
                 label: Padding-Top
                 commentAbove: Define a length
@@ -641,6 +683,10 @@ form:
                 span: storm
                 cssClass: col-xs-5 col-sm-2
                 assetVar: theme_content_wrapper_padding_top
+                trigger:
+                    action: show
+                    field: content_inside_wrapper
+                    condition: checked
             content_wrapper_padding_top_unit:
                 label: Unit
                 commentAbove: Choose a unit
@@ -655,6 +701,10 @@ form:
                     %: %
                 default: px
                 assetVar: theme_content_wrapper_padding_top_unit
+                trigger:
+                    action: show
+                    field: content_inside_wrapper
+                    condition: checked
             content_wrapper_padding_right:
                 label: Padding-Right
                 commentAbove: Define a length
@@ -664,6 +714,10 @@ form:
                 span: storm
                 cssClass: col-xs-5 col-sm-2
                 assetVar: theme_content_wrapper_padding_right
+                trigger:
+                    action: show
+                    field: content_inside_wrapper
+                    condition: checked
             content_wrapper_padding_right_unit:
                 label: Unit
                 commentAbove: Choose a unit
@@ -678,6 +732,10 @@ form:
                     %: %
                 default: px
                 assetVar: theme_content_wrapper_padding_right_unit
+                trigger:
+                    action: show
+                    field: content_inside_wrapper
+                    condition: checked
             content_wrapper_padding_bottom:
                 label: Padding-Bottom
                 commentAbove: Define a length
@@ -687,6 +745,10 @@ form:
                 span: storm
                 cssClass: col-xs-5 col-sm-2
                 assetVar: theme_content_wrapper_padding_bottom
+                trigger:
+                    action: show
+                    field: content_inside_wrapper
+                    condition: checked
             content_wrapper_padding_bottom_unit:
                 label: Unit
                 commentAbove: Choose a unit
@@ -701,6 +763,10 @@ form:
                     %: %
                 default: px
                 assetVar: theme_content_wrapper_padding_bottom_unit
+                trigger:
+                    action: show
+                    field: content_inside_wrapper
+                    condition: checked
             content_wrapper_padding_left:
                 label: Padding-Left
                 commentAbove: Define a length
@@ -710,6 +776,10 @@ form:
                 span: storm
                 cssClass: col-xs-5 col-sm-2
                 assetVar: theme_content_wrapper_padding_left
+                trigger:
+                    action: show
+                    field: content_inside_wrapper
+                    condition: checked
             content_wrapper_padding_left_unit:
                 label: Unit
                 commentAbove: Choose a unit
@@ -724,6 +794,10 @@ form:
                     %: %
                 default: px
                 assetVar: theme_content_wrapper_padding_left_unit
+                trigger:
+                    action: show
+                    field: content_inside_wrapper
+                    condition: checked
             content_wrapper_background:
                 label: Background Color
                 commentAbove: Choose a background color
@@ -735,6 +809,10 @@ form:
                 span: storm
                 cssClass: col-xs-6 col-sm-2
                 assetVar: theme_content_wrapper_background
+                trigger:
+                    action: show
+                    field: content_inside_wrapper
+                    condition: checked
             content_wrapper_box_shadow:
                 label: Box Shadow
                 commentAbove: CSS Rule for your box_shadow
@@ -743,6 +821,10 @@ form:
                 span: storm
                 cssClass: col-xs-6 col-sm-5
                 assetVar: theme_content_wrapper_box_shadow
+                trigger:
+                    action: show
+                    field: content_inside_wrapper
+                    condition: checked
             content_wrapper_border:
                 label: Border
                 commentAbove: CSS Rule for your border
@@ -751,6 +833,10 @@ form:
                 span: storm
                 cssClass: col-xs-6 col-sm-5
                 assetVar: theme_content_wrapper_border
+                trigger:
+                    action: show
+                    field: content_inside_wrapper
+                    condition: checked
             content_wrapper_full_height:
                 label: Content Wrapper Full Height
                 commentAbove: Will be ignored if the Sidebar is not inside the Content Wrapper. THis option make the Content Wrapper use the full height of the website.
@@ -762,6 +848,10 @@ form:
                 span: storm
                 cssClass: col-xs-6 col-sm-5
                 assetVar: theme_content_wrapper_full_height
+                trigger:
+                    action: show
+                    field: content_inside_wrapper
+                    condition: checked
 
         #Sidebar
 
@@ -775,13 +865,10 @@ form:
                 label: Sidebar
                 commentAbove: Enabling this option will add a sidebar on your website
                 tab: Sidebar
-                type: dropdown
+                type: switch
                 span: storm
                 cssClass: col-md-3
-                options:
-                    yes: Enabled
-                    no: Disabled
-                default: Disabled
+                default: 0
                 assetVar: theme_sidebar_activated
             sidebar_position: 
                 label: Sidebar position
@@ -795,19 +882,11 @@ form:
                     left: Left
                 Default: Right
                 assetVar: theme_sidebar_position
-            sidebar_inside_content_wrapper:
-                label: Sidebar inside Content Wrapper
-                commentAbove: Setting this option to "No" will make the sidebar float next to the main content wrapper.
-                commentHtml: true
-                tab: Sidebar
-                type: Dropdown
-                span: storm
-                cssClass: col-md-3
-                options: 
-                    yes: Yes
-                    no: No
-                Default: Yes
-                assetVar: theme_sidebar_inside_content_wrapper
+                trigger:
+                    action: show
+                    field: sidebar_activated
+                    condition: checked
+
             sidebar_width:
                 label: Sidebar Width
                 commentAbove: Specify the Sidebar Width (in pixels)
@@ -817,19 +896,70 @@ form:
                 span: storm
                 cssClass: col-md-3
                 assetVar: theme_sidebar_width
+                trigger:
+                    action: show
+                    field: sidebar_activated
+                    condition: checked
+            sidebar_space_between_content:
+                label: Gap between Content and Sidebar
+                commentAbove: Specify a Length
+                type: number
+                tab: Sidebar
+                span: storm
+                default: 2
+                cssClass: col-xs-6 col-sm-2
+                assetVar: theme_sidebar_space_between_content
+                trigger:
+                    action: show
+                    field: sidebar_activated
+                    condition: checked
+            sidebar_space_between_content_unit:
+                label: Unit
+                commentAbove: Pick a Unit
+                tab: Sidebar
+                type: dropdown
+                span: storm
+                cssClass: col-sm-1
+                options:
+                    px: px
+                    em: em
+                    rem: rem
+                    %: %
+                default: em
+                assetVar: theme_sidebar_space_between_content_unit
+                trigger:
+                    action: show
+                    field: sidebar_activated
+                    condition: checked                
+            sidebar_inside_content_wrapper:
+                label: Sidebar inside Content Wrapper
+                commentAbove: Setting this option to "No" will make the sidebar float next to the main content wrapper.
+                tab: Sidebar
+                type: switch
+                span: storm
+                cssClass: col-md-6
+                Default: 1
+                assetVar: theme_sidebar_inside_content_wrapper
+                trigger:
+                    action: show
+                    field: sidebar_activated
+                    condition: checked
+
             sidebar_inside_own_wrapper: 
                 label: Sidebar Wrapper
                 commentAbove: Enabling this option will add a wrapper around the sidebar only. Will be ignored if Sidebar > Sidebar inside Content Wrapper is set to Yes. 
                 commentHtml: true
                 tab: Sidebar
-                type: Dropdown
+                type: switch
                 span: storm
-                cssClass: col-md-12
-                options: 
-                    yes: Yes
-                    no: No
-                default: No
+                cssClass: col-md-6
+                default: 0
                 assetVar: theme_sidebar_inside_own_wrapper
+                trigger:
+                    action: show
+                    field: sidebar_inside_content_wrapper
+                    condition: unchecked
+                    
             sidebar_wrapper_margin_top:
                 label: Margin-Top
                 type: number
@@ -839,6 +969,10 @@ form:
                 span: storm
                 cssClass: col-xs-5 col-sm-2
                 assetVar: theme_sidebar_wrapper_margin_top
+                trigger:
+                    action: show
+                    field: sidebar_inside_own_wrapper
+                    condition: checked
             sidebar_wrapper_margin_top_unit: 
                 label: Unit
                 commentAbove: Choose a unit
@@ -853,6 +987,10 @@ form:
                     %: %
                 default: px
                 assetVar: theme_sidebar_wrapper_margin_top_unit
+                trigger:
+                    action: show
+                    field: sidebar_inside_own_wrapper
+                    condition: checked
             sidebar_wrapper_margin_right:
                 label: Margin-Right
                 commentAbove: Define a length
@@ -861,6 +999,10 @@ form:
                 span: storm
                 cssClass: col-xs-5 col-sm-2
                 assetVar: theme_sidebar_wrapper_margin_right
+                trigger:
+                    action: show
+                    field: sidebar_inside_own_wrapper
+                    condition: checked
             sidebar_wrapper_margin_right_unit: 
                 label: Unit
                 commentAbove: Choose a unit
@@ -875,6 +1017,10 @@ form:
                     %: %
                 default: px
                 assetVar: theme_sidebar_wrapper_margin_right_unit
+                trigger:
+                    action: show
+                    field: sidebar_inside_own_wrapper
+                    condition: checked
             sidebar_wrapper_margin_bottom:
                 label: Margin-Bottom
                 commentAbove: Define a length
@@ -883,6 +1029,10 @@ form:
                 span: storm
                 cssClass: col-xs-5 col-sm-2
                 assetVar: theme_sidebar_wrapper_margin_bottom
+                trigger:
+                    action: show
+                    field: sidebar_inside_own_wrapper
+                    condition: checked
             sidebar_wrapper_margin_bottom_unit:
                 label: Unit
                 commentAbove: Choose a unit
@@ -897,6 +1047,10 @@ form:
                     %: %
                 default: px
                 assetVar: theme_sidebar_wrapper_margin_bottom_unit
+                trigger:
+                    action: show
+                    field: sidebar_inside_own_wrapper
+                    condition: checked
             sidebar_wrapper_margin_left:
                 label: Margin-Left
                 commentAbove: Define a length
@@ -905,6 +1059,10 @@ form:
                 span: storm
                 cssClass: col-xs-5 col-sm-2
                 assetVar: theme_sidebar_wrapper_margin_left
+                trigger:
+                    action: show
+                    field: sidebar_inside_own_wrapper
+                    condition: checked
             sidebar_wrapper_margin_left_unit:
                 label: Unit
                 commentAbove: Choose a unit
@@ -919,6 +1077,10 @@ form:
                     %: %
                 default: px
                 assetVar: theme_sidebar_wrapper_margin_left_unit
+                trigger:
+                    action: show
+                    field: sidebar_inside_own_wrapper
+                    condition: checked
             sidebar_wrapper_padding_top:
                 label: Padding-Top
                 commentAbove: Define a length
@@ -928,6 +1090,10 @@ form:
                 span: storm
                 cssClass: col-xs-5 col-sm-2
                 assetVar: theme_sidebar_wrapper_padding_top
+                trigger:
+                    action: show
+                    field: sidebar_inside_own_wrapper
+                    condition: checked
             sidebar_wrapper_padding_top_unit:
                 label: Unit
                 commentAbove: Choose a unit
@@ -942,6 +1108,10 @@ form:
                     %: %
                 default: px
                 assetVar: theme_sidebar_wrapper_padding_top_unit
+                trigger:
+                    action: show
+                    field: sidebar_inside_own_wrapper
+                    condition: checked
             sidebar_wrapper_padding_right:
                 label: Padding-Right
                 commentAbove: Define a length
@@ -950,6 +1120,10 @@ form:
                 span: storm
                 cssClass: col-xs-5 col-sm-2
                 assetVar: theme_sidebar_wrapper_padding_right
+                trigger:
+                    action: show
+                    field: sidebar_inside_own_wrapper
+                    condition: checked
             sidebar_wrapper_padding_right_unit:
                 label: Unit
                 commentAbove: Choose a unit
@@ -964,6 +1138,10 @@ form:
                     %: %
                 default: px
                 assetVar: theme_sidebar_wrapper_padding_right_unit
+                trigger:
+                    action: show
+                    field: sidebar_inside_own_wrapper
+                    condition: checked
             sidebar_wrapper_padding_bottom:
                 label: Padding-Bottom
                 commentAbove: Define a length
@@ -972,6 +1150,10 @@ form:
                 span: storm
                 cssClass: col-xs-5 col-sm-2
                 assetVar: theme_sidebar_wrapper_padding_bottom
+                trigger:
+                    action: show
+                    field: sidebar_inside_own_wrapper
+                    condition: checked
             sidebar_wrapper_padding_bottom_unit:
                 label: Unit
                 commentAbove: Choose a unit
@@ -986,6 +1168,10 @@ form:
                     %: %
                 default: px
                 assetVar: theme_sidebar_wrapper_padding_bottom_unit
+                trigger:
+                    action: show
+                    field: sidebar_inside_own_wrapper
+                    condition: checked
             sidebar_wrapper_padding_left:
                 label: Padding-Left
                 commentAbove: Define a length
@@ -994,6 +1180,10 @@ form:
                 span: storm
                 cssClass: col-xs-5 col-sm-2
                 assetVar: theme_sidebar_wrapper_padding_left
+                trigger:
+                    action: show
+                    field: sidebar_inside_own_wrapper
+                    condition: checked
             sidebar_wrapper_padding_left_unit:
                 label: Unit
                 commentAbove: Choose a unit
@@ -1008,9 +1198,27 @@ form:
                     %: %
                 default: px
                 assetVar: theme_sidebar_wrapper_padding_left_unit
+                trigger:
+                    action: show
+                    field: sidebar_inside_own_wrapper
+                    condition: checked
+            sidebar_wrapper_height:
+                label: Wrapper Height fit Sidebar Content
+                commentAbove: this option will make the wrapper adjust its height based on the sidebar content instead of the content wrapper content.
+                type: switch
+                tab: Sidebar    
+                default: 0
+                trigger:
+                    action: show
+                    field: sidebar_inside_own_wrapper
+                    condition: checked
+                assetVar: theme_sidebar_wrapper_height
+                span: storm
+                cssClass: col-md-3
             sidebar_wrapper_background:
                 label: Background Color
                 type: colorpicker
+                commentAbove: background color for the sidebar wrapper
                 availableColors: []
                 allowEmpty: true
                 default: FFFFFF
@@ -1018,42 +1226,36 @@ form:
                 span: storm
                 cssClass: col-xs-6 col-sm-3
                 assetVar: theme_sidebar_wrapper_background
+                trigger:
+                    action: show
+                    field: sidebar_inside_own_wrapper
+                    condition: checked
             sidebar_wrapper_box_shadow:
                 label: Box Shadow
+                commentAbove: CSS rule for the box shadow
                 type: text
                 tab: Sidebar
                 span: storm
                 cssClass: col-xs-6 col-sm-3
                 assetVar: theme_sidebar_box_shadow
+                trigger:
+                    action: show
+                    field: sidebar_inside_own_wrapper
+                    condition: checked
             sidebar_wrapper_border:
                 label: Border
                 type: text
+                commentAbove: CSS Rule for the border
                 tab: Sidebar
                 span: storm
                 cssClass: col-xs-6 col-sm-3
                 assetVar: theme_sidebar_border
-            sidebar_space_between_content:
-                label: Space between Sidebar and Content
-                type: number
-                tab: Sidebar
-                span: storm
-                default: 2
-                cssClass: col-xs-6 col-sm-2
-                assetVar: theme_sidebar_space_between_content
-            sidebar_space_between_content_unit:
-                label: Unit
-                comment: Pick a Unit
-                tab: Sidebar
-                type: dropdown
-                span: storm
-                cssClass: col-sm-1
-                options:
-                    px: px
-                    em: em
-                    rem: rem
-                    %: %
-                default: em
-                assetVar: theme_sidebar_space_between_content_unit
+                trigger:
+                    action: show
+                    field: sidebar_inside_own_wrapper
+                    condition: checked
+
+
         # Typography
         
             section_typography: 
@@ -1465,6 +1667,209 @@ form:
                     %: %
                 default: em
                 assetVar: theme_navigation_padding_left_unit
+            navigation_transition:
+                label: Transition
+                commentAbove: Transition when opening the navigation on mobile view
+                options: 
+                    right: From Right
+                    left: From Left
+                    top: From Top
+                    bottom: From Bottom
+                default: left
+                tab: Navigation - Style
+                span: storm
+                cssClass: col-sm-12
+                assetVar: theme_navigation_transition
+
+            navigation_mobile_spacing:
+                label: Mobile View - Navigation bar spacing settings
+                type: section
+                tab: Navigation - Style
+            
+            navigation_mobile_margin_top:
+                label: Margin-Top
+                type: number
+                commentAbove: Define a length
+                tab: Navigation - Style
+                default: 0
+                span: storm
+                cssClass: col-xs-5 col-sm-2
+                assetVar: theme_navigation_mobile_margin_top
+            navigation_mobile_margin_top_unit: 
+                label: Unit
+                commentAbove: Choose a unit
+                tab: Navigation - Style
+                type: dropdown
+                span: storm
+                cssClass: col-sm-1
+                options: 
+                    px: px
+                    em: em
+                    rem: rem
+                    %: %
+                default: em
+                assetVar: theme_navigation_mobile_margin_top_unit
+            navigation_mobile_margin_right:
+                label: Margin-Right
+                commentAbove: Define a length
+                type: number
+                tab: Navigation - Style
+                default: 0
+                span: storm
+                cssClass: col-xs-5 col-sm-2
+                assetVar: theme_navigation_mobile_margin_right
+            navigation_mobile_margin_right_unit: 
+                label: Unit
+                commentAbove: Choose a unit
+                tab: Navigation - Style
+                type: dropdown
+                span: storm
+                cssClass: col-sm-1
+                options: 
+                    px: px
+                    em: em
+                    rem: rem
+                    %: %
+                default: em
+                assetVar: theme_navigation_mobile_margin_right_unit
+            navigation_mobile_margin_bottom:
+                label: Margin-Bottom
+                commentAbove: Define a length
+                type: number
+                default: 0
+                tab: Navigation - Style
+                span: storm
+                cssClass: col-xs-5 col-sm-2
+                assetVar: theme_navigation_mobile_margin_bottom
+            navigation_mobile_margin_bottom_unit:
+                label: Unit
+                commentAbove: Choose a unit
+                tab: Navigation - Style
+                type: dropdown
+                span: storm
+                cssClass: col-sm-1
+                options: 
+                    px: px
+                    em: em
+                    rem: rem
+                    %: %
+                default: em
+                assetVar: theme_navigation_mobile_margin_bottom_unit
+            navigation_mobile_margin_left:
+                label: Margin-Left
+                commentAbove: Define a length
+                type: number
+                default: 0
+                tab: Navigation - Style
+                span: storm
+                cssClass: col-xs-5 col-sm-2
+                assetVar: theme_navigation_mobile_margin_left
+            navigation_mobile_margin_left_unit:
+                label: Unit
+                commentAbove: Choose a unit
+                tab: Navigation - Style
+                type: dropdown
+                span: storm
+                cssClass: col-sm-1
+                options: 
+                    px: px
+                    em: em
+                    rem: rem
+                    %: %
+                default: em
+                assetVar: theme_navigation_mobile_margin_left_unit
+            navigation_mobile_padding_top:
+                label: Padding-Top
+                commentAbove: Define a length
+                type: number
+                tab: Navigation - Style
+                default: 0
+                span: storm
+                cssClass: col-xs-5 col-sm-2
+                assetVar: theme_navigation_mobile_padding_top
+            navigation_mobile_padding_top_unit:
+                label: Unit
+                commentAbove: Choose a unit
+                tab: Navigation - Style
+                type: dropdown
+                span: storm
+                cssClass: col-sm-1
+                options: 
+                    px: px
+                    em: em
+                    rem: rem
+                    %: %
+                default: em
+                assetVar: theme_navigation_mobile_padding_top_unit
+            navigation_mobile_padding_right:
+                label: Padding-Right
+                commentAbove: Define a length
+                type: number
+                tab: Navigation - Style
+                default: 2
+                span: storm
+                cssClass: col-xs-5 col-sm-2
+                assetVar: theme_navigation_mobile_padding_right
+            navigation_mobile_padding_right_unit:
+                label: Unit
+                commentAbove: Choose a unit
+                tab: Navigation - Style
+                type: dropdown
+                span: storm
+                cssClass: col-sm-1
+                options: 
+                    px: px
+                    em: em
+                    rem: rem
+                    %: %
+                default: em
+                assetVar: theme_navigation_mobile_padding_right_unit
+            navigation_mobile_padding_bottom:
+                label: Padding-Bottom
+                commentAbove: Define a length
+                type: number
+                tab: Navigation - Style
+                default: 0
+                span: storm
+                cssClass: col-xs-5 col-sm-2
+                assetVar: theme_navigation_mobile_padding_bottom
+            navigation_mobile_padding_bottom_unit:
+                label: Unit
+                commentAbove: Choose a unit
+                tab: Navigation - Style
+                type: dropdown
+                span: storm
+                cssClass: col-sm-1
+                options: 
+                    px: px
+                    em: em
+                    rem: rem
+                    %: %
+                default: em
+                assetVar: theme_navigation_mobile_padding_bottom_unit
+            navigation_mobile_padding_left:
+                label: Padding-Left
+                commentAbove: Define a length
+                type: number
+                tab: Navigation - Style
+                default: 2
+                span: storm
+                cssClass: col-xs-5 col-sm-2
+                assetVar: theme_navigation_mobile_padding_left
+            navigation_mobile_padding_left_unit:
+                label: Unit
+                commentAbove: Choose a unit
+                tab: Navigation - Style
+                type: dropdown
+                span: storm
+                cssClass: col-sm-1
+                options: 
+                    px: px
+                    em: em
+                    rem: rem
+                    %: %
+                default: em
+                assetVar: theme_navigation_mobile_padding_left_unit
 
             #navigation fixed on top yes no
 
@@ -1485,20 +1890,42 @@ form:
                 label: Navlinks Font Properties
                 type: section
                 tab: Navigation - Style
+            navlinks_font_family_import:
+                label: Google Font Link
+                commentAbove: Copy Paste the Google Font Link to include it to your website.
+                type: text
+                tab: Navigation - Style
+                span: storm
+                cssClass: col-sm-3
             navlinks_font_family: 
                 label: Navlinks Font Family
-                comment: Can be left empty. Variable is theme_navlinks_font_family
+                commentAbove: Can be left empty. Variable is theme_navlinks_font_family
                 type: text
                 tab: Navigation - Style
                 assetVar: theme_navlinks_font_family
-                span: left
+                span: storm
+                cssClass: col-sm-3
             navlinks_font_size: 
                 label: Navlinks Font Size (in pixels)
-                comment: Can be left empty. Variable is theme_navlinks_font_size
+                commentAbove: Can be left empty. Variable is theme_navlinks_font_size
                 type: number
                 tab: Navigation - Style
                 assetVar: theme_navlinks_font_size
-                span: right
+                span: storm
+                cssClass: col-sm-5
+            navlinks_font_size_unit:
+                label: Unit
+                commentAbove: Choose a unit
+                tab: Navigation - Style
+                type: dropdown
+                span: storm
+                cssClass: col-sm-1
+                options: 
+                    px: px
+                    em: em
+                    rem: rem
+                default: em
+                assetVar: theme_navlinks_font_size_unit
             navlinks_font_color:
                 label: Navlinks Font Color
                 comment: Can be left empty. Variable is theme_navlinks_font_color

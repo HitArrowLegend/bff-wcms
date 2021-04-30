@@ -1,0 +1,14 @@
+@media all and (max-width: 1180px) {
+    #site_layout #header_layout {
+        grid-template-areas: "Navigation-Container";
+        grid-template-columns: 1fr;
+    }
+    #site_layout #content_layout {
+        grid-template-areas: "Main-Container";
+        grid-template-columns: 1fr;
+    }
+    #site_layout #footer_layout {
+        grid-template-areas: "Footer-Container";
+        grid-template-columns: 1fr;
+    }
+}

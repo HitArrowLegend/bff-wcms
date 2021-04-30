@@ -1,3 +1,6 @@
+[staticPage]
+useContent = 1
+default = 0
 ==
 <!doctype html>
 <html lang="fr">
@@ -8,6 +11,7 @@
         <!-- Base Theme CSS -->
         <link href="{{ ['assets/scss/theme.scss']|theme }}" rel="stylesheet">
         <!-- Scripts -->
+        {{ this.theme.navlinks_font_family_import | raw }}
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="http://team-legend.fr/themes/lgd-news/assets/js/copyright.js"></script>
         {% framework extras %}
@@ -21,10 +25,12 @@
             </header>
             <section id="content_layout">
                 {% page %}
+                {% placeholder sidebar %}
         </section>
             <footer id="footer_layout">
                 <div>FOOTER</div>
             </footer>
+            <script src="{{ 'assets/js/app.js'|theme }}"></script>
         </div>
     </body>
 </html>

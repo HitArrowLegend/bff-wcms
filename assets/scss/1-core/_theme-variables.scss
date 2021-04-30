@@ -67,6 +67,8 @@ $sidebar_wrapper: $theme_sidebar_inside_own_wrapper;
 $sidebar_activated: $theme_sidebar_activated;
 $sidebar_position: $theme_sidebar_position;
 $sidebar_width: $theme_sidebar_width;
+$sidebar_wrapper_height: $theme_sidebar_wrapper_height;
+
 //
 $content_wrapper_background: $theme_content_wrapper_background;
 $content_wrapper_box_shadow: $theme_content_wrapper_box_shadow;
@@ -109,10 +111,21 @@ $navigation_padding_left: $theme_navigation_padding_left * unit($theme_navigatio
 //
 $navigation_mobile_height: $theme_navigation_mobile_height * unit($theme_navigation_mobile_height_unit);
 $navigation_height: $theme_navigation_height * unit($theme_navigation_height_unit);
+//
+$navigation_mobile_margin_top: $theme_navigation_mobile_margin_top * unit(+$theme_navigation_mobile_margin_top_unit);
+$navigation_mobile_margin_right: $theme_navigation_mobile_margin_right * unit($theme_navigation_mobile_margin_right_unit);
+$navigation_mobile_margin_bottom: $theme_navigation_mobile_margin_bottom * unit($theme_navigation_mobile_margin_bottom_unit);
+$navigation_mobile_margin_left: $theme_navigation_mobile_margin_left * unit($theme_navigation_mobile_margin_left_unit);
+//
+$navigation_mobile_padding_top: $theme_navigation_mobile_padding_top * unit($theme_navigation_mobile_padding_top_unit);
+$navigation_mobile_padding_right: $theme_navigation_mobile_padding_right * unit($theme_navigation_mobile_padding_right_unit);
+$navigation_mobile_padding_bottom: $theme_navigation_mobile_padding_bottom * unit($theme_navigation_mobile_padding_bottom_unit);
+$navigation_mobile_padding_left: $theme_navigation_mobile_padding_left * unit($theme_navigation_mobile_padding_left_unit);
 
-
-
+$navigation_transition: $theme_navigation_transition;
 
 $logo_font_size: $theme_logo_font_size+em; // Change Variable Unit
-$navlinks_font_size: $theme_navlinks_font_size+em; // Change Variable Unit
+$navlinks_font_size: $theme_navlinks_font_size * unit($theme_navlinks_font_size_unit); // Change Variable Unit
+$navlinks_font_weight: $theme_navlinks_font_weight;
+$navlinks_font_color: $theme_navlinks_font_color;
 $content_wrapper_full_height: $theme_content_wrapper_full_height;

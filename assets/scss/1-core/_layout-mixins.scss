@@ -132,9 +132,9 @@
 }
 
 @mixin main-layout {
-    @if ($sidebar_activated == yes) {
-        @if ($content_wrapper == yes) {
-            @if ($sidebar_content_wrapper == yes) {
+    @if ($sidebar_activated == 1) {
+        @if ($content_wrapper == 1) {
+            @if ($sidebar_content_wrapper == 1) {
                 .content_wrapper {
                     @include content-layout;
                 }
@@ -154,7 +154,7 @@
 }
 
 @mixin content-wrapper {
-    @if ($content_wrapper == yes) {
+    @if ($content_wrapper == 1) {
         .content_wrapper {
             @include margins($content_wrapper_margin_top, $content_wrapper_margin_right, $content_wrapper_margin_bottom, $content_wrapper_margin_left);
             @include paddings($content_wrapper_padding_top, $content_wrapper_padding_right, $content_wrapper_padding_bottom, $content_wrapper_padding_left);
@@ -163,12 +163,12 @@
             @include css(box-shadow, $content_wrapper_box_shadow);
             @include css(border, $content_wrapper_border);
 
-            @if ($sidebar_activated == yes) {
-                @if ($theme_sidebar_inside_content_wrapper == no) {
+            @if ($sidebar_activated == 1) {
+                @if ($sidebar_content_wrapper == 0) {
                     grid-area: Content;
                 }
                 @else {
-                    @if ($content_wrapper_full_height == yes) {
+                    @if ($content_wrapper_full_height == 1) {
                         height: 100%;
                     }
                 }
@@ -176,7 +176,7 @@
         }
     }
     @else {
-        @if ($sidebar_activated == yes) {
+        @if ($sidebar_activated == 1) {
             .content {
                 grid-area: Content;
             }
@@ -185,8 +185,9 @@
 }
 
 @mixin sidebar-wrapper {
-    @if ($sidebar_activated == yes) {
-        @if ($sidebar_wrapper == yes) {
+    @if ($sidebar_activated == 1) {
+        @if ($sidebar_content_wrapper == 0) {
+        @if ($sidebar_wrapper == 1) {
             .sidebar_wrapper {
                 @include margins($sidebar_wrapper_margin_top, $sidebar_wrapper_margin_right, $sidebar_wrapper_margin_bottom, $sidebar_wrapper_margin_left);
                 @include paddings($sidebar_wrapper_padding_top, $sidebar_wrapper_padding_right, $sidebar_wrapper_padding_bottom, $sidebar_wrapper_padding_left);
@@ -195,6 +196,10 @@
                 @include css(box-shadow, $sidebar_box_shadow);
                 @include css(border, $sidebar_border);
 
+                @if ($sidebar_wrapper_height == 1) {
+                    height: min-content;
+                }
+
                 grid-area: Sidebar;
             }
         }
@@ -202,7 +207,7 @@
             .sidebar {
                 grid-area: Sidebar;
             }
-        }
+        }}
     }
 }
 

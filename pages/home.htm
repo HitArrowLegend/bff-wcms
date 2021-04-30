@@ -4,7 +4,7 @@ layout = "main-layout"
 is_hidden = 0
 ==
 <main id="content" class="main-content">
-    {% if this.theme.content_inside_wrapper == "yes" %}
+    {% if this.theme.content_inside_wrapper == 1 %}
     <div class="content_wrapper">{% endif %}
         <div class="content">
             {# YOUR CONTENT GOES THERE #}
@@ -17,14 +17,14 @@ is_hidden = 0
         </div>
         
         
-    {% if this.theme.sidebar_activated == "yes" %}
-        {% if this.theme.content_inside_wrapper == "yes" %}
-            {% if this.theme.sidebar_inside_content_wrapper == "no" %}
+    {% if this.theme.sidebar_activated == 1 %}
+        {% if this.theme.content_inside_wrapper == 1 %}
+            {% if this.theme.sidebar_inside_content_wrapper == 0 %}
                 </div>
             {% endif %}
         {% endif %}
-        {% if this.theme.sidebar_inside_content_wrapper == "no" or this.theme.content_inside_wrapper == "no" %}
-        {% if this.theme.sidebar_inside_own_wrapper == "yes" %}
+        {% if this.theme.sidebar_inside_content_wrapper == 0 or this.theme.content_inside_wrapper == 0 %}
+        {% if this.theme.sidebar_inside_own_wrapper == 1 %}
         <div class="sidebar_wrapper">
         {% endif %}
         {% endif %}
@@ -37,13 +37,13 @@ is_hidden = 0
                         
             {# END OF SIDEBAR SECTION #}
         </div>
-        {% if this.theme.sidebar_inside_wrapper == "no" %}
-                {% if this.theme.sidebar_inside_content_wrapper == "no" %}
-        {% if this.theme.sidebar_own_wrapper == "yes" %}
+        {% if this.theme.sidebar_inside_wrapper == 0 %}
+                {% if this.theme.sidebar_inside_content_wrapper == 0 %}
+        {% if this.theme.sidebar_own_wrapper == 1 %}
         </div>{% endif %}{% endif %}{% endif %}
     {% endif %}
-    {% if this.theme.content_inside_wrapper == "yes" %}
-        {% if this.theme.sidebar_inside_content_wrapper == "yes" %}
+    {% if this.theme.content_inside_wrapper == 1 %}
+        {% if this.theme.sidebar_inside_content_wrapper == 1 %}
             </div>
         {% endif %}
     {% endif %}

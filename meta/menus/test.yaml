@@ -1,0 +1,13 @@
+items:
+    -
+        title: Accueil
+        nesting: 0
+        type: static-page
+        code: ''
+        reference: accueil
+        replace: 0
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+name: test

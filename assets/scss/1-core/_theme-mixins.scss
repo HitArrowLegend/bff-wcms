@@ -71,3 +71,23 @@
         }
     }
 }
+
+@mixin navslide($direction) {
+    
+    @if $direction == top {
+        transform: translateY(calc(-100% - #{$navigation_mobile_height}));
+    } 
+    @else if $direction == right {
+        transform: translateX(100%);
+    } 
+    @else if $direction == bottom {
+        transform: translateY(100%);
+    } 
+    @else if $direction == left {
+        transform: translateX(-100%);
+    } 
+    @else if $direction == reset {
+        transform: translateX(0%) translateY(0%);
+    }
+
+}

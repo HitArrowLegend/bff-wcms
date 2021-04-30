@@ -79,3 +79,33 @@
 @if ($theme_navigation_mobile_height == null) {
     $theme_navigation_mobile_height: 0;
 }
+@if ($theme_navigation_mobile_margin_top == null) {
+    $theme_navigation_margin_top: 0;
+}
+@if ($theme_navigation_mobile_margin_right == null) {
+    $theme_navigation_margin_right: 0;
+}
+@if ($theme_navigation_mobile_margin_bottom == null) {
+    $theme_navigation_margin_bottom: 0;
+}
+@if ($theme_navigation_mobile_margin_left == null) {
+    $theme_navigation_margin_left: 0;
+}
+@if ($theme_navigation_mobile_padding_top == null) {
+    $theme_navigation_padding_top: 0;
+}
+@if ($theme_navigation_mobile_padding_right == null) {
+    $theme_navigation_padding_top: 0;
+}
+@if ($theme_navigation_mobile_padding_bottom == null) {
+    $theme_navigation_padding_top: 0;
+}
+@if ($theme_navigation_mobile_padding_left == null) {
+    $theme_navigation_padding_top: 0;
+}
+@if ($theme_navigation_mobile_height == null) {
+    $theme_navigation_mobile_height: 0;
+}
+@if ($theme_navlinks_font_size == null) {
+    $theme_navlinks_font_size: 0;
+}
