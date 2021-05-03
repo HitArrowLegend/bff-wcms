@@ -1,3 +1,10 @@
+body {
+    font-family: $theme_general_font_family, sans-serif;
+    @include css(color, $brand_neutral);
+    @include css(font-size, $global_font_size);
+    line-height: 1.5; // Add a variable
+}
+
 #site_layout {
     @include margins(0, 0, 0, 0);
     @include paddings(0, 0, 0, 0);
@@ -13,6 +20,9 @@
 @include content-wrapper;
 
 @include google-font-load($theme_navlinks_font_family);
+@include google-font-load($theme_general_font_family);
+@include google-font-load($theme_logo_font_family);
+
 
 // #content_layout, .content_wrapper {
 //     height: 20000px;
@@ -23,27 +33,177 @@
 // --------------------------------------------------
 
 ::selection {
-    color : $txt_selection_clr;
-    background: $txt_selection_bg;
+    @include css(color, $txt_selection_clr);
+    @include css(background-color, $txt_selection_bg);
 }
 
 a {
     color: $link_clr;
-    font-size: 2rem;
-    font-weight: 500;
     text-decoration: none;
     
     &:hover,
     &:active { 
         color: $link_hover_clr;
     }
-}
-
-$contextual_colors: (muted: $muted, success: $success, important: $important, info: $info, warning: $warning, danger: $danger);
-
-@each $context, $colors in $contextual_colors {
-    .#{$context} {
-        color: #{$colors};
-        &-bg { background: #{$colors}; color: #FFFFFF; }
+    &:visited {
+        color: $link_visited;
     }
 }
+
+// $contextual_colors: (muted: $txt_muted_clr, success: $success, important: $important, info: $info, warning: $warning, danger: $danger);
+
+
+
+// @each $context, $colors in $contextual_colors {
+//     .#{$context} {
+//         color: #{$colors};
+//         &-bg { background: #{$colors}; color: #FFFFFF; }
+//     }
+// }
+
+
+// $red: #FF0000;
+// $colors: (primary: $brand_primary, secondary: $brand_secondary, accent: $brand_accent, red: $red);
+// $shades: ("50": 96%, "100": 85%, "200": 64%, "300": 43% , "400": 21%, "500": 0 , "600": -18.8%, "700": -38.56%, "800": -54.7% , "900": -75.5%);
+
+// @each $color, $variable in $colors {
+//     @each $class, $shade in $shades {
+//         .bg-#{$color}-#{$class} {
+//             background-color: scale-color(#{$variable}, $lightness: $shade);
+//         }
+//         .text-#{$color}-#{$class} {
+//             color: scale-color(#{$variable}, $lightness: $shade);
+//         }
+//         .border-#{$color}-#{$class} {
+//             color: scale-color(#{$variable}, $lightness: $shade);
+//         }
+//     }
+// }
+
+// .important {
+//     color: $important;
+//     background: $important_background;
+//     padding: 2em;
+//     border: 2px solid $important;
+//     border-radius: 0.5em;
+//     margin-bottom: 1em;
+// }
+// .danger {
+//     color: $danger;
+//     background: $danger_background;
+//     padding: 2em;
+//     border: 2px solid $danger;
+//     border-radius: 0.5em;
+//     margin-bottom: 1em;
+// }
+// .info {
+//     color: $info;
+//     background: $info_background;
+//     padding: 2em;
+//     border: 2px solid $info;
+//     border-radius: 0.5em;
+//     margin-bottom: 1em;
+// }
+// .success {
+//     color: $success;
+//     background: $success_background;
+//     padding: 2em;
+//     border: 2px solid $success;
+//     border-radius: 0.5em;
+//     margin-bottom: 1em;
+// }
+// .warning {
+//     color: $warning;
+//     background: $warning_background;
+//     padding: 2em;
+//     border: 2px solid $warning;
+//     border-radius: 0.5em;
+//     margin-bottom: 1em;
+// }
+
+
+@if ($button_activated == 1) {
+    button {
+        font-family : inherit;
+        font-size: 1em;
+        cursor: pointer;
+        @include css(color, $button_text_color);
+        @include css(background-color, $button_primary_background);
+        @include css(border-width, $button_border_width);
+        @include css(border-style, $button_border_style);
+        @include css(border-color, $button_border_color);
+        @include paddings($button_padding_top, $button_padding_right, $button_padding_bottom, $button_padding_left);
+
+        &:hover {background-color: darken($button_primary_background, 5%);}
+        &:active {background-color: darken($button_primary_background, 10%);}
+    }
+    @if ($cta_button_activated == 1) {
+        .cta {
+            @include css(color, $cta_button_text_color);
+            @include css(background-color, $cta_button_background);
+            @include css(border-width, $cta_button_border_width);
+            @include css(border-style, $cta_button_border_style);
+            @include css(border-color, $cta_button_border_color);
+
+            &:hover {background-color: darken($cta_button_background, 5%);}
+            &:active {background-color: darken($cta_button_background, 10%);}
+        }
+    }
+}
+
+body {
+    box-shadow: inset 0px 0px 51px 0px rgb(255 255 255 / 10%), 0px 6px 18px 0px rgb(0 0 0 / 10%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

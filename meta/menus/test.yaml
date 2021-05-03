@@ -3,10 +3,27 @@ items:
         title: Accueil
         nesting: 0
         type: static-page
+        url: null
         code: ''
         reference: accueil
+        cmsPage: null
         replace: 0
         viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Présentation
+        nesting: 0
+        type: static-page
+        code: ''
+        reference: presentationa
+        replace: 0
+        viewBag:
+            locale:
+                fr:
+                    title: ''
+                    url: ''
             isHidden: '0'
             cssClass: ''
             isExternal: '0'

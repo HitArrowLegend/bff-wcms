@@ -1,3 +1,9 @@
 @mixin google-font-load($name) {
 	@import url('https://fonts.googleapis.com/css?family=#{$name}');
 }
+@mixin text-transform($type) {
+	@if ($type == capitalize) {text-transform: $type;}
+	@else if ($type == uppercase) {text-transform: $type;}
+	@else if ($type == lowercase) {text-transform: $type;}
+	@else {}
+}

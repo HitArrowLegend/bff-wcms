@@ -12,120 +12,219 @@
 // --------------------------------------------------
 //
 //
-$brand_primary :       $theme_primary_color;
-$brand_secondary :     $theme_secondary_color;
-$brand_accent :        $theme_accent_color;
+$brand_primary :                    $theme_primary_color;
+$brand_secondary :                  $theme_secondary_color;
+$brand_accent :                     $theme_accent_color;
+$brand_neutral:                     $theme_neutral_color;
+//
+$brand_primary_shade_1:             $theme_primary_color_shade_1;
+$brand_primary_shade_2:             $theme_primary_color_shade_2;
+$brand_primary_shade_3:             $theme_primary_color_shade_3;
+//
+$brand_secondary_shade_1:           $theme_secondary_color_shade_1;
+$brand_secondary_shade_2:           $theme_secondary_color_shade_2;
+$brand_secondary_shade_3:           $theme_secondary_color_shade_3;
+//
+$brand_accent_shade_1:              $theme_accent_color_shade_1;
+$brand_accent_shade_2:              $theme_accent_color_shade_2;
+$brand_accent_shade_3:              $theme_accent_color_shade_3;
+//
+$brand_neutral_shade_1:             $theme_neutral_color_shade_1;
+$brand_neutral_shade_2:             $theme_neutral_color_shade_2;
+$brand_neutral_shade_3:             $theme_neutral_color_shade_3;
 //
 //
 // Layout Colors
 // --------------------------------------------------
 //
-$main_bg :             $theme_page_background;
-$content_bg :          $theme_content_background;
+//
+$main_bg :                          $theme_page_background;
+// EDIT
+// EDIT
 //
 //
-// Contextual Colors
+// Text Colors
 // --------------------------------------------------
 //
-$txt_clr :             $theme_text_color;
-$link_clr :            $theme_link_color;
-$link-hover-clr :      darken($link_clr, 15%);
 //
-$secondary_text_clr :  $theme_secondary_text_color;
-$txt_light :           $theme_text_color_light;
+$txt_clr :                          $theme_text_color;
+$txt_muted_clr:                     $theme_muted_color;
+$txt_dimmed_clr:                    $theme_dimmed_color;
+$txt_secondary:                     $theme_secondary_text_color;
+$txt_light:                         $theme_text_color_light;
 //
-$muted :               $theme_muted;
-$success :             $theme_success;
-$important :           $theme_important;
-$info :                $theme_info;
-$warning :             $theme_warning;
-$danger :              $theme_danger;
+$link_clr :                         $theme_link_color;
+$link-hover-clr :                   darken($link_clr, 15%);
+$link_active:                       $theme_link_color_active;
+$link_visited:                      $theme_link_color_visited;
+//
+$secondary_text_clr :               $theme_secondary_text_color;
+$txt_light :                        $theme_text_color_light;
+//
+$success :                          $theme_success_color;
+$success_background :               $theme_success_background_color;
+//
+$important :                        $theme_important_color;
+$important_background :             $theme_important_background_color;
+//
+$info :                             $theme_info_color;
+$info_background :                  $theme_info_background_color;
+//
+$warning :                          $theme_warning_color;
+$warning_background :               $theme_warning_background_color;
+//
+$danger :                           $theme_danger_color;
+$danger_background :                $theme_danger_background_color;
 //
 //
 // Misc
 // --------------------------------------------------
 //
-$txt_selection_clr :   $theme_text_selection_color;
-$txt_selection_bg :    $theme_text_selection_background;
+//
+$txt_selection_clr :                $theme_text_selection_color;
+$txt_selection_bg :                 $theme_text_selection_background;
 //
 // 
 // E N D   O F   C O L O R
 // --------------------------------------------------
+// B U T T O N S
+//
+// Basic Buttons Settings
+// --------------------------------------------------
+//
+//
+$button_activated:                  $theme_button_activated;
+//
+$button_text_color:                 $theme_button_text_color;
+$button_primary_background:         $theme_button_primary_background;
+$button_secondary_background:       $theme_button_secondary_background;
+//
+$button_border_width:               $theme_button_border_width * unit($theme_button_border_width_unit);
+$button_border_style:               $theme_button_border_style;
+$button_border_color:               $theme_button_border_color;
+$button_secondary_border_color:     $theme_button_secondary_border_color;
+//
+$button_padding_top:                $theme_button_padding_top * unit($theme_button_padding_top_unit);
+$button_padding_right:              $theme_button_padding_right * unit($theme_button_padding_right_unit);
+$button_padding_bottom:             $theme_button_padding_bottom * unit($theme_button_padding_bottom_unit);
+$button_padding_left:               $theme_button_padding_left * unit($theme_button_padding_left_unit);
+//
+//
+// CTA Buttons Settings
+// --------------------------------------------------
+//
+//
+$cta_button_activated:              $theme_cta_button_activated;
+$cta_button_text_color:             $theme_cta_button_text_color;
+$cta_button_background:             $theme_cta_button_background;
+//
+$cta_button_border_width:           $theme_cta_button_border_width * unit($theme_cta_button_border_width_unit);
+$cta_button_border_style:           $theme_cta_button_border_style;
+$cta_button_border_color:           $theme_cta_button_border_color;
+//
+//
+// E N D   O F   B U T T O N S
+// --------------------------------------------------
 // L A Y O U T S
 //
+// Layout Settings
+// --------------------------------------------------
+//
+//
+$layout_type :                      $theme_layout_type;
+$page_width :                       $theme_page_width * unit($theme_page_width_unit);
+$layout_gap:                        $theme_layout_gap * unit($theme_layout_gap_unit);
+//
+//
+// Additional Options : Custom Layouts
+// --------------------------------------------------
+//
+//
+$custom_nav_type:                   $theme_custom_nav_type;
+$custom_nav_width:                  $theme_custom_nav_fixed_width * unit($theme_custom_nav_fixed_width_unit);
+//
+$custom_footer_type:                $theme_custom_footer_type;
+$custom_footer_width:               $theme_custom_footer_fixed_width * unit($theme_custom_footer_fixed_width_unit);
+//
 // 
+// E N D   O F   L A Y O U T
+// --------------------------------------------------
+// C O N T E N T
 //
-$layout_type : $theme_layout_type;
-$page_width : $theme_page_width;
-$page_width_unit : $theme_page_width_unit;
-$layout_gap: $theme_layout_gap * unit($theme_layout_gap_unit);
+// Content Wrapper
+// --------------------------------------------------
 //
-$content_wrapper: $theme_content_inside_wrapper;
 //
-$sidebar_content_wrapper: $theme_sidebar_inside_content_wrapper;
-$sidebar_wrapper: $theme_sidebar_inside_own_wrapper;
-$sidebar_activated: $theme_sidebar_activated;
-$sidebar_position: $theme_sidebar_position;
-$sidebar_width: $theme_sidebar_width;
-$sidebar_wrapper_height: $theme_sidebar_wrapper_height;
+$content_wrapper:                   $theme_content_inside_wrapper;
+//
+$sidebar_content_wrapper:           $theme_sidebar_inside_content_wrapper;
+$sidebar_wrapper:                   $theme_sidebar_inside_own_wrapper;
+$sidebar_activated:                 $theme_sidebar_activated;
+$sidebar_position:                  $theme_sidebar_position;
+$sidebar_width:                     $theme_sidebar_width * unit($theme_sidebar_width_unit);
+$sidebar_wrapper_height:            $theme_sidebar_wrapper_height;
+//
+$content_wrapper_background:        $theme_content_wrapper_background;
+$content_wrapper_box_shadow:        $theme_content_wrapper_box_shadow;
+$content_wrapper_border:            $theme_content_wrapper_border;
+//
+$sidebar_wrapper_background:        $theme_sidebar_wrapper_background;
+$sidebar_box_shadow:                $theme_sidebar_box_shadow;
+$sidebar_border:                    $theme_sidebar_border;
+$sidebar_space_between_content:     $theme_sidebar_space_between_content * unit($theme_sidebar_space_between_content_unit);
+//
+$content_wrapper_margin_top:        $theme_content_wrapper_margin_top * unit($theme_content_wrapper_margin_top_unit);
+$content_wrapper_margin_right:      $theme_content_wrapper_margin_right * unit($theme_content_wrapper_margin_right_unit);
+$content_wrapper_margin_bottom:     $theme_content_wrapper_margin_bottom * unit($theme_content_wrapper_margin_bottom_unit);
+$content_wrapper_margin_left:       $theme_content_wrapper_margin_left * unit($theme_content_wrapper_margin_left_unit);
+//
+$content_wrapper_padding_top:       $theme_content_wrapper_padding_top * unit($theme_content_wrapper_padding_top_unit);
+$content_wrapper_padding_right:     $theme_content_wrapper_padding_right * unit($theme_content_wrapper_padding_right_unit);
+$content_wrapper_padding_bottom:    $theme_content_wrapper_padding_bottom * unit($theme_content_wrapper_padding_bottom_unit);
+$content_wrapper_padding_left:      $theme_content_wrapper_padding_left * unit($theme_content_wrapper_padding_left_unit);
+//
+$sidebar_wrapper_margin_top:        $theme_sidebar_wrapper_margin_top * unit($theme_sidebar_wrapper_margin_top_unit);
+$sidebar_wrapper_margin_right:      $theme_sidebar_wrapper_margin_right * unit($theme_sidebar_wrapper_margin_right_unit);
+$sidebar_wrapper_margin_bottom:     $theme_sidebar_wrapper_margin_bottom * unit($theme_sidebar_wrapper_margin_bottom_unit);
+$sidebar_wrapper_margin_left:       $theme_sidebar_wrapper_margin_left * unit($theme_sidebar_wrapper_margin_left_unit);
+//
+$sidebar_wrapper_padding_top:       $theme_sidebar_wrapper_padding_top * unit($theme_sidebar_wrapper_padding_top_unit);
+$sidebar_wrapper_padding_right:     $theme_sidebar_wrapper_padding_right * unit($theme_sidebar_wrapper_padding_right_unit);
+$sidebar_wrapper_padding_bottom:    $theme_sidebar_wrapper_padding_bottom * unit($theme_sidebar_wrapper_padding_bottom_unit);
+$sidebar_wrapper_padding_left:      $theme_sidebar_wrapper_padding_left * unit($theme_sidebar_wrapper_padding_left_unit);
+//
+$navigation_margin_top:             $theme_navigation_margin_top * unit(+$theme_navigation_margin_top_unit);
+$navigation_margin_right:           $theme_navigation_margin_right * unit($theme_navigation_margin_right_unit);
+$navigation_margin_bottom:          $theme_navigation_margin_bottom * unit($theme_navigation_margin_bottom_unit);
+$navigation_margin_left:            $theme_navigation_margin_left * unit($theme_navigation_margin_left_unit);
+//
+$navigation_padding_top:            $theme_navigation_padding_top * unit($theme_navigation_padding_top_unit);
+$navigation_padding_right:          $theme_navigation_padding_right * unit($theme_navigation_padding_right_unit);
+$navigation_padding_bottom:         $theme_navigation_padding_bottom * unit($theme_navigation_padding_bottom_unit);
+$navigation_padding_left:           $theme_navigation_padding_left * unit($theme_navigation_padding_left_unit);
+//
+$navigation_mobile_height:          $theme_navigation_mobile_height * unit($theme_navigation_mobile_height_unit);
+$navigation_height:                 $theme_navigation_height * unit($theme_navigation_height_unit);
+//
+$navigation_mobile_margin_top:      $theme_navigation_mobile_margin_top * unit(+$theme_navigation_mobile_margin_top_unit);
+$navigation_mobile_margin_right:    $theme_navigation_mobile_margin_right * unit($theme_navigation_mobile_margin_right_unit);
+$navigation_mobile_margin_bottom:   $theme_navigation_mobile_margin_bottom * unit($theme_navigation_mobile_margin_bottom_unit);
+$navigation_mobile_margin_left:     $theme_navigation_mobile_margin_left * unit($theme_navigation_mobile_margin_left_unit);
+//
+$navigation_mobile_padding_top:     $theme_navigation_mobile_padding_top * unit($theme_navigation_mobile_padding_top_unit);
+$navigation_mobile_padding_right:   $theme_navigation_mobile_padding_right * unit($theme_navigation_mobile_padding_right_unit);
+$navigation_mobile_padding_bottom:  $theme_navigation_mobile_padding_bottom * unit($theme_navigation_mobile_padding_bottom_unit);
+$navigation_mobile_padding_left:    $theme_navigation_mobile_padding_left * unit($theme_navigation_mobile_padding_left_unit);
 
-//
-$content_wrapper_background: $theme_content_wrapper_background;
-$content_wrapper_box_shadow: $theme_content_wrapper_box_shadow;
-$content_wrapper_border:$theme_content_wrapper_border;
-//
-$sidebar_wrapper_background: $theme_sidebar_wrapper_background;
-$sidebar_box_shadow: $theme_sidebar_box_shadow;
-$sidebar_border: $theme_sidebar_border;
-$sidebar_space_between_content: $theme_sidebar_space_between_content * unit($theme_sidebar_space_between_content_unit);
-//
-$content_wrapper_margin_top: $theme_content_wrapper_margin_top * unit($theme_content_wrapper_margin_top_unit);
-$content_wrapper_margin_right: $theme_content_wrapper_margin_right * unit($theme_content_wrapper_margin_right_unit);
-$content_wrapper_margin_bottom: $theme_content_wrapper_margin_bottom * unit($theme_content_wrapper_margin_bottom_unit);
-$content_wrapper_margin_left: $theme_content_wrapper_margin_left * unit($theme_content_wrapper_margin_left_unit);
-//
-$content_wrapper_padding_top: $theme_content_wrapper_padding_top * unit($theme_content_wrapper_padding_top_unit);
-$content_wrapper_padding_right: $theme_content_wrapper_padding_right * unit($theme_content_wrapper_padding_right_unit);
-$content_wrapper_padding_bottom: $theme_content_wrapper_padding_bottom * unit($theme_content_wrapper_padding_bottom_unit);
-$content_wrapper_padding_left: $theme_content_wrapper_padding_left * unit($theme_content_wrapper_padding_left_unit);
-//
-$sidebar_wrapper_margin_top: $theme_sidebar_wrapper_margin_top * unit($theme_sidebar_wrapper_margin_top_unit);
-$sidebar_wrapper_margin_right: $theme_sidebar_wrapper_margin_right * unit($theme_sidebar_wrapper_margin_right_unit);
-$sidebar_wrapper_margin_bottom: $theme_sidebar_wrapper_margin_bottom * unit($theme_sidebar_wrapper_margin_bottom_unit);
-$sidebar_wrapper_margin_left: $theme_sidebar_wrapper_margin_left * unit($theme_sidebar_wrapper_margin_left_unit);
-//
-$sidebar_wrapper_padding_top: $theme_sidebar_wrapper_padding_top * unit($theme_sidebar_wrapper_padding_top_unit);
-$sidebar_wrapper_padding_right: $theme_sidebar_wrapper_padding_right * unit($theme_sidebar_wrapper_padding_right_unit);
-$sidebar_wrapper_padding_bottom: $theme_sidebar_wrapper_padding_bottom * unit($theme_sidebar_wrapper_padding_bottom_unit);
-$sidebar_wrapper_padding_left: $theme_sidebar_wrapper_padding_left * unit($theme_sidebar_wrapper_padding_left_unit);
-//
-$navigation_margin_top: $theme_navigation_margin_top * unit(+$theme_navigation_margin_top_unit);
-$navigation_margin_right: $theme_navigation_margin_right * unit($theme_navigation_margin_right_unit);
-$navigation_margin_bottom: $theme_navigation_margin_bottom * unit($theme_navigation_margin_bottom_unit);
-$navigation_margin_left: $theme_navigation_margin_left * unit($theme_navigation_margin_left_unit);
-//
-$navigation_padding_top: $theme_navigation_padding_top * unit($theme_navigation_padding_top_unit);
-$navigation_padding_right: $theme_navigation_padding_right * unit($theme_navigation_padding_right_unit);
-$navigation_padding_bottom: $theme_navigation_padding_bottom * unit($theme_navigation_padding_bottom_unit);
-$navigation_padding_left: $theme_navigation_padding_left * unit($theme_navigation_padding_left_unit);
-//
-$navigation_mobile_height: $theme_navigation_mobile_height * unit($theme_navigation_mobile_height_unit);
-$navigation_height: $theme_navigation_height * unit($theme_navigation_height_unit);
-//
-$navigation_mobile_margin_top: $theme_navigation_mobile_margin_top * unit(+$theme_navigation_mobile_margin_top_unit);
-$navigation_mobile_margin_right: $theme_navigation_mobile_margin_right * unit($theme_navigation_mobile_margin_right_unit);
-$navigation_mobile_margin_bottom: $theme_navigation_mobile_margin_bottom * unit($theme_navigation_mobile_margin_bottom_unit);
-$navigation_mobile_margin_left: $theme_navigation_mobile_margin_left * unit($theme_navigation_mobile_margin_left_unit);
-//
-$navigation_mobile_padding_top: $theme_navigation_mobile_padding_top * unit($theme_navigation_mobile_padding_top_unit);
-$navigation_mobile_padding_right: $theme_navigation_mobile_padding_right * unit($theme_navigation_mobile_padding_right_unit);
-$navigation_mobile_padding_bottom: $theme_navigation_mobile_padding_bottom * unit($theme_navigation_mobile_padding_bottom_unit);
-$navigation_mobile_padding_left: $theme_navigation_mobile_padding_left * unit($theme_navigation_mobile_padding_left_unit);
+$navigation_transition:             $theme_navigation_transition;
 
-$navigation_transition: $theme_navigation_transition;
-
-$logo_font_size: $theme_logo_font_size+em; // Change Variable Unit
-$navlinks_font_size: $theme_navlinks_font_size * unit($theme_navlinks_font_size_unit); // Change Variable Unit
-$navlinks_font_weight: $theme_navlinks_font_weight;
-$navlinks_font_color: $theme_navlinks_font_color;
-$content_wrapper_full_height: $theme_content_wrapper_full_height;
+$logo_outside_navigation:           $theme_logo_outside_navigation;
+$logo_font_size:                    $theme_logo_font_size * unit($theme_logo_font_size_unit);
+$logo_color:                        $theme_logo_color;
+$logo_font_weight:                  $theme_logo_font_weight;
+$navlinks_font_size:                $theme_navlinks_font_size * unit($theme_navlinks_font_size_unit); 
+$navlinks_font_weight:              $theme_navlinks_font_weight;
+$navlinks_color:                    $theme_navlinks_color;
+$navlinks_text_transform:           $theme_navlinks_text_transform;
+$content_wrapper_full_height:       $theme_content_wrapper_full_height;
+$global_font_size:                  $theme_global_font_size * unit($theme_global_font_size_unit);

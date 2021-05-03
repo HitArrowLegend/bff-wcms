@@ -1,9 +1,17 @@
 [viewBag]
 ==
-<nav id="navigation">
-    <div class="logo">
+{% if this.theme.logo_outside_navigation == "1" %}
+    <div id="logo">
         <a href="#">{{ this.theme.website_name }}</a>
     </div>
+{% endif %}
+<nav id="navigation">
+    {% if this.theme.logo_outside_navigation == "0" %}
+        <div class="logo">
+            <a href="#">{{ this.theme.website_name }}</a>
+        </div>
+    {% endif %}
+
     {% if this.page.id == 'tag-view' %}
         <ul id="menu" class="list extended">
     {% else %}

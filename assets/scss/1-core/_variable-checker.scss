@@ -1,3 +1,7 @@
+//
+// Prevents number variables to be null. If it is null, it will be 0 and it won't be rendered
+//
+
 @if ($theme_layout_gap == null) {
     $theme_layout_gap: 0;
 }
@@ -51,6 +55,9 @@
 }
 @if ($theme_sidebar_wrapper_padding_left == null) {
     $theme_sidebar_wrapper_padding_left: 0;
+}
+@if ($theme_sidebar_width == null) {
+    $theme_sidebar_width: 0;
 }
 @if ($theme_navigation_margin_top == null) {
     $theme_navigation_margin_top: 0;
@@ -108,4 +115,28 @@
 }
 @if ($theme_navlinks_font_size == null) {
     $theme_navlinks_font_size: 0;
+}
+@if ($theme_logo_font_size == null) {
+    $theme_logo_font_size: 0;
+}
+@if ($theme_button_border_width == null) {
+    $theme_button_border_width: 0;
+}
+@if ($theme_button_padding_top == null) {
+    $theme_button_padding_top: 0;
+}
+@if ($theme_button_padding_right == null) {
+    $theme_button_padding_right: 0;
+}
+@if ($theme_button_padding_bottom == null) {
+    $theme_button_padding_bottom: 0;
+}
+@if ($theme_button_padding_left == null) {
+    $theme_button_padding_left: 0;
+}
+@if ($theme_cta_button_border_width == null) {
+    $theme_cta_button_border_width: 0;
+}
+@if ($theme_global_font_size == null) {
+    $theme_global_font_size: 0;
 }

@@ -1,7 +1,7 @@
 #header_layout {
     @include css(background-color, $theme_navigation_background_color);
     @include css(box-shadow, $theme_navigation_box_shadow);
-    position: sticky;
+    position: sticky; // Add a variable
     top: 0;
 }
 
@@ -12,24 +12,18 @@
     justify-content: space-between; // Add Variable
     min-height: $navigation_height;
 
-
-    @include paddings($navigation_padding_top, $navigation_padding_right, $navigation_padding_bottom, $navigation_padding_left); 
+    @if ($layout_type == fixed_Width) {
+        @media screen and (max-width: $page_width) {
+            @include paddings($navigation_padding_top, $navigation_padding_right, $navigation_padding_bottom, $navigation_padding_left); 
+        }
+    }
+    @else {
+        @include paddings($navigation_padding_top, $navigation_padding_right, $navigation_padding_bottom, $navigation_padding_left); 
+    }
+    
     // a { 
         //@include css(color, $theme_navFontColor);
     // }
-    .logo { 
-        grid-area: Logo;   
-        justify-self: start;
-        align-self: center;
-
-        a {
-            @include css(color, $theme_logo_font_colors);
-            @include css(font-size, $logo_font_size);
-            transition: font-size 0.2s ease-in-out;
-            //@include fontsize($theme_logoFontSize);
-            //@include logo-font($theme_logoFontFamily);
-        }
-    }   
     
     #menu.list {
         display: inline-flex;
@@ -38,17 +32,50 @@
     }
     
     .list-item {
-        font-family: $theme_navlinks_font_family, sans-serif;
+        @include css(font-family, $theme_navlinks_font_family);
         //text-transform: $nav-text-transform;
         a { 
             @include css(font-size, $navlinks_font_size);
-            font-weight: $navlinks_font_weight;
-            color: $navlinks_font_color;
+            @include css(font-weight,$navlinks_font_weight);
+            @include css(color, $navlinks_color);
+            @include text-transform($navlinks_text_transform);
         }
     }
     
     .burger { 
         display: none;
+    }
+}
+
+@if ($logo_outside_navigation == 0) {
+    #navigation {
+        #logo { 
+            justify-self: start;
+            align-self: center;
+
+            a {
+                @include css(color, $logo_color);
+                @include css(font-size, $logo_font_size);
+                @include css(font-weight, $logo_font_weight);
+                transition: font-size 0.2s ease-in-out;
+                font-family: $theme_logo_font_family, sans-serif;
+            }
+        }
+    }
+}
+@else {
+    #logo { 
+        justify-self: center; // Add Variable
+        align-self: center;
+        grid-area: Logo;
+
+        a {
+            @include css(color, $logo_color);
+            @include css(font-size, $logo_font_size);
+            @include css(font-weight, $logo_font_weight);
+            transition: font-size 0.2s ease-in-out;
+            font-family: $theme_logo_font_family, sans-serif;
+        }
     }
 }
 
@@ -60,9 +87,10 @@
 
         @include paddings($navigation_mobile_padding_top,$navigation_mobile_padding_right,$navigation_mobile_padding_bottom,$navigation_mobile_padding_left);
         @include margins($navigation_mobile_margin_top,$navigation_mobile_margin_right,$navigation_mobile_margin_bottom,$navigation_mobile_margin_left);        
-        
-        & .logo-link {
-            //font-size: $logo-size-mobile;
+        @if ($logo_outside_navigation == 0) {
+            & .logo-link {
+                //font-size: $logo-size-mobile;
+            }
         }
         
         & .list-item a {

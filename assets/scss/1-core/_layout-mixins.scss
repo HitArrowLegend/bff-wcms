@@ -12,10 +12,15 @@
         #content_layout,
         #footer_layout {
             display: grid ;
-            grid-template-columns: 1fr $theme_page_width+$page_width_unit 1fr; 
+            grid-template-columns: 1fr $page_width 1fr; 
         }
         #header_layout {
-            grid-template-areas: ". Navigation-Container .";
+            @if ($logo_outside_navigation == 1) {
+                grid-template-areas:  ". Logo ." ". Navigation-Container .";
+            }
+            @else {
+                grid-template-areas:  ". Navigation-Container .";
+            }
 
             nav { grid-area: Navigation-Container; }
         }
@@ -64,7 +69,7 @@
             }
             #content_layout {
                 grid-template-areas: ". Main-Container .";
-                grid-template-columns: 1fr $theme_page_width+px 1fr; 
+                grid-template-columns: 1fr $page_width 1fr; 
 
                 >main { grid-area: Main-Container; }
             }
@@ -72,9 +77,6 @@
     }
     @else if ($layout_type == custom) {
 
-        $custom_nav_type: $theme_custom_nav_type;
-        $custom_footer_type: $theme_custom_footer_type;
-        
         #site_layout {
             grid-template-areas: "Header" 
                                  "Content" 
@@ -91,15 +93,25 @@
             
             @if ($custom_nav_type == fixed_width) {
                 #header_layout {
-                    grid-template-areas: ". Navigation-Container .";
-                    grid-template-columns: 1fr $theme_custom_nav_fixed_width+px 1fr;
+                    @if ($logo_outside_navigation == 1) {
+                        grid-template-areas:  ". Logo ." ". Navigation-Container .";
+                    }
+                    @else {
+                        grid-template-areas:  ". Navigation-Container .";
+                    }
+                    grid-template-columns: 1fr $custom_nav_width 1fr;
 
                     nav { grid-area: Navigation-Container; }
                 }
             }
             @else if ($custom_nav_type == full_width) {
                 #header_layout {
-                    grid-template-areas: "Navigation-Container";
+                    @if ($logo_outside_navigation == 1) {
+                        grid-template-areas:  "Logo" "Navigation-Container";
+                    }
+                    @else {
+                        grid-template-areas:  "Navigation-Container";
+                    }
 
                     nav { grid-area: Navigation-Container; }
                 }
@@ -107,7 +119,7 @@
             
             #content_layout {
                 grid-template-areas: ". Main-Container .";
-                grid-template-columns: 1fr $theme_page_width+px 1fr; 
+                grid-template-columns: 1fr $page_width 1fr; 
 
                 main { grid-area: Main-Container; }
             }
@@ -115,7 +127,7 @@
             @if ($custom_footer_type == fixed_width) {
                 #footer_layout {
                     grid-template-areas: ". Footer-Container .";
-                    grid-template-columns: 1fr $theme_custom_footer_fixed_width+px 1fr;
+                    grid-template-columns: 1fr $custom_footer_width 1fr;
 
                     div { grid-area: Footer-Container; }
                 }
@@ -162,7 +174,7 @@
             @include css(background, $content_wrapper_background);
             @include css(box-shadow, $content_wrapper_box_shadow);
             @include css(border, $content_wrapper_border);
-
+        
             @if ($sidebar_activated == 1) {
                 @if ($sidebar_content_wrapper == 0) {
                     grid-area: Content;
@@ -171,6 +183,11 @@
                     @if ($content_wrapper_full_height == 1) {
                         height: 100%;
                     }
+                }
+            }
+            @else {
+                @if ($content_wrapper_full_height == 1) {
+                    height: 100%;
                 }
             }
         }
@@ -192,7 +209,7 @@
                 @include margins($sidebar_wrapper_margin_top, $sidebar_wrapper_margin_right, $sidebar_wrapper_margin_bottom, $sidebar_wrapper_margin_left);
                 @include paddings($sidebar_wrapper_padding_top, $sidebar_wrapper_padding_right, $sidebar_wrapper_padding_bottom, $sidebar_wrapper_padding_left);
 
-                @include css(background, $sidebar_wrapper_background);
+                @include css(background-color, $sidebar_wrapper_background);
                 @include css(box-shadow, $sidebar_box_shadow);
                 @include css(border, $sidebar_border);
 
@@ -214,16 +231,20 @@
 @mixin content-layout {
     @if ($sidebar_position == left) {
         display: grid;
-        grid-template-columns: $sidebar_width+px auto;
+        grid-template-columns: $sidebar_width auto;
         grid-template-areas: "Sidebar Content";
 
         @include css(gap, $sidebar_space_between_content);
     }
     @else {
         display: grid;
-        grid-template-columns: auto $sidebar_width+px;
+        grid-template-columns: auto $sidebar_width;
         grid-template-areas: "Content Sidebar";
 
         @include css(gap, $sidebar_space_between_content);
     }
+}
+
+@mixin logo{
+
 }

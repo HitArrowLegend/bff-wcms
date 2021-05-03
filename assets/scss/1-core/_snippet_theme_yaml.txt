@@ -1,0 +1,32 @@
+///
+//
+//
+//   F O N T   S I Z E + U N I T
+//
+//
+///
+name:
+    label: Font Size
+    commentAbove: Choose a font-size
+    commentHtml: true
+    tab:
+    type: number
+    span: storm
+    cssClass: col-xs-6 col-md-2
+    assetVar: theme_
+
+name:
+    label: Unit
+    commentAbove: Choose a unit
+    commentHtml: true
+    tab: 
+    type: dropdown
+    options:
+        px: px
+        em: em
+        rem: rem
+        %: %
+    default: em    
+    span: storm
+    cssClass: col-xs-6 col-md-2
+    assetVar: theme_

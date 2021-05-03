@@ -3,6 +3,8 @@ description: 'Big F****ing Framework'
 author: 'OG'
 homepage: ''
 code: '1'
+require:
+    - "winter.wn-translate-plugin"
 
 ## Configuration
 
@@ -34,187 +36,367 @@ form:
         # Contains besic details about the brand
         
             section_general: 
-                label: General Informations
-                comment: Manage details about your brand
-                tab: General
+                label: themes.bff-wcms::lang.options.general_section
+                comment: themes.bff-wcms::lang.options.general_description
+                tab: themes.bff-wcms::lang.options.general_tab
                 type: section
             website_name:
-                label: Website Name
-                commentAbove: Variable name is website_name
-                default: My Website
+                label: themes.bff-wcms::lang.options.website_name
+                commentAbove: themes.bff-wcms::lang.options.website_name_desc
+                default: Website
                 type: text
-                tab: General
+                tab: themes.bff-wcms::lang.options.general_tab
                 span: storm
                 cssClass: col-lg-12
             website_fb:
                 label: Facebook
-                commentAbove: Variable name is website_fb
-                default: My Facebook
+                commentAbove: themes.bff-wcms::lang.options.website_facebook_desc
+                default: Facebook
                 type: text
-                tab: General
+                tab: themes.bff-wcms::lang.options.general_tab
                 span: storm
                 cssClass: col-sm-12 col-md-4 col-lg-3
             website_twitter:
                 label: Twitter
-                commentAbove: Variable name is website_twitter
-                default: My Twitter
+                commentAbove: themes.bff-wcms::lang.options.website_twitter_desc
+                default: Twitter
                 type: text
-                tab: General
+                tab: themes.bff-wcms::lang.options.general_tab
                 span: storm
                 cssClass: col-sm-12 col-md-4 col-lg-3
             website_ig:
                 label: Instagram
-                commentAbove: Variable name is website_ig
-                default: My Instagram
+                commentAbove: themes.bff-wcms::lang.options.website_instagram_desc
+                default: Instagram
                 type: text
-                tab: General
+                tab: themes.bff-wcms::lang.options.general_tab
                 span: storm
                 cssClass: col-sm-12 col-md-4 col-lg-3
             website_yt:
                 label: Youtube
-                commentAbove: Variable name is website_yt
-                default: My Youtube
+                commentAbove: themes.bff-wcms::lang.options.website_youtube_desc
+                default: Youtube
                 type: text
-                tab: General
+                tab: themes.bff-wcms::lang.options.general_tab
                 span: storm
                 cssClass: col-sm-12 col-md-4 col-lg-3
                 
         # Color Section
         
             section_color_branding: 
-                label: Color Branding
-                comment: Contains settings to manage your color branding. Darker and lighter shades will be generated automatically
-                tab: Color Palette
+                label: themes.bff-wcms::lang.options.color_branding_tab
+                comment: themes.bff-wcms::lang.options.color_branding_tab_desc
+                tab: themes.bff-wcms::lang.options.color_branding_tab
                 type: section
             primary_color:
-                label: Primary Color
-                commentAbove: Variable name is theme_primary_color
-                assetVar: 'theme_primary_color'
+                label: themes.bff-wcms::lang.options.primary_color
+                commentAbove: themes.bff-wcms::lang.options.primary_color_desc
+                commentHtml: true
                 type: colorpicker
-                availableColors: []
-                allowEmpty: true
-                tab: Color Palette
+                tab: themes.bff-wcms::lang.options.color_branding_tab
                 span: storm
-                cssClass: col-sm-6 col-md-3
+                cssClass: col-xs-12 col-md-3
+                availableColors: []
+                default: '#3498db'
+                allowEmpty: true
+                assetVar: theme_primary_color
             secondary_color:
                 label: Secondary Color
-                commentAbove: Variable name is theme_secondary_color  
-                assetVar: 'theme_secondary_color'
+                commentAbove: Defines the color that will be displayed the most frequently to contrast with your primary color</br></br>ℹ️ <span style="color:#007ADE">Shades will be automatically generated for this variable. </br>You can access them with $brand-secondary-(50 to 900, with a step of 100)</span>
+                commentHtml: true
                 type: colorpicker
-                availableColors: []
-                allowEmpty: true
-                tab: Color Palette
+                tab: themes.bff-wcms::lang.options.color_branding_tab
                 span: storm
-                cssClass: col-sm-6 col-md-3
+                cssClass: col-xs-12 col-md-3
+                availableColors: []
+                default: '#34495e'
+                allowEmpty: true
+                assetVar: theme_secondary_color
             accent_color:
                 label: Accent Color
-                commentAbove: Variable name is theme_accent_color
-                assetVar: 'theme_accent_color'
+                commentAbove: Defines the color that will be used the most frequently to give emphasis to certain elements (buttons, important elements etc...)</br></br>ℹ️ <span style="color:#007ADE">Shades will be automatically generated for this variable. </br>You can access them with $brand-accent-(50 to 900, with a step of 100)</span>
+                commentHtml: true
                 type: colorpicker
+                tab: themes.bff-wcms::lang.options.color_branding_tab
+                span: storm
+                cssClass: col-xs-12 col-md-3
+                availableColors: []
+                default: '#e74c3c'
+                allowEmpty: true
+                assetVar: theme_accent_color
+            neutral_color:
+                label: Neutral Color
+                commentAbove: Defines the color that will be used the most frequently to color the text throughout your website</br></br>ℹ️ <span style="color:#007ADE">Shades will be automatically generated for this variable. </br>You can access them with $brand-neutral-(50 to 900, with a step of 100)</span>
+                commentHtml: true
+                type: colorpicker
+                tab: themes.bff-wcms::lang.options.color_branding_tab
+                span: storm
+                cssClass: col-xs-12 col-md-3
+                availableColors: []
+                default: '#444444'
+                allowEmpty: true
+                assetVar: theme_neutral_color
+            branding_color_spacer:
+                tab: themes.bff-wcms::lang.options.color_branding_tab
+                type: section
+            primary_color_shade_1:
+                label: 'Primary Color - Shade #1'
+                commentAbove:
+                type: colorpicker
+                tab: themes.bff-wcms::lang.options.color_branding_tab
+                span: storm
+                cssClass: col-xs-6 col-md-3
+                availableColors: []
+                default: '#2980b9'
+                allowEmpty: true
+                assetVar: theme_primary_color_shade_1
+            secondary_color_shade_1:
+                label: 'Secondary Color - Shade #1'
+                commentAbove:
+                type: colorpicker
+                tab: themes.bff-wcms::lang.options.color_branding_tab
+                span: storm
+                cssClass: col-xs-6 col-md-3
+                availableColors: []
+                default: '#2c3e50'
+                allowEmpty: true
+                assetVar: theme_secondary_color_shade_1
+            accent_color_shade_1:
+                label: 'Accent Color - Shade #1'
+                commentAbove:
+                type: colorpicker
+                tab: themes.bff-wcms::lang.options.color_branding_tab
+                span: storm
+                cssClass: col-xs-6 col-md-3
+                availableColors: []
+                default: '#c0392b'
+                allowEmpty: true
+                assetVar: theme_accent_color_shade_1
+            neutral_color_shade_1:
+                label: 'Neutral Color - Shade #1'
+                commentAbove:
+                type: colorpicker
+                tab: themes.bff-wcms::lang.options.color_branding_tab
+                span: storm
+                cssClass: col-xs-6 col-md-3
+                availableColors: []
+                default: '#333333'
+                allowEmpty: true
+                assetVar: theme_neutral_color_shade_1
+            primary_color_shade_2:
+                label: 'Primary Color - Shade #2'
+                commentAbove:
+                type: colorpicker
+                tab: themes.bff-wcms::lang.options.color_branding_tab
+                span: storm
+                cssClass: col-xs-6 col-md-3
                 availableColors: []
                 allowEmpty: true
-                tab: Color Palette
+                assetVar: theme_primary_color_shade_2
+            secondary_color_shade_2:
+                label: 'Secondary Color - Shade #2'
+                commentAbove:
+                type: colorpicker
+                tab: themes.bff-wcms::lang.options.color_branding_tab
                 span: storm
-                cssClass: col-sm-6 col-md-3
-            
+                cssClass: col-xs-6 col-md-3
+                availableColors: []
+                allowEmpty: true
+                assetVar: theme_secondary_color_shade_2
+            accent_color_shade_2:
+                label: 'Accent Color - Shade #2'
+                commentAbove:
+                type: colorpicker
+                tab: themes.bff-wcms::lang.options.color_branding_tab
+                span: storm
+                cssClass: col-xs-6 col-md-3
+                availableColors: []
+                allowEmpty: true
+                assetVar: theme_accent_color_shade_2
+            neutral_color_shade_2:
+                label: 'Neutral Color - Shade #2'
+                commentAbove:
+                type: colorpicker
+                tab: themes.bff-wcms::lang.options.color_branding_tab
+                span: storm
+                cssClass: col-xs-6 col-md-3
+                availableColors: []
+                allowEmpty: true
+                assetVar: theme_neutral_color_shade_2
+            primary_color_shade_3:
+                label: 'Primary Color - Shade #3'
+                commentAbove:
+                type: colorpicker
+                tab: themes.bff-wcms::lang.options.color_branding_tab
+                span: storm
+                cssClass: col-xs-6 col-md-3
+                availableColors: []
+                allowEmpty: true
+                assetVar: theme_primary_color_shade_3
+            secondary_color_shade_3:
+                label: 'Secondary Color - Shade #3'
+                commentAbove:
+                type: colorpicker
+                tab: themes.bff-wcms::lang.options.color_branding_tab
+                span: storm
+                cssClass: col-xs-6 col-md-3
+                availableColors: []
+                allowEmpty: true
+                assetVar: theme_secondary_color_shade_3
+            accent_color_shade_3:
+                label: 'Accent Color - Shade #3'
+                commentAbove:
+                type: colorpicker
+                tab: themes.bff-wcms::lang.options.color_branding_tab
+                span: storm
+                cssClass: col-xs-6 col-md-3
+                availableColors: []
+                allowEmpty: true
+                assetVar: theme_accent_color_shade_3
+            neutral_color_shade_3:
+                label: 'Neutral Color - Shade #3'
+                commentAbove:
+                type: colorpicker
+                tab: themes.bff-wcms::lang.options.color_branding_tab
+                span: storm
+                cssClass: col-xs-6 col-md-3
+                availableColors: []
+                allowEmpty: true
+                assetVar: theme_neutral_color_shade_3
         # 
-            
-            section_layout_color: 
-                label: Layout Colors
-                comment: Contains settings to manage all the colors of your website
+            section_colors: 
+                label: Color Palette
+                comment: Defines the colors that will be used throughout your website. 
                 tab: Color Palette
                 type: section
-            page_background:
-                label: Page Background
-                commentAbove: Variable name is theme_page_background
-                assetVar: 'theme_page_background'
-                type: colorpicker
-                availableColors: []
-                allowEmpty: true
-                tab: Color Palette
-                span: storm
-                cssClass: col-sm-6 col-md-3
-            content_background:
-                label: Content Background
-                commentAbove: Variable name is theme_content_background
-                assetVar: 'theme_content_background'
-                type: colorpicker
-                availableColors: []
-                allowEmpty: true
-                tab: Color Palette
-                span: storm
-                cssClass: col-sm-6 col-md-3
 
-        # Text Color
-
-            section_contextual_colors: 
-                label: Contextual Colors
-                comment: Contains settings to manage contextual colors
+            text_subsection: 
+                label: Basic Text
                 tab: Color Palette
                 type: section
-              
             text_color:
                 label: Text Color
-                commentAbove: "Variable name is theme_text_color. Default value is #2F3640"
-                assetVar: 'theme_text_color'
+                commentAbove: "Variable name is theme_text_color. Default value is #444444"
+                assetVar: theme_text_color
                 type: colorpicker
                 availableColors: []
                 allowEmpty: true
-                default: '#2F3640'
+                default: '#444444'
                 tab: Color Palette
                 span: storm
-                cssClass: col-sm-6 col-md-3
-            link_color:
-                label: Link Color
-                commentAbove: "Variable name is theme_link_color. Default value is #2F3640"
-                assetVar: 'theme_link_color'
-                type: colorpicker
-                availableColors: []
-                allowEmpty: true
-                default: '#2F3640'
-                tab: Color Palette
-                span: storm
-                cssClass: col-sm-6 col-md-3
-            secondary_text_color:
-                label: Secondary Text Color
-                commentAbove: "Variable name is theme_secondary_text_color. Default value is #353B48"
-                assetVar: 'theme_secondary_text_color'
-                type: colorpicker
-                availableColors: []
-                allowEmpty: true
-                default: '#353B48'
-                tab: Color Palette
-                span: storm
-                cssClass: col-sm-6 col-md-3
-            
-            text_color_light:
-                label: Text Color Light
-                commentAbove: "Variable name is theme_text_color_light. Default value is #DCDDE1"
-                assetVar: 'theme_text_color_light'
-                type: colorpicker
-                availableColors: []
-                allowEmpty: true
-                default: '#DCDDE1'
-                tab: Color Palette
-                span: storm
-                cssClass: col-sm-6 col-md-3
-                
+                cssClass: col-sm-6 col-md-4
             muted_color:
                 label: Muted Color
-                commentAbove: "Variable name is theme_muted. Default value is #7F8FA6"
-                assetVar: 'theme_muted'
+                commentAbove: "Variable name is theme_muted_color. Default value is #7F8FA6"
+                assetVar: theme_muted_color
                 type: colorpicker
                 availableColors: []
                 allowEmpty: true
                 default: '#7F8FA6'
                 tab: Color Palette
                 span: storm
-                cssClass: col-sm-6 col-md-3
-                
+                cssClass: col-sm-6 col-md-4
+            dimmed_color:
+                label: Dimmed Color
+                commentAbove: "Variable name is theme_dimmed_color. Default value is #abb3bf"
+                assetVar: theme_dimmed_color
+                type: colorpicker
+                availableColors: []
+                allowEmpty: true
+                default: '#abb3bf'
+                tab: Color Palette
+                span: storm
+                cssClass: col-sm-6 col-md-4
+            text_spacer:
+                tab: Color Palette
+                type: section
+            secondary_text_color:
+                label: Secondary Text Color
+                commentAbove: "Variable name is theme_secondary_text_color. Default value is #353B48"
+                assetVar: theme_secondary_text_color
+                type: colorpicker
+                availableColors: []
+                allowEmpty: true
+                default: '#353B48'
+                tab: Color Palette
+                span: storm
+                cssClass: col-sm-6 col-md-6
+            text_color_light:
+                label: Text Color Light
+                commentAbove: "Variable name is theme_text_color_light. Default value is #DCDDE1"
+                assetVar: theme_text_color_light
+                type: colorpicker
+                availableColors: []
+                allowEmpty: true
+                default: '#DCDDE1'
+                tab: Color Palette
+                span: storm
+                cssClass: col-sm-6 col-md-6
+
+
+            link_section:
+                label: Links
+                type: section
+                tab: Color Palette
+            link_color:
+                label: Link Color
+                commentAbove: "Variable name is theme_link_color. Default value is #2F3640. </br>The :hover color will be automatically generated. This can be modified in the theme variables."
+                commentHtml: true
+                assetVar: theme_link_color
+                type: colorpicker
+                availableColors: []
+                allowEmpty: true
+                default: '#2F3640'
+                tab: Color Palette
+                span: storm
+                cssClass: col-sm-6 col-md-4
+            link_color_active:
+                label: Link Color Active
+                commentAbove: "Variable name is theme_link_color_active. Default value is #C00C00"
+                commentHtml: true
+                assetVar: theme_link_color_active
+                type: colorpicker
+                availableColors: []
+                allowEmpty: true
+                default: '#C00C00'
+                tab: Color Palette
+                span: storm
+                cssClass: col-sm-6 col-md-4
+            link_color_visited:
+                label: Link Color Visited
+                commentAbove: "Variable name is theme_link_color_visited. Default value is #551A8B"
+                commentHtml: true
+                assetVar: theme_link_color_visited
+                type: colorpicker
+                availableColors: []
+                allowEmpty: true
+                default: '#551A8B'
+                tab: Color Palette
+                span: storm
+                cssClass: col-sm-6 col-md-4
+            
+            section_layout_color: 
+                label: Layout Colors
+                tab: Color Palette
+                type: section
+            page_background:
+                label: Page Background
+                commentAbove: Variable name is theme_page_background
+                assetVar: theme_page_background
+                type: colorpicker
+                availableColors: []
+                allowEmpty: true
+                tab: Color Palette
+                span: storm
+                cssClass: col-sm-6 col-md-4
+            important_section:
+                label: Important
+                type: section 
+                tab: Color Palette
             important_color:
-                label: Important Color
-                commentAbove: "Variable name is theme_important. Default value is #00A8FF"
-                assetVar: 'theme_important'
+                label: Important Text Color
+                commentAbove: "Variable name is theme_important_color. Default value is #00A8FF"
+                assetVar: theme_important_color
                 type: colorpicker
                 availableColors: []
                 allowEmpty: true
@@ -222,11 +404,25 @@ form:
                 tab: Color Palette
                 span: storm
                 cssClass: col-sm-6 col-md-3 
-                
+            important_background_color:
+                label: Important Background Color
+                commentAbove: "Variable name is theme_important_background_color. Default value is #00A8FF"
+                assetVar: theme_important_background_color
+                type: colorpicker
+                availableColors: []
+                allowEmpty: true
+                default: '#99ddff'
+                tab: Color Palette
+                span: storm
+                cssClass: col-sm-6 col-md-3 
+            success_section:
+                label: Success
+                type: section 
+                tab: Color Palette
             success_color:
-                label: Success Color
-                commentAbove: "Variable name is theme_success. Default value is #44BD32"
-                assetVar: 'theme_success'
+                label: Success Text Color
+                commentAbove: "Variable name is theme_success_color. Default value is #44BD32"
+                assetVar: theme_success_color
                 type: colorpicker
                 availableColors: []
                 allowEmpty: true
@@ -234,11 +430,25 @@ form:
                 tab: Color Palette
                 span: storm
                 cssClass: col-sm-6 col-md-3
-                
+            success_background_color:
+                label: Success background_Color
+                commentAbove: "Variable name is theme_success_background_color. Default value is #44BD32"
+                assetVar: theme_success_background_color
+                type: colorpicker
+                availableColors: []
+                allowEmpty: true
+                default: '#c8efc3'
+                tab: Color Palette
+                span: storm
+                cssClass: col-sm-6 col-md-3
+            info_section:
+                label: Info
+                type: section 
+                tab: Color Palette 
             info_color:
-                label: Info Color
-                commentAbove: "Variable name is theme_info. Default value is #9C88FF"
-                assetVar: 'theme_info'
+                label: Info Text Color
+                commentAbove: "Variable name is theme_info_color. Default value is #9C88FF"
+                assetVar: theme_info_color
                 type: colorpicker
                 availableColors: []
                 allowEmpty: true
@@ -246,23 +456,51 @@ form:
                 tab: Color Palette
                 span: storm
                 cssClass: col-sm-6 col-md-3
-                
+            info_background_color:
+                label: Info Background Color
+                commentAbove: "Variable name is theme_info_background_color. Default value is #9C88FF"
+                assetVar: theme_info_background_color
+                type: colorpicker
+                availableColors: []
+                allowEmpty: true
+                default: '#d0c7ff'
+                tab: Color Palette
+                span: storm
+                cssClass: col-sm-6 col-md-3
+            warning_section:
+                label: Warning
+                type: section 
+                tab: Color Palette
             warning_color:
-                label: Warning Color
-                commentAbove: "Variable name is theme_warning. Default value is #FBC531"
-                assetVar: 'theme_warning'
+                label: Warning Text Color
+                commentAbove: "Variable name is theme_warning_color. Default value is #FBC531"
+                assetVar: theme_warning_color
                 type: colorpicker
                 availableColors: []
                 allowEmpty: true
                 default: '#FBC531'
                 tab: Color Palette
                 span: storm
-                cssClass: col-sm-6 col-md-3 
-                
+                cssClass: col-sm-6 col-md-3
+            warning_background_color:
+                label: Warning Background Color
+                commentAbove: "Variable name is theme_warning_background_color. Default value is #FBC531"
+                assetVar: theme_warning_background_color
+                type: colorpicker
+                availableColors: []
+                allowEmpty: true
+                default: '#fcf6e7'
+                tab: Color Palette
+                span: storm
+                cssClass: col-sm-6 col-md-3  
+            danger_section:
+                label: Danger
+                type: section 
+                tab: Color Palette
             danger_color:
-                label: Danger Color
-                commentAbove: "Variable name is theme_danger. Default value is #E84118"
-                assetVar: 'theme_danger'
+                label: Danger Text Color
+                commentAbove: "Variable name is theme_danger_color. Default value is #E84118"
+                assetVar: theme_danger_color
                 type: colorpicker
                 availableColors: []
                 allowEmpty: true
@@ -270,101 +508,376 @@ form:
                 tab: Color Palette
                 span: storm
                 cssClass: col-sm-6 col-md-3
-                
-        #
-        
-            section_misc_color: 
+            danger_background_color:
+                label: Danger Background Color
+                commentAbove: "Variable name is theme_danger_background_color. Default value is #E84118"
+                assetVar: theme_danger_background_color
+                type: colorpicker
+                availableColors: []
+                allowEmpty: true
+                default: '#f8c2b5'
+                tab: Color Palette
+                span: storm
+                cssClass: col-sm-6 col-md-3
+    
+            section_button:
+                label: Basic Buttons
+                type: section
+                tab: Buttons
+                comment: Defines the global styles your buttons will have throughout your website
+            button_activated:
+                label: Activates the Buttons
+                commentAbove: Enabling this will make your buttons use the following rules
+                tab: Buttons
+                type: switch
+                default: 0
+                assetVar: theme_button_activated
+            button_text_color:
+                label: Color
+                commentAbove:  Choose a color
+                assetVar: theme_button_text_color
+                type: colorpicker
+                span: storm
+                cssClass: col-sm-2
+                allowEmpty: true
+                availableColors: []
+                tab: Buttons
+            button_primary_background:
+                label: Primary
+                commentAbove: Background
+                assetVar: theme_button_primary_background
+                type: colorpicker
+                span: storm
+                cssClass: col-sm-1
+                allowEmpty: true
+                availableColors: []
+                tab: Buttons
+            button_secondary_background:
+                label: Secondary
+                commentAbove: Background
+                assetVar: theme_button_secondary_background
+                type: colorpicker
+                span: storm
+                cssClass: col-sm-1
+                allowEmpty: true
+                availableColors: []
+                tab: Buttons
+            button_border_width:
+                label: Border Width
+                commentAbove: Define a length
+                assetVar: theme_button_border_width
+                type: number
+                span: storm
+                cssClass: col-sm-2
+                tab: Buttons
+            buttons_border_width_unit:
+                label: Unit
+                commentAbove: Pick a unit
+                assetVar: theme_button_border_width_unit
+                type: dropdown
+                span: storm
+                cssClass: col-sm-1
+                options: 
+                    px: px
+                    em: em
+                    rem: rem
+                    %: %
+                default: px
+                tab: Buttons
+            button_border_style:
+                label: Border Style
+                commentAbove: Pick a border style
+                assetVar: theme_button_border_style
+                type: dropdown
+                options:
+                    none: None
+                    hidden: Hidden
+                    dotted: Dotted
+                    dashed: Dashed
+                    solid: Solid
+                    double: Double
+                    groove: Groove
+                    ridge: Ridge
+                    inset: Inset
+                    outset: Outset
+                default: none
+                span: storm
+                cssClass: col-sm-3
+                tab: Buttons
+            button_border_color:
+                label: Border Color
+                commentAbove: Border Color
+                assetVar: theme_button_border_color
+                type: colorpicker
+                span: storm
+                cssClass: col-sm-1
+                allowEmpty: true
+                availableColors: []
+                tab: Buttons
+            button_secondary_border_color:
+                label: Secondary
+                commentAbove: Border Color
+                assetVar: theme_button_secondary_border_color
+                type: colorpicker
+                span: storm
+                cssClass: col-sm-1 
+                allowEmpty: true
+                availableColors: []
+                tab: Buttons
+            buttons_spacer_1:
+                type: section
+                tab: Buttons
+            button_padding_top:
+                label: Padding Top
+                commentAbove: Choose a length
+                assetVar: theme_button_padding_top
+                type: number
+                span: storm
+                cssClass: col-sm-2 col-md-2
+                tab: Buttons
+            button_padding_top_unit:
+                label: Unit
+                commentAbove: Pick a unit
+                assetVar: theme_button_padding_top_unit
+                type: dropdown
+                options:
+                    px: px
+                    em: em
+                    rem: rem
+                    %: %
+                default: px
+                span: storm
+                cssClass: col-sm-1 col-md-1
+                tab: Buttons
+            button_padding_right:
+                label: Padding Right
+                commentAbove: Choose a length
+                assetVar: theme_button_padding_right
+                type: number
+                span: storm
+                cssClass: col-sm-2 col-md-2
+                tab: Buttons
+            button_padding_right_unit:
+                label: Unit
+                commentAbove: Pick a unit
+                assetVar: theme_button_padding_right_unit
+                type: dropdown
+                options:
+                    px: px
+                    em: em
+                    rem: rem
+                    %: %
+                default: px
+                span: storm
+                cssClass: col-sm-1 col-md-1
+                tab: Buttons
+            button_padding_bottom:
+                label: Padding Bottom
+                commentAbove: Choose a length
+                assetVar: theme_button_padding_bottom
+                type: number
+                span: storm
+                cssClass: col-sm-2 col-md-2
+                tab: Buttons
+            button_padding_bottom_unit:
+                label: Unit
+                commentAbove: Pick a unit
+                assetVar: theme_button_padding_bottom_unit
+                type: dropdown
+                options:
+                    px: px
+                    em: em
+                    rem: rem
+                    %: %
+                default: px
+                span: storm
+                cssClass: col-sm-1 col-md-1
+                tab: Buttons
+            button_padding_left:
+                label: Padding Left
+                commentAbove: Choose a length
+                assetVar: theme_button_padding_left
+                type: number
+                span: storm
+                cssClass: col-sm-2 col-md-2
+                tab: Buttons
+            button_padding_left_unit:
+                label: Unit
+                commentAbove: Pick a unit
+                assetVar: theme_button_padding_left_unit
+                type: dropdown
+                options:
+                    px: px
+                    em: em
+                    rem: rem
+                    %: %
+                default: px
+                span: storm
+                cssClass: col-sm-1 col-md-1
+                tab: Buttons
+            buttons_spacer_2:
+                label: Call to Action Buttons (CTA)
+                type: section
+                tab: Buttons
+            cta_button_activated:
+                label: Activate
+                commentAbove: Enabling this will make your CTA buttons use the following rules
+                assetVar: theme_cta_button_activated
+                type: switch
+                default: 0
+                tab: Buttons
+            cta_button_text_color:
+                label: Color
+                commentAbove: Choose a color
+                assetVar: theme_cta_button_text_color
+                type: colorpicker
+                span: storm
+                cssClass: col-sm-2
+                allowEmpty: true
+                availableColors: []
+                tab: Buttons
+            cta_button_background:
+                label: Background
+                commentAbove: Choose a background
+                assetVar: theme_cta_button_background
+                type: colorpicker
+                span: storm
+                cssClass: col-sm-2
+                allowEmpty: true
+                availableColors: []
+                tab: Buttons
+            cta_button_border_width:
+                label: Border Width
+                commentAbove: Define a length
+                assetVar: theme_cta_button_border_width
+                type: number
+                span: storm
+                cssClass: col-sm-2
+                tab: Buttons
+            cta_button_border_width_unit:
+                label: Unit
+                commentAbove: Pick a unit
+                assetVar: theme_cta_button_border_width_unit
+                type: dropdown
+                span: storm
+                cssClass: col-sm-1
+                options: 
+                    px: px
+                    em: em
+                    rem: rem
+                    %: %
+                default: px
+                tab: Buttons
+            cta_button_border_style:
+                label: Border Style
+                commentAbove: Choose a style
+                assetVar: theme_cta_button_border_style
+                type: dropdown
+                options:
+                    none: None
+                    hidden: Hidden
+                    dotted: Dotted
+                    dashed: Dashed
+                    solid: Solid
+                    double: Double
+                    groove: Groove
+                    ridge: Ridge
+                    inset: Inset
+                    outset: Outset
+                default: none
+                span: storm
+                cssClass: col-sm-3
+                allowEmpty: true
+                availableColors: []
+                tab: Buttons
+            cta_button_border_color:
+                label: Call to Action - Border Color
+                commentAbove: Pick a color
+                assetVar: theme_cta_button_border_color
+                type: colorpicker
+                span: storm
+                cssClass: col-sm-2
+                allowEmpty: true
+                availableColors: []
+                tab: Buttons
+
+
+            section_input:
+                label: Input Section
+                commentAbove: Defines the global styles your inputs will use. WIP
+                type: section
+                tab: Inputs
+            input_text_color:
+                label: Input Text Color
+                commentAbove:
+                assetVar: theme_input_text_color
+                type: colorpicker
+                span: storm
+                cssClass: col-xs-6 col-md-4 col-lg-3
+                allowEmpty: true
+                availableColors: []
+                tab: Inputs
+            input_text_background:
+                label: Input Text Background
+                commentAbove:
+                assetVar: theme_input_text_background
+                type: colorpicker
+                span: storm
+                cssClass: col-xs-6 col-md-4 col-lg-3
+                allowEmpty: true
+                availableColors: []
+                tab: Inputs
+            input_focused_background:
+                label: Input Focused Background
+                commentAbove: 
+                assetVar: theme_input_focused_background
+                type: colorpicker
+                span: storm
+                cssClass: col-xs-6 col-md-4 col-lg-3
+                allowEmpty: true
+                availableColors: []
+                tab: Inputs
+
+            # misc_section:
+            section_color_misc: 
                 label: Misc Settings
                 comment: Contains various other settings
                 tab: Color Palette
                 type: section
-                
             text_selection_color:
                 label: Text Selection Color
                 commentAbove: "Variable name is theme_text_selection_color. Default value is #FFFFFF"
-                assetVar: 'theme_text_selection_color'
                 type: colorpicker
-                availableColors: []
-                allowEmpty: true
-                default: '#FFFFFF'
                 tab: Color Palette
                 span: storm
                 cssClass: col-sm-6 col-md-3
+                availableColors: []
+                default: '#FFFFFF'
+                allowEmpty: true
+                assetVar: theme_text_selection_color
             text_selection_background:
                 label: Text Selection Background
                 commentAbove: "Variable name is theme_text_selection_background. Default value is #468EFE"
-                assetVar: 'theme_text_selection_background'
                 type: colorpicker
-                availableColors: []
-                allowEmpty: true
-                default: '#468EFE'
                 tab: Color Palette
                 span: storm
                 cssClass: col-sm-6 col-md-3
-        # Colors 
-            # text_section
-            # text_color
-            # dimmed_text_color
-            # muted_text_color
-            # link_section
-            # link_color
-            # link_active
-            # link_hover_color
-            # link_visited
-            # page_section
-            # page_background
-            # content_background
-            # sidebar_background
-            # button_section
-            # button_activate
-            # button_text_color
-            # button_border_style
-            # button_border_width
-            # button_border_color
-            # button_primary_background
-            # button_secondary_background
-            # cta_button_activate
-            # cta_button_text_color
-            # cta_button_background
-            # cta_button_border_style
-            # cta_button_border_width
-            # cta_button_border_color
-            # input_section
-            # text_input_color
-            # text_input_background
-            # input_focused_background
-            # success_section
-            # success_text_color
-            # success_background
-            # success_border_style
-            # success_border_width
-            # success_border_color
-            # warning_section
-            # warning_text_color
-            # warning_background
-            # warning_border_style
-            # warning_border_width
-            # warning_border_color
-            # danger_section
-            # danger_text_color
-            # danger_background
-            # danger_border_style
-            # danger_border_width
-            # danger_border_color
-            # info_section
-            # info_text_color
-            # info_background
-            # info_border_style
-            # info_border_width
-            # info_border_color
-            # important_section
-            # important_text_color
-            # important_background
-            # important_border_style
-            # important_border_width
-            # important_border_color
-            # misc_section
-            # chrome_tab_background
+                availableColors: []
+                default: '#468EFE'
+                allowEmpty: true
+                assetVar: theme_text_selection_background
+
+            chrome_tab_background:
+                label: Theme Color
+                commentAbove: todo
+                type: colorpicker
+                tab: Color Palette
+                span: storm
+                cssClass: col-sm-6
+                availanleColors: []
+                default: '#FF0000'
+                allowEmpty: true
+
                 
         # Layout
         
@@ -483,6 +996,7 @@ form:
                     rem: rem
                     %: %
                 default: px
+                assetVar: theme_custom_nav_fixed_width_unit
             custom_footer_type:
                 label: Footer Layout
                 commentAbove: Choose which type you want your Footer to be on your website. Will be ignored if you picked "Default" or "Full Width" to Layout Settings > Type of Layout
@@ -517,6 +1031,7 @@ form:
                     rem: rem
                     %: %
                 default: px
+                assetVar: theme_custom_footer_fixed_width_unit
 
         # Full Width Wrapping Options
 
@@ -526,7 +1041,6 @@ form:
                 commentHtml: true
                 type: section
                 tab: Content
-
             content_inside_wrapper:
                 label: Activate content wrapper
                 CommentAbove: Choose if you want your content to be wrapped around a specific div. By default, this option is not activated.
@@ -535,21 +1049,7 @@ form:
                 cssClass: col-md-12
                 type: switch
                 default: 0
-                assetVar: $theme_content_inside_wrapper
-
-            # content_inside_wrapper:
-            #     label: Content Wrapper
-            #     commentAbove: Choose if you want your content to be wrapped around a specific div. By default, this option is not activated.
-            #     tab: Content
-            #     type: dropdown
-            #     span: storm
-            #     cssClass: col-lg-12
-            #     options:
-            #         yes: Enabled
-            #         no: Disabled
-            #     default: wrapped
-            #     assetVar: $theme_content_inside_wrapper
-
+                assetVar: theme_content_inside_wrapper
             content_wrapper_margin_top:
                 label: Margin-Top
                 commentAbove: Define a length
@@ -804,7 +1304,7 @@ form:
                 type: colorpicker
                 availableColors: []
                 allowEmpty: true
-                default: FFFFFF
+                default: '#FFFFFF'
                 tab: Content
                 span: storm
                 cssClass: col-xs-6 col-sm-2
@@ -840,12 +1340,10 @@ form:
             content_wrapper_full_height:
                 label: Content Wrapper Full Height
                 commentAbove: Will be ignored if the Sidebar is not inside the Content Wrapper. THis option make the Content Wrapper use the full height of the website.
-                type: dropdown
-                options:
-                    yes: Yes
-                    no: No
+                type: switch
                 tab: Content
                 span: storm
+                default: 0
                 cssClass: col-xs-6 col-sm-5
                 assetVar: theme_content_wrapper_full_height
                 trigger:
@@ -894,8 +1392,27 @@ form:
                 type: number
                 default: 250
                 span: storm
-                cssClass: col-md-3
+                cssClass: col-md-2
                 assetVar: theme_sidebar_width
+                trigger:
+                    action: show
+                    field: sidebar_activated
+                    condition: checked
+            sidebar_width_unit:
+                label: Unit
+                commentAbove: Choose a unit
+                commentHtml: true
+                tab: Sidebar
+                type: dropdown
+                options:
+                    px: px
+                    em: em
+                    rem: rem
+                    %: %
+                default: px    
+                span: storm
+                cssClass: col-xs-6 col-md-1
+                assetVar: theme_sidebar_width_unit
                 trigger:
                     action: show
                     field: sidebar_activated
@@ -1221,7 +1738,7 @@ form:
                 commentAbove: background color for the sidebar wrapper
                 availableColors: []
                 allowEmpty: true
-                default: FFFFFF
+                default: '#FFFFFF'
                 tab: Sidebar
                 span: storm
                 cssClass: col-xs-6 col-sm-3
@@ -1395,27 +1912,72 @@ form:
                 comment: Contains settings to manage the basic layout of your website
                 tab: Logo
                 type: section
+            logo_outside_navigation:
+                label: Logo Outside Navigation
+                commentAbove: Activating this option will place the Logo outside the Navigation bar which will then be placed above everything else on your website.
+                type: switch
+                default: 0
+                tab: Logo
+                assetVar: theme_logo_outside_navigation
+                span: storm
+                cssClass: col-sm-12
             logo_font_family: 
                 label: Logo Font Family
-                comment: Can be left empty. Variable is theme_logo_font_family
+                commentAbove: Can be left empty. Variable is theme_logo_font_family
                 type: text
                 tab: Logo
                 assetVar: theme_logo_font_family
-                span: left
+                span: storm
+                cssClass: col-sm-6
             logo_font_size: 
                 label: Logo Font Size (in em)
-                comment: Can be left empty. Variable is theme_logo_font_size
+                commentAbove: Can be left empty. Variable is theme_logo_font_size
                 type: number
                 tab: Logo
                 assetVar: theme_logo_font_size
-                span: right
-            logo_font_color:
+                span: storm
+                cssClass: col-sm-5
+            logo_font_size_unit:
+                label: Unit
+                commentAbove: Choose a unit
+                tab: Logo
+                type: dropdown
+                span: storm
+                cssClass: col-sm-1
+                options: 
+                    px: px
+                    em: em
+                    rem: rem
+                    %: %
+                default: em
+                assetVar: theme_logo_font_size_unit
+            logo_font_weight: 
+                label: Logo Font Weight (100 - 900)
+                commentAbove: Variable is theme_logo_font_weight
+                type: dropdown
+                options:
+                    100: "100"
+                    200: "200"
+                    300: "300"
+                    400: "400"
+                    500: "500"
+                    600: "600"
+                    700: "700"
+                    800: "800"
+                    900: "900"
+                tab: Logo
+                assetVar: theme_logo_font_weight
+                span: storm
+                cssClass: col-sm-6
+            logo_color:
                 label: Logo Font Color
                 comment: Can be left empty. Variable is theme_logo_font_color
                 type: colorpicker
                 availableColors: ['#1ABC9C', '#14A085', '#2FCC71','#26AE60','#3498DB','#2980B9','#9B59B6','#8D44AD','#34495E','#2B3E50','#F1C40F','#F39C13', '#E67E23', '#D35400', '#E74B3C', '#C03A2B', '#ECF0F1', '#BDC3C7', '#95A4A6', '#7E8C8D', '']
                 tab: Logo
-                assetVar: theme_logo_font_colors
+                assetVar: theme_logo_color
+                span: storm
+                cssClass: col-sm-6
 
             section_navigation_style: 
                 label: Navigation - Style Settings
@@ -1430,7 +1992,7 @@ form:
                 assetVar: theme_navigation_height
                 default: 80
                 span: storm
-                cssClass: col-xs-5 col-sm-3
+                cssClass: col-xs-5 col-sm-5
             navigation_height_unit:
                 label: Unit
                 commentAbove: Choose a unit
@@ -1452,7 +2014,7 @@ form:
                 tab: Navigation - Style
                 assetVar: theme_navigation_mobile_height
                 span: storm
-                cssClass: col-xs-5 col-sm-2
+                cssClass: col-xs-5 col-sm-5
             navigation_mobile_height_unit:
                 label: Unit
                 commentAbove: Choose a unit
@@ -1467,7 +2029,20 @@ form:
                     %: %
                 default: em
                 assetVar: theme_navigation_mobile_height_unit
-        
+            navigation_transition:
+                label: Transition
+                commentAbove: Transition when opening the navigation on mobile view
+                type: dropdown
+                options: 
+                    right: From Right
+                    left: From Left
+                    top: From Top
+                    bottom: From Bottom
+                default: left
+                tab: Navigation - Style
+                span: storm
+                cssClass: col-sm-12
+                assetVar: theme_navigation_transition
                         ##
 
             section_navigation_background:
@@ -1477,12 +2052,107 @@ form:
             navigation_background: 
                 type: colorpicker
                 availableColors: ['#1ABC9C', '#14A085', '#2FCC71','#26AE60','#3498DB','#2980B9','#9B59B6','#8D44AD','#34495E','#2B3E50','#F1C40F','#F39C13', '#E67E23', '#D35400', '#E74B3C', '#C03A2B', '#ECF0F1', '#BDC3C7', '#95A4A6', '#7E8C8D', '']
+                allowEmpty: true
                 tab: Navigation - Style
                 default: rgb(27,28,41)
-                assetVar: 'theme_navigation_background_color'
+                assetVar: theme_navigation_background_color
                 comment: Can be left empty. Variable is theme_navigation_background_color
 
+            section_navigation_boxshadow:
+                label: Box Shadow
+                type: section
+                tab: Navigation - Style
+            navigation_boxshadow: 
+                type: text
+                default: "inset 0px 0px 51px 0px rgb(255 255 255 / 10%), 0px 6px 18px 0px rgb(0 0 0 / 10%)"
+                tab: Navigation - Style
+                assetVar: theme_navigation_box_shadow
+                comment: Can be left empty. Variable is theme_navigation_box_shadow
 
+            ##
+            section_navlinks_font:
+                label: Navlinks Font Properties
+                type: section
+                tab: Navigation - Style
+            navlinks_font_family_import:
+                label: Google Font Link
+                commentAbove: Copy Paste the Google Font Link to include it to your website.
+                type: text
+                tab: Navigation - Style
+                span: storm
+                cssClass: col-sm-3
+            navlinks_font_family: 
+                label: Navlinks Font Family
+                commentAbove: Can be left empty. Variable is theme_navlinks_font_family
+                type: text
+                tab: Navigation - Style
+                assetVar: theme_navlinks_font_family
+                span: storm
+                cssClass: col-sm-3
+            navlinks_font_size: 
+                label: Navlinks Font Size (in pixels)
+                commentAbove: Can be left empty. Variable is theme_navlinks_font_size
+                type: number
+                tab: Navigation - Style
+                assetVar: theme_navlinks_font_size
+                span: storm
+                cssClass: col-sm-5
+            navlinks_font_size_unit:
+                label: Unit
+                commentAbove: Choose a unit
+                tab: Navigation - Style
+                type: dropdown
+                span: storm
+                cssClass: col-sm-1
+                options: 
+                    px: px
+                    em: em
+                    rem: rem
+                default: em
+                assetVar: theme_navlinks_font_size_unit
+            navlinks_color:
+                label: Navlinks Font Color
+                comment: Can be left empty. Variable is theme_navlinks_font_color
+                type: colorpicker
+                availableColors: ['#1ABC9C', '#14A085', '#2FCC71','#26AE60','#3498DB','#2980B9','#9B59B6','#8D44AD','#34495E','#2B3E50','#F1C40F','#F39C13', '#E67E23', '#D35400', '#E74B3C', '#C03A2B', '#ECF0F1', '#BDC3C7', '#95A4A6', '#7E8C8D', '']
+                tab: Navigation - Style
+                assetVar: theme_navlinks_color
+                span: left
+            navlinks_font_weight: 
+                label: Navlinks Font Weight (100 - 900)
+                comment: Variable is theme_navlinks_font_weight
+                type: dropdown
+                options:
+                    100: "100"
+                    200: "200"
+                    300: "300"
+                    400: "400"
+                    500: "500"
+                    600: "600"
+                    700: "700"
+                    800: "800"
+                    900: "900"
+                tab: Navigation - Style
+                assetVar: theme_navlinks_font_weight
+                span: right
+            navlinks_text_transform:
+                label: Text Transform
+                commentAbove: Choose a type
+                commentHtml: true
+                tab: Navigation - Style
+                type: dropdown
+                options:
+                    none: None
+                    uppercase: Uppercase
+                    lowercase: Lowercase
+                    capitalize: Capitalize
+                default: none
+                span: storm
+                cssClass: col-xs-6 col-md-2
+                assetVar: theme_navlinks_text_transform
+            navigation_spacer_1:
+                type: section
+                tab: Navigation - Style
             navigation_margin_top:
                 label: Margin-Top
                 type: number
@@ -1667,19 +2337,7 @@ form:
                     %: %
                 default: em
                 assetVar: theme_navigation_padding_left_unit
-            navigation_transition:
-                label: Transition
-                commentAbove: Transition when opening the navigation on mobile view
-                options: 
-                    right: From Right
-                    left: From Left
-                    top: From Top
-                    bottom: From Bottom
-                default: left
-                tab: Navigation - Style
-                span: storm
-                cssClass: col-sm-12
-                assetVar: theme_navigation_transition
+            
 
             navigation_mobile_spacing:
                 label: Mobile View - Navigation bar spacing settings
@@ -1874,83 +2532,7 @@ form:
             #navigation fixed on top yes no
 
             ##
-            section_navigation_boxshadow:
-                label: Box Shadow
-                type: section
-                tab: Navigation - Style
-            navigation_boxshadow: 
-                type: text
-                default: "inset 0px 0px 51px 0px rgb(255 255 255 / 10%), 0px 6px 18px 0px rgb(0 0 0 / 10%)"
-                tab: Navigation - Style
-                assetVar: theme_navigation_box_shadow
-                comment: Can be left empty. Variable is theme_navigation_box_shadow
 
-            ##
-            section_navlinks_font:
-                label: Navlinks Font Properties
-                type: section
-                tab: Navigation - Style
-            navlinks_font_family_import:
-                label: Google Font Link
-                commentAbove: Copy Paste the Google Font Link to include it to your website.
-                type: text
-                tab: Navigation - Style
-                span: storm
-                cssClass: col-sm-3
-            navlinks_font_family: 
-                label: Navlinks Font Family
-                commentAbove: Can be left empty. Variable is theme_navlinks_font_family
-                type: text
-                tab: Navigation - Style
-                assetVar: theme_navlinks_font_family
-                span: storm
-                cssClass: col-sm-3
-            navlinks_font_size: 
-                label: Navlinks Font Size (in pixels)
-                commentAbove: Can be left empty. Variable is theme_navlinks_font_size
-                type: number
-                tab: Navigation - Style
-                assetVar: theme_navlinks_font_size
-                span: storm
-                cssClass: col-sm-5
-            navlinks_font_size_unit:
-                label: Unit
-                commentAbove: Choose a unit
-                tab: Navigation - Style
-                type: dropdown
-                span: storm
-                cssClass: col-sm-1
-                options: 
-                    px: px
-                    em: em
-                    rem: rem
-                default: em
-                assetVar: theme_navlinks_font_size_unit
-            navlinks_font_color:
-                label: Navlinks Font Color
-                comment: Can be left empty. Variable is theme_navlinks_font_color
-                type: colorpicker
-                availableColors: ['#1ABC9C', '#14A085', '#2FCC71','#26AE60','#3498DB','#2980B9','#9B59B6','#8D44AD','#34495E','#2B3E50','#F1C40F','#F39C13', '#E67E23', '#D35400', '#E74B3C', '#C03A2B', '#ECF0F1', '#BDC3C7', '#95A4A6', '#7E8C8D', '']
-                tab: Navigation - Style
-                assetVar: theme_navlinks_font_color
-                span: left
-            navlinks_font_weight: 
-                label: Navlinks Font Weight (100 - 900)
-                comment: Variable is theme_navlinks_font_weight
-                type: dropdown
-                options:
-                    100: "100"
-                    200: "200"
-                    300: "300"
-                    400: "400"
-                    500: "500"
-                    600: "600"
-                    700: "700"
-                    800: "800"
-                    900: "900"
-                tab: Navigation - Style
-                assetVar: theme_navlinks_font_weight
-                span: right
                 
                 
         # User / Mod Bar
@@ -1976,6 +2558,55 @@ form:
                 comment: Contains settings to manage the basic layout of your website
                 tab: Widgets
                 type: section
+
+            test-1:
+                type: switch
+                label: test 1
+                tab: test
+                default: 0
+            test-2:
+                type: switch
+                label: test 2
+                tab: test
+                default: 1
+                dependsOn:
+                    - test-1
+            test-3:
+                type: switch
+                label: test 3
+                tab: test
+                default: 0
+            _test-emoji:
+                label: Emoji
+                type: emojipicker
+                tab: test
+            global_font_size:
+                label: Font Size
+                commentAbove:
+                commentHtml:
+                tab: test
+                type: number
+                span: storm
+                cssClass: col-xs-6 col-md-2
+                assetVar: theme_global_font_size
+
+            global_font_size_unit:
+                label: Unit
+                commentAbove: Choose a unit
+                commentHtml: 
+                tab: test
+                type: dropdown
+                options:
+                    px: px
+                    em: em
+                    rem: rem
+                    %: %
+                default: em    
+                span: storm
+                cssClass: col-xs-6 col-md-2
+                assetVar: theme_global_font_size_unit
+            
+
 
 ## TO DO
 ##
