@@ -19,19 +19,6 @@ form:
     tabs:
         fields:
         
-        # Readme
-            readme: 
-                label: Read Me
-                comment: Just a basic Read Me
-                tab: README
-                type: section
-            
-            readme_content: 
-                label: Updates
-                type: partial
-                path: themes/bff-wcms/partials/theme_related/README.htm
-                tab: README
-        
         # General
         # Contains besic details about the brand
         
