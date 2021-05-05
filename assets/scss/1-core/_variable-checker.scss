@@ -87,28 +87,28 @@
     $theme_navigation_mobile_height: 0;
 }
 @if ($theme_navigation_mobile_margin_top == null) {
-    $theme_navigation_margin_top: 0;
+    $theme_navigation_mobile_margin_top: 0;
 }
 @if ($theme_navigation_mobile_margin_right == null) {
-    $theme_navigation_margin_right: 0;
+    $theme_navigation_mobile_margin_right: 0;
 }
 @if ($theme_navigation_mobile_margin_bottom == null) {
-    $theme_navigation_margin_bottom: 0;
+    $theme_navigation_mobile_margin_bottom: 0;
 }
 @if ($theme_navigation_mobile_margin_left == null) {
-    $theme_navigation_margin_left: 0;
+    $theme_navigation_mobile_margin_left: 0;
 }
 @if ($theme_navigation_mobile_padding_top == null) {
-    $theme_navigation_padding_top: 0;
+    $theme_navigation_mobile_padding_top: 0;
 }
 @if ($theme_navigation_mobile_padding_right == null) {
-    $theme_navigation_padding_top: 0;
+    $theme_navigation_mobile_padding_right: 0;
 }
 @if ($theme_navigation_mobile_padding_bottom == null) {
-    $theme_navigation_padding_top: 0;
+    $theme_navigation_mobile_padding_bottom: 0;
 }
 @if ($theme_navigation_mobile_padding_left == null) {
-    $theme_navigation_padding_top: 0;
+    $theme_navigation_mobile_padding_left: 0;
 }
 @if ($theme_navigation_mobile_height == null) {
     $theme_navigation_mobile_height: 0;
@@ -139,4 +139,26 @@
 }
 @if ($theme_global_font_size == null) {
     $theme_global_font_size: 0;
+}
+// Typohraphy
+@if ($theme_h1_size == null) {
+    $theme_h1_size: 0;
+}
+@if ($theme_h2_size == null) {
+    $theme_h2_size: 0;
+}
+@if ($theme_h3_size == null) {
+    $theme_h3_size: 0;
+}
+@if ($theme_h4_size == null) {
+    $theme_h4_size: 0;
+}
+@if ($theme_h5_size == null) {
+    $theme_h5_size: 0;
+}
+@if ($theme_h6_size == null) {
+    $theme_h6_size: 0;
+}
+@if ($theme_display_size == null) {
+    $theme_display_size: 0;
 }

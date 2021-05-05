@@ -50,6 +50,11 @@
             & #footer_layout {
                 display: grid ;
             }
+            @if ($logo_outside_navigation == 1) {
+                #header_layout {
+                    grid-template-areas:  "Logo" "Navigation-Container";
+                }
+            }
         }
     }
     @else if ($layout_type == default) {
@@ -66,6 +71,11 @@
             & #content_layout,
             & #footer_layout {
                 display: grid ;
+            }
+            @if ($logo_outside_navigation == 1) {
+                #header_layout {
+                    grid-template-areas:  "Logo" "Navigation-Container";
+                }
             }
             #content_layout {
                 grid-template-areas: ". Main-Container .";

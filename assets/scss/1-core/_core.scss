@@ -23,6 +23,14 @@ body {
 @include google-font-load($theme_general_font_family);
 @include google-font-load($theme_logo_font_family);
 
+@include text-headings($h1_font_family, $h1_size, $h1_color);
+@include text-headings($h2_font_family, $h2_size, $h2_color);
+@include text-headings($h3_font_family, $h3_size, $h3_color);
+@include text-headings($h4_font_family, $h4_size, $h4_color);
+@include text-headings($h5_font_family, $h5_size, $h5_color);
+@include text-headings($h6_font_family, $h6_size, $h6_color);
+
+
 
 // #content_layout, .content_wrapper {
 //     height: 20000px;

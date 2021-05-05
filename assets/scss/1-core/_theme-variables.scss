@@ -206,7 +206,7 @@ $navigation_padding_left:           $theme_navigation_padding_left * unit($theme
 $navigation_mobile_height:          $theme_navigation_mobile_height * unit($theme_navigation_mobile_height_unit);
 $navigation_height:                 $theme_navigation_height * unit($theme_navigation_height_unit);
 //
-$navigation_mobile_margin_top:      $theme_navigation_mobile_margin_top * unit(+$theme_navigation_mobile_margin_top_unit);
+$navigation_mobile_margin_top:      $theme_navigation_mobile_margin_top * unit($theme_navigation_mobile_margin_top_unit);
 $navigation_mobile_margin_right:    $theme_navigation_mobile_margin_right * unit($theme_navigation_mobile_margin_right_unit);
 $navigation_mobile_margin_bottom:   $theme_navigation_mobile_margin_bottom * unit($theme_navigation_mobile_margin_bottom_unit);
 $navigation_mobile_margin_left:     $theme_navigation_mobile_margin_left * unit($theme_navigation_mobile_margin_left_unit);
@@ -228,3 +228,26 @@ $navlinks_color:                    $theme_navlinks_color;
 $navlinks_text_transform:           $theme_navlinks_text_transform;
 $content_wrapper_full_height:       $theme_content_wrapper_full_height;
 $global_font_size:                  $theme_global_font_size * unit($theme_global_font_size_unit);
+
+$h1_size:                           $theme_h1_size * unit($theme_h1_size_unit);
+$h2_size:                           $theme_h1_size * unit($theme_h2_size_unit);
+$h3_size:                           $theme_h1_size * unit($theme_h3_size_unit);
+$h4_size:                           $theme_h1_size * unit($theme_h4_size_unit);
+$h5_size:                           $theme_h1_size * unit($theme_h5_size_unit);
+$h6_size:                           $theme_h1_size * unit($theme_h6_size_unit);
+$display_size:                      $theme_display_size * unit($theme_display_size_unit);
+
+
+$h1_font_family: $theme_h1_font_family;
+$h2_font_family: $theme_h2_font_family;
+$h3_font_family: $theme_h3_font_family;
+$h4_font_family: $theme_h4_font_family;
+$h5_font_family: $theme_h5_font_family;
+$h6_font_family: $theme_h6_font_family;
+
+$h1_color: $theme_h1_color;
+$h2_color: $theme_h2_color;
+$h3_color: $theme_h3_color;
+$h4_color: $theme_h4_color;
+$h5_color: $theme_h5_color;
+$h6_color: $theme_h6_color;

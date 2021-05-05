@@ -36,7 +36,7 @@
         //text-transform: $nav-text-transform;
         a { 
             @include css(font-size, $navlinks_font_size);
-            @include css(font-weight,$navlinks_font_weight);
+            @include css(font-weight, $navlinks_font_weight);
             @include css(color, $navlinks_color);
             @include text-transform($navlinks_text_transform);
         }
@@ -52,22 +52,27 @@
         #logo { 
             justify-self: start;
             align-self: center;
-
+            
             a {
                 @include css(color, $logo_color);
                 @include css(font-size, $logo_font_size);
                 @include css(font-weight, $logo_font_weight);
                 transition: font-size 0.2s ease-in-out;
                 font-family: $theme_logo_font_family, sans-serif;
+                
             }
         }
     }
 }
 @else {
     #logo { 
-        justify-self: center; // Add Variable
-        align-self: center;
+        justify-content: center; // Add Variable
+        align-items: center;
         grid-area: Logo;
+        width: 100%;
+        @include paddings($navigation_padding_top, $navigation_padding_right, $navigation_padding_bottom, $navigation_padding_left); // Add Variable
+        min-height: 50px; // Add Variable
+        display: flex;
 
         a {
             @include css(color, $logo_color);
@@ -75,6 +80,9 @@
             @include css(font-weight, $logo_font_weight);
             transition: font-size 0.2s ease-in-out;
             font-family: $theme_logo_font_family, sans-serif;
+            // Add Padding Variables
+
+            // Add Variables for responsive
         }
     }
 }
@@ -84,9 +92,10 @@
     #navigation {
         min-height: $navigation_mobile_height;
         transition: 0.2s;
-
+        
         @include paddings($navigation_mobile_padding_top,$navigation_mobile_padding_right,$navigation_mobile_padding_bottom,$navigation_mobile_padding_left);
         @include margins($navigation_mobile_margin_top,$navigation_mobile_margin_right,$navigation_mobile_margin_bottom,$navigation_mobile_margin_left);        
+        
         @if ($logo_outside_navigation == 0) {
             & .logo-link {
                 //font-size: $logo-size-mobile;
@@ -112,48 +121,33 @@
                 @include navslide($navigation_transition);
                 
                 // This changes the speed when the nav is closing. 0 makes it disappear instantly.
-                transition: 0.5s cubic-bezier(0.46, 0.03, 0.52, 0.96);
-                overflow: hidden;
+                transition: .8s cubic-bezier(0.65, 0.05, 0.36, 1);
                 width: 100%;
                 flex-flow: column;
                 gap: 0;
                 
-                & .link {
-                    // Default position before animation
-                    transform: translateX(-100px);   
-                }
-                
                  &.active {
                     // This allows changing the speed when the nav is opening
                     @include navslide(reset);
-                                        
-                    .list-item {
-                        position: relative;
-                        height: 73px;
-                    }
 
                     .link { 
-                        position: absolute; 
-                        height: 100%; 
-                        width: 100%;
                         transform: translateX(0px);
-                        transition: 0.5s cubic-bezier(0.46, 0.03, 0.52, 0.96);
                     }
                 }
                 
                 & .list-item {
-                    border-bottom: 1px solid #ccc5b9;
+                    border-bottom: 1px solid #ccc5b9; // Add Variable
                     display: grid;
                     align-items: center;
                     
                     & a {
-                        padding: 0 1em;
-                        line-height: 3em;
-                        transition: 0.5s ease-in-out;
+                        // Default position before animation
+                        transform: translateX(-100px);   
+                        padding: 1.5em 1em; // Add Variable
                     }
                     
                     &:hover {
-                        background: #e5e2d9;
+                        background: #e5e2d9; // Add Variable
                     }
                 }
             }

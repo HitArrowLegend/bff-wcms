@@ -84,6 +84,7 @@ form:
                 span: storm
                 cssClass: col-xs-12 col-md-3
                 availableColors: []
+                showAlpha: true
                 default: '#3498db'
                 allowEmpty: true
                 assetVar: theme_primary_color
@@ -361,7 +362,6 @@ form:
                 tab: Color Palette
                 span: storm
                 cssClass: col-sm-6 col-md-4
-            
             section_layout_color: 
                 label: Layout Colors
                 tab: Color Palette
@@ -373,6 +373,7 @@ form:
                 type: colorpicker
                 availableColors: []
                 allowEmpty: true
+                default: '#FFFFFF'
                 tab: Color Palette
                 span: storm
                 cssClass: col-sm-6 col-md-4
@@ -1792,62 +1793,474 @@ form:
                 assetVar: theme_general_font_color
                 comment: variable is theme_general_font_color
 
-            # typography
-            # UI Main Font
-            # UI Secondary Font
-            # Logo Font
-            # Navigation Links Font            
-            # Title Heading Font
-            # size section
-            # h1_size
-            # h1_unit
-            # h2 
-            # h2
-            # h3
-            # h3
-            # h4
-            # h4
-            # h5
-            # h5
-            # h6
-            # h6
-            # main_size
-            # main_unit
-            # small_size
-            # small_unit
-            # large_size
-            # large_unit
-            # display_1_use yes no
-            # display_1_size
-            # display_1_size
-            # display_2_use yes no
-            # display_2_size
-            # display_2_size
-            # display_3_use yes no
-            # display_3_size
-            # display_3_size
-            # display_4_use yes no
-            # display_4_size
-            # display_4_size
-            # weight_section
-            # main_weight
-            # light_weight
-            # large_weight
-            # Spacing_section
-            # line_height
-            # blockquote_section
-            # blockquote_background
-            # blockquote_paddings
-            # blockquote_font_size
-            # blockquote_color
-            # blockquote_text_align
-            # blockquote_footer
-            # blockquote_footer_font_size
-            # blockquote_footer_color
-            # blockquote_footer_style
-            # blockquote_footer_cite
-            # blockquote_footer_cite_font_size
-            # blockquote_footer_cite_style
+            typography: 
+                label: Typography Settings
+                commentAbove: 
+                type:
+                tab:
+            UI Main Font: 
+                label:
+                commentAbove:
+                type:
+                tab:
+            UI Secondary Font: 
+                label:
+                commentAbove:
+                type:
+                tab:
+            Logo Font: 
+                label:
+                commentAbove:
+                type:
+                tab:
+            Navigation Links Font            : 
+                label:
+                commentAbove:
+                type:
+                tab:
+            Title Heading Font: 
+                label:
+                commentAbove:
+                type:
+                tab:
+            size section: 
+                label:
+                commentAbove:
+                type:
+                tab:
+            h1_spacer:
+                label: H1
+                comment: Defines the styles that will be applied to all H1 elements inside the main container
+                type: section
+                tab: Typography
+            h1_font_family:
+                label: Font Family
+                commentAbove: Choose a font. By default, the Main Font Family will be used.
+                type: text
+                tab: Typography
+                span: storm
+                cssClass: col-xs-12 col-md-2
+                assetVar: theme_h1_font_family
+            h1_color:
+                label: Color
+                commentAbove: Pick a color
+                type: colorpicker
+                availableColors: []
+                allowEmpty: true
+                tab: Typography
+                span: storm
+                cssClass: col-xs-12 col-md-1
+                assetVar: theme_h1_color
+            h1_size: 
+                label: Font Size
+                commentAbove: Choose a font-size
+                type: number
+                tab: Typography
+                span: storm
+                cssClass: col-xs-6 col-md-1
+                assetVar: theme_h1_size
+            h1_size_unit: 
+                label: Unit
+                commentAbove: Choose a unit
+                type: dropdown
+                tab: Typography
+                options:
+                    px: px
+                    em: em
+                    rem: rem
+                    %: %
+                default: em    
+                span: storm
+                cssClass: col-xs-6 col-md-1
+                assetVar: theme_h1_size_unit
+            h2_spacer:
+                label: H2
+                comment: Defines the styles that will be applied to all H2 elements inside the main container
+                type: section
+                tab: Typography
+            h2_font_family:
+                label: Font Family
+                commentAbove: Choose a font. By default, the Main Font Family will be used.
+                type: text
+                tab: Typography
+                span: storm
+                cssClass: col-xs-12 col-md-2
+                assetVar: theme_h2_font_family
+            h2_color:
+                label: Color
+                commentAbove: Pick a color
+                type: colorpicker
+                availableColors: []
+                allowEmpty: true
+                tab: Typography
+                span: storm
+                cssClass: col-xs-12 col-md-1
+                assetVar: theme_h2_color
+            h2_size : 
+                label: Font Size
+                commentAbove: Choose a font-size
+                type: number
+                tab: Typography
+                span: storm
+                cssClass: col-xs-6 col-md-1
+                assetVar: theme_h2_size
+            h2_size_unit: 
+                label: Unit
+                commentAbove: Choose a unit
+                type: dropdown
+                tab: Typography
+                options:
+                    px: px
+                    em: em
+                    rem: rem
+                    %: %
+                default: em    
+                span: storm
+                cssClass: col-xs-6 col-md-1
+                assetVar: theme_h2_size_unit
+            h3_spacer:
+                label: H3
+                comment: Defines the styles that will be applied to all H3 elements inside the main container
+                type: section
+                tab: Typography
+            h3_font_family:
+                label: Font Family
+                commentAbove: Choose a font. By default, the Main Font Family will be used.
+                type: text
+                tab: Typography
+                span: storm
+                cssClass: col-xs-12 col-md-2
+                assetVar: theme_h3_font_family
+            h3_color:    
+                label: Color
+                commentAbove: Pick a color
+                type: colorpicker
+                availableColors: []
+                allowEmpty: true
+                tab: Typography
+                span: storm
+                cssClass: col-xs-12 col-md-1
+                assetVar: theme_h3_color
+            h3_size: 
+                label: Font Size
+                commentAbove: Choose a font-size
+                type: number
+                tab: Typography
+                span: storm
+                cssClass: col-xs-6 col-md-1
+                assetVar: theme_h3_size
+            h3_size_unit: 
+                label: Unit
+                commentAbove: Choose a unit
+                type: dropdown
+                tab: Typography
+                options:
+                    px: px
+                    em: em
+                    rem: rem
+                    %: %
+                default: em    
+                span: storm
+                cssClass: col-xs-6 col-md-1
+                assetVar: theme_h3_size_unit
+            h4_spacer:
+                label: H4
+                comment: Defines the styles that will be applied to all H4 elements inside the main container
+                type: section
+                tab: Typography
+            h4_font_family:
+                label: Font Family
+                commentAbove: Choose a font. By default, the Main Font Family will be used.
+                type: text
+                tab: Typography
+                span: storm
+                cssClass: col-xs-12 col-md-2
+                assetVar: theme_h4_font_family
+            h4_color:  
+                label: Color
+                commentAbove: Pick a color
+                type: colorpicker
+                availableColors: []
+                allowEmpty: true
+                tab: Typography
+                span: storm
+                cssClass: col-xs-12 col-md-1
+                assetVar: theme_h4_color
+            h4_size: 
+                label: Font Size
+                commentAbove: Choose a font-size
+                type: number
+                tab: Typography
+                span: storm
+                cssClass: col-xs-6 col-md-1
+                assetVar: theme_h4_size
+            h4_size_unit: 
+                label: Unit
+                commentAbove: Choose a unit
+                type: dropdown
+                tab: Typography
+                options:
+                    px: px
+                    em: em
+                    rem: rem
+                    %: %
+                default: em    
+                span: storm
+                cssClass: col-xs-6 col-md-1
+                assetVar: theme_h4_size_unit
+            h5_spacer:
+                label: H5
+                comment: Defines the styles that will be applied to all H5 elements inside the main container
+                type: section
+                tab: Typography
+            h5_font_family:
+                label: Font Family
+                commentAbove: Choose a font. By default, the Main Font Family will be used.
+                type: text
+                tab: Typography
+                span: storm
+                cssClass: col-xs-12 col-md-2
+                assetVar: theme_h5_font_family
+            h5_color: 
+                label: Color
+                commentAbove: Pick a color
+                type: colorpicker
+                availableColors: []
+                allowEmpty: true
+                tab: Typography
+                span: storm
+                cssClass: col-xs-12 col-md-1
+                assetVar: theme_h5_color
+            h5_size: 
+                label: Font Size
+                commentAbove: Choose a font-size
+                type: number
+                tab: Typography
+                span: storm
+                cssClass: col-xs-6 col-md-1
+                assetVar: theme_h5_size
+            h5_size_unit: 
+                label: Unit
+                commentAbove: Choose a unit
+                type: dropdown
+                tab: Typography
+                options:
+                    px: px
+                    em: em
+                    rem: rem
+                    %: %
+                default: em    
+                span: storm
+                cssClass: col-xs-6 col-md-1
+                assetVar: theme_h5_size_unit
+            h6_spacer:
+                label: H6
+                comment: Defines the styles that will be applied to all H6 elements inside the main container
+                type: section
+                tab: Typography
+            h6_font_family:
+                label: Font Family
+                commentAbove: Choose a font. By default, the Main Font Family will be used.
+                type: text
+                tab: Typography
+                span: storm
+                cssClass: col-xs-12 col-md-2
+                assetVar: theme_h6_font_family
+            h6_color:
+                label: Color
+                commentAbove: Pick a color
+                type: colorpicker
+                availableColors: []
+                allowEmpty: true
+                tab: Typography
+                span: storm
+                cssClass: col-xs-12 col-md-1
+                assetVar: theme_h6_color
+            h6_size: 
+                label: Font Size
+                commentAbove: Choose a font-size
+                type: number
+                tab: Typography
+                span: storm
+                cssClass: col-xs-6 col-md-1
+                assetVar: theme_h6_size
+            h6_size_unit: 
+                label: Unit
+                commentAbove: Choose a unit
+                type: dropdown
+                tab: Typography
+                options:
+                    px: px
+                    em: em
+                    rem: rem
+                    %: %
+                default: em    
+                span: storm
+                cssClass: col-xs-6 col-md-1
+                assetVar: theme_h6_size_unit
+            display_spacer:
+                label: Display
+                comment: Defines the styles that will be applied to the display class
+                type: section
+                tab: Typography
+            display_activated: 
+                label: Activate (Yes / No)
+                commentAbove: Activate the addition of this class in your css file
+                type: switch
+                tab: Typography
+                span: storm
+                cssClass: col-xs-6 col-md-2
+            display_font_family:
+                label: Font Family
+                commentAbove: Choose a font. By default, the Main Font Family will be used.
+                type: text
+                tab: Typography
+                span: storm
+                cssClass: col-xs-12 col-md-3
+                assetVar: theme_display_font_family
+                trigger:
+                    action: show
+                    field: display_activated
+                    condition: checked
+            display_color: 
+                label: Color
+                commentAbove: Pick a color
+                type: colorpicker
+                availableColors: []
+                allowEmpty: true
+                tab: Typography
+                span: storm
+                cssClass: col-xs-16 col-md-1
+                assetVar: theme_display_color
+                trigger:
+                    action: show
+                    field: display_activated
+                    condition: checked
+            display_size: 
+                label: Font Size
+                commentAbove: Choose a font-size
+                type: number
+                tab: Typography
+                span: storm
+                cssClass: col-xs-6 col-md-1
+                assetVar: theme_display_size
+                trigger:
+                    action: show
+                    field: display_activated
+                    condition: checked
+            display_size_unit: 
+                label: Unit
+                commentAbove: Choose a unit
+                type: dropdown
+                tab: Typography
+                options:
+                    px: px
+                    em: em
+                    rem: rem
+                    %: %
+                default: em    
+                span: storm
+                cssClass: col-xs-6 col-md-1
+                assetVar: theme_display_size_unit
+                trigger:
+                    action: show
+                    field: display_activated
+                    condition: checked
+            weight_section: 
+                label:
+                commentAbove:
+                type:
+                tab:
+            main_weight: 
+                label:
+                commentAbove:
+                type:
+                tab:
+            light_weight: 
+                label:
+                commentAbove:
+                type:
+                tab:
+            large_weight: 
+                label:
+                commentAbove:
+                type:
+                tab:
+            Spacing_section: 
+                label:
+                commentAbove:
+                type:
+                tab:
+            line_height: 
+                label:
+                commentAbove:
+                type:
+                tab:
+            blockquote_section: 
+                label:
+                commentAbove:
+                type:
+                tab:
+            blockquote_background: 
+                label:
+                commentAbove:
+                type:
+                tab:
+            blockquote_paddings: 
+                label:
+                commentAbove:
+                type:
+                tab:
+            blockquote_font_size: 
+                label:
+                commentAbove:
+                type:
+                tab:
+            blockquote_color: 
+                label:
+                commentAbove:
+                type:
+                tab:
+            blockquote_text_align: 
+                label:
+                commentAbove:
+                type:
+                tab:
+            blockquote_footer: 
+                label:
+                commentAbove:
+                type:
+                tab:
+            blockquote_footer_font_size: 
+                label:
+                commentAbove:
+                type:
+                tab:
+            blockquote_footer_color: 
+                label:
+                commentAbove:
+                type:
+                tab:
+            blockquote_footer_style: 
+                label:
+                commentAbove:
+                type:
+                tab:
+            blockquote_footer_cite: 
+                label:
+                commentAbove:
+                type:
+                tab:
+            blockquote_footer_cite_font_size: 
+                label:
+                commentAbove:
+                type:
+                tab:
+            blockquote_footer_cite_style: 
+                label:
+                commentAbove:
+                type:
+                tab:
         
         # buttons_settings
         # button_paddings
@@ -2000,6 +2413,7 @@ form:
                 type: number
                 tab: Navigation - Style
                 assetVar: theme_navigation_mobile_height
+                default: 80
                 span: storm
                 cssClass: col-xs-5 col-sm-5
             navigation_mobile_height_unit:
@@ -2014,7 +2428,7 @@ form:
                     em: em
                     rem: rem
                     %: %
-                default: em
+                default: px
                 assetVar: theme_navigation_mobile_height_unit
             navigation_transition:
                 label: Transition
@@ -2041,7 +2455,7 @@ form:
                 availableColors: ['#1ABC9C', '#14A085', '#2FCC71','#26AE60','#3498DB','#2980B9','#9B59B6','#8D44AD','#34495E','#2B3E50','#F1C40F','#F39C13', '#E67E23', '#D35400', '#E74B3C', '#C03A2B', '#ECF0F1', '#BDC3C7', '#95A4A6', '#7E8C8D', '']
                 allowEmpty: true
                 tab: Navigation - Style
-                default: rgb(27,28,41)
+                default: '#FFFFFF'
                 assetVar: theme_navigation_background_color
                 comment: Can be left empty. Variable is theme_navigation_background_color
 
@@ -2546,23 +2960,38 @@ form:
                 tab: Widgets
                 type: section
 
-            test-1:
+            switch_1:
+                label: Country 1
                 type: switch
-                label: test 1
-                tab: test
-                default: 0
-            test-2:
+
+            switch_2:
+                label: Country 2
                 type: switch
-                label: test 2
-                tab: test
-                default: 1
-                dependsOn:
-                    - test-1
-            test-3:
+                trigger: 
+                    action: show
+                    field: switch_1
+                    condition: checked
+
+            switch_3:
+                label: Country 3
                 type: switch
-                label: test 3
-                tab: test
-                default: 0
+                trigger: 
+                    action: show
+                    field: switch_2
+                    condition: checked
+
+            switch_4:
+                label: Country 4
+                type: switch
+                trigger: 
+                    action: show
+                    field: switch_2
+                    condition: checked
+                    
+                    
+                    
+                    
+                    
             _test-emoji:
                 label: Emoji
                 type: emojipicker
