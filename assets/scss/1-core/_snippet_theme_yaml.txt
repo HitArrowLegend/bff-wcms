@@ -60,3 +60,36 @@ color:
                 span: storm
                 cssClass: col-xs-1 col-md-1
                 assetVar: theme_
+///
+//
+//
+//   P A D D I N G S
+//
+//
+///
+            name:
+                label: Padding-Left
+                commentAbove: Define a length
+                type: number
+                tab: Sidebar
+                span: storm
+                cssClass: col-xs-5 col-sm-2
+                assetVar: theme_
+
+label: Unit
+                commentAbove: Choose a unit
+                tab: Sidebar
+                type: dropdown
+                span: storm
+                cssClass: col-sm-1
+                options: 
+                    px: px
+                    em: em
+                    rem: rem
+                    %: %
+                default: px
+                assetVar: theme_sidebar_wrapper_padding_left_unit
+                trigger:
+                    action: show
+                    field: sidebar_inside_own_wrapper
+                    condition: checked

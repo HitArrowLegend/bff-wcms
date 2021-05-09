@@ -3,6 +3,7 @@
 		@import url('https://fonts.googleapis.com/css?family=#{$name}');
 	}
 }
+
 @mixin text-transform($type) {
 	@if ($type == capitalize) {text-transform: $type;}
 	@else if ($type == uppercase) {text-transform: $type;}
@@ -10,12 +11,22 @@
 	@else {}
 }
 
-@mixin text-headings($font_family, $font_size, $color) {
+@mixin text-headings($element, $font_family, $font_size, $color, $padding-top, $padding-right, $padding-bottom, $padding-left) {
 	@if ($font_family != null) or ($font_size != null) or ($color != null) {
-		h1 {
+		#{$element}, .#{$element} {
 			@include css(font-family, $font_family);
 			@include css(font-size, $font_size); 
-			@include css(color,$color); 
+			@include css(color, $color); 
+
+			@if (strip-unit($padding-top) != 0) 
+			 or (strip-unit($padding-top) != 0) 
+			 or (strip-unit($padding-top) != 0) 
+			 or (strip-unit($padding-top) != 0) {
+				@include margins($padding-top, $padding-right, $padding-bottom, $padding-left)
+			}
+			@else {
+				@include margins(0, 0, 0.5em, 0); // add variables default margins headings
+			}
 		}
 	}
 }

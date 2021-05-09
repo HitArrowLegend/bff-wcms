@@ -23,18 +23,12 @@ body {
 @include google-font-load($theme_general_font_family);
 @include google-font-load($theme_logo_font_family);
 
-@include text-headings($h1_font_family, $h1_size, $h1_color);
-@include text-headings($h2_font_family, $h2_size, $h2_color);
-@include text-headings($h3_font_family, $h3_size, $h3_color);
-@include text-headings($h4_font_family, $h4_size, $h4_color);
-@include text-headings($h5_font_family, $h5_size, $h5_color);
-@include text-headings($h6_font_family, $h6_size, $h6_color);
-
-
-
-// #content_layout, .content_wrapper {
-//     height: 20000px;
-// }
+@include text-headings("h1", $h1_font_family, $h1_size, $h1_color, $h1_margin_top, $h1_margin_right, $h1_margin_bottom, $h1_margin_left);
+@include text-headings("h2", $h2_font_family, $h2_size, $h2_color, $h2_margin_top, $h2_margin_right, $h2_margin_bottom, $h2_margin_left);
+@include text-headings("h3", $h3_font_family, $h3_size, $h3_color, $h3_margin_top, $h3_margin_right, $h3_margin_bottom, $h3_margin_left);
+@include text-headings("h4", $h4_font_family, $h4_size, $h4_color, $h4_margin_top, $h4_margin_right, $h4_margin_bottom, $h4_margin_left);
+@include text-headings("h5", $h5_font_family, $h5_size, $h5_color, $h5_margin_top, $h5_margin_right, $h5_margin_bottom, $h5_margin_left);
+@include text-headings("h6", $h6_font_family, $h6_size, $h6_color, $h6_margin_top, $h6_margin_right, $h6_margin_bottom, $h6_margin_left);
 
 //
 // Testing Things

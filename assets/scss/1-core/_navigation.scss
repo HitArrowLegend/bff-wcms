@@ -26,9 +26,12 @@
     // }
     
     #menu.list {
-        display: inline-flex;
+        display: flex;
         flex-direction: row;
+        width: 100%;
         gap: 1em; // Add Variable
+        justify-content: space-between; // Add Variable
+
     }
     
     .list-item {
@@ -122,7 +125,6 @@
                 
                 // This changes the speed when the nav is closing. 0 makes it disappear instantly.
                 transition: .8s cubic-bezier(0.65, 0.05, 0.36, 1);
-                width: 100%;
                 flex-flow: column;
                 gap: 0;
                 

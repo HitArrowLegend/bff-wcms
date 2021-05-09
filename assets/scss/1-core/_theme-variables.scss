@@ -230,13 +230,42 @@ $content_wrapper_full_height:       $theme_content_wrapper_full_height;
 $global_font_size:                  $theme_global_font_size * unit($theme_global_font_size_unit);
 
 $h1_size:                           $theme_h1_size * unit($theme_h1_size_unit);
-$h2_size:                           $theme_h1_size * unit($theme_h2_size_unit);
-$h3_size:                           $theme_h1_size * unit($theme_h3_size_unit);
-$h4_size:                           $theme_h1_size * unit($theme_h4_size_unit);
-$h5_size:                           $theme_h1_size * unit($theme_h5_size_unit);
-$h6_size:                           $theme_h1_size * unit($theme_h6_size_unit);
+$h2_size:                           $theme_h2_size * unit($theme_h2_size_unit);
+$h3_size:                           $theme_h3_size * unit($theme_h3_size_unit);
+$h4_size:                           $theme_h4_size * unit($theme_h4_size_unit);
+$h5_size:                           $theme_h5_size * unit($theme_h5_size_unit);
+$h6_size:                           $theme_h6_size * unit($theme_h6_size_unit);
 $display_size:                      $theme_display_size * unit($theme_display_size_unit);
 
+$h1_margin_top: $theme_h1_margin_top * unit($theme_h1_margin_top_unit);
+$h1_margin_right: $theme_h1_margin_right * unit($theme_h1_margin_right_unit);
+$h1_margin_bottom: $theme_h1_margin_bottom * unit($theme_h1_margin_bottom_unit);
+$h1_margin_left: $theme_h1_margin_left * unit($theme_h1_margin_left_unit);
+
+$h2_margin_top: $theme_h2_margin_top * unit($theme_h2_margin_top_unit);
+$h2_margin_right: $theme_h2_margin_right * unit($theme_h2_margin_right_unit);
+$h2_margin_bottom: $theme_h2_margin_bottom * unit($theme_h2_margin_bottom_unit);
+$h2_margin_left: $theme_h2_margin_left * unit($theme_h2_margin_left_unit);
+
+$h3_margin_top: $theme_h3_margin_top * unit($theme_h3_margin_top_unit);
+$h3_margin_right: $theme_h3_margin_right * unit($theme_h3_margin_right_unit);
+$h3_margin_bottom: $theme_h3_margin_bottom * unit($theme_h3_margin_bottom_unit);
+$h3_margin_left: $theme_h3_margin_left * unit($theme_h3_margin_left_unit);
+
+$h4_margin_top: $theme_h4_margin_top * unit($theme_h4_margin_top_unit);
+$h4_margin_right: $theme_h4_margin_right * unit($theme_h4_margin_right_unit);
+$h4_margin_bottom: $theme_h4_margin_bottom * unit($theme_h4_margin_bottom_unit);
+$h4_margin_left: $theme_h4_margin_left * unit($theme_h4_margin_left_unit);
+
+$h5_margin_top: $theme_h5_margin_top * unit($theme_h5_margin_top_unit);
+$h5_margin_right: $theme_h5_margin_right * unit($theme_h5_margin_right_unit);
+$h5_margin_bottom: $theme_h5_margin_bottom * unit($theme_h5_margin_bottom_unit);
+$h5_margin_left: $theme_h5_margin_left * unit($theme_h5_margin_left_unit);
+
+$h6_margin_top: $theme_h6_margin_top * unit($theme_h6_margin_top_unit);
+$h6_margin_right: $theme_h6_margin_right * unit($theme_h6_margin_right_unit);
+$h6_margin_bottom: $theme_h6_margin_bottom * unit($theme_h6_margin_bottom_unit);
+$h6_margin_left: $theme_h6_margin_left * unit($theme_h6_margin_left_unit);
 
 $h1_font_family: $theme_h1_font_family;
 $h2_font_family: $theme_h2_font_family;
