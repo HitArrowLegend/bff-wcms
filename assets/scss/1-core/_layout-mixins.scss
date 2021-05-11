@@ -16,9 +16,8 @@
             @if ($logo_outside_navigation == 1) {
                 grid-template-areas:  "Logo-Container" "Navigation-Container";
 
-                .logo_wrapper { grid-area: Logo-Container; grid-template-areas: ". Logo ."}
-                .nav_wrapper { grid-area: Navigation-Container; grid-template-areas: ". Navigation ."}
-    
+                .logo_wrapper { grid-area: Logo-Container; grid-template-areas: ". Logo ."; }
+                .nav_wrapper { grid-area: Navigation-Container; grid-template-areas: ". Navigation ."; }
                 .wrapper { display: grid; grid-template-columns: 1fr $page_width 1fr;}
             }
             @else {
@@ -60,10 +59,9 @@
 
                     grid-template-areas:  "Logo-Container" "Navigation-Container";
 
-                    .logo_wrapper { grid-area: Logo-Container; grid-template-areas: "Logo"}
-                    .nav_wrapper { grid-area: Navigation-Container; grid-template-areas: "Navigation"}
-        
-                    .wrapper { display: grid; grid-template-columns: 1fr;}
+                    .logo_wrapper { grid-area: Logo-Container; grid-template-areas: "Logo"; }
+                    .nav_wrapper { grid-area: Navigation-Container; grid-template-areas: "Navigation"; }
+                    .wrapper { display: grid; grid-template-columns: 1fr; }
                 }
                 @else {
                     grid-template-areas:  "Navigation-Container";
@@ -89,30 +87,22 @@
             & #footer_layout {
                 display: grid ;
             }
-
-
-
             
             #header_layout {
                 @if ($logo_outside_navigation == 1) {
                     grid-template-areas:  "Logo-Container" "Navigation-Container";
 
-                    .logo_wrapper { grid-area: Logo-Container; grid-template-areas: "Logo"}
-                    .nav_wrapper { grid-area: Navigation-Container; grid-template-areas: "Navigation"}
-        
+                    .logo_wrapper { grid-area: Logo-Container; grid-template-areas: "Logo"; }
+                    .nav_wrapper { grid-area: Navigation-Container; grid-template-areas: "Navigation"; }
                     .wrapper { display: grid; grid-template-columns: 1fr;}
                 }
             
                 @else {
-                    #header_layout {
-                        grid-template-areas:  "Navigation-Container";
+                    grid-template-areas:  "Navigation-Container";
 
-                        .nav_wrapper { grid-area: Navigation-Container; grid-template-areas: ". Navigation ."; display: grid; grid-template-columns: 1fr; }
-                    }
+                    .nav_wrapper { grid-area: Navigation-Container; grid-template-areas: ". Navigation ."; display: grid; grid-template-columns: 1fr; }
                 }
             }
-
-
 
             #content_layout {
                 grid-template-areas: ". Main-Container ."; grid-template-columns: 1fr $page_width 1fr; 
@@ -142,19 +132,15 @@
                     @if ($logo_outside_navigation == 1) {
                         grid-template-areas:  "Logo-Container" "Navigation-Container";
 
-                        .logo_wrapper { grid-area: Logo-Container; grid-template-areas: ". Logo ."}
-                        .nav_wrapper { grid-area: Navigation-Container; grid-template-areas: ". Navigation ."}
-            
-                        .wrapper { display: grid; grid-template-columns: 1fr $page_width 1fr;}
+                        .logo_wrapper { grid-area: Logo-Container; grid-template-areas: ". Logo ."; }
+                        .nav_wrapper { grid-area: Navigation-Container; grid-template-areas: ". Navigation ."; }
+                        .wrapper { display: grid; grid-template-columns: 1fr $custom_nav_width 1fr; }
                     }
                     @else {
                         grid-template-areas:  "Navigation-Container";
 
-                        .nav_wrapper { grid-area: Navigation-Container; grid-template-areas: ". Navigation ."; grid-template-columns: 1fr $page_width 1fr;}
+                        .nav_wrapper { grid-area: Navigation-Container; grid-template-areas: ". Navigation ."; display: grid; grid-template-columns: 1fr $custom_nav_width 1fr;}
                     }
-                    grid-template-columns: 1fr $custom_nav_width 1fr;
-
-                    nav { grid-area: Navigation-Container; }
                 }
             }
             @else if ($custom_nav_type == full_width) {
@@ -162,17 +148,17 @@
                     @if ($logo_outside_navigation == 1) {
                         grid-template-areas:  "Logo" "Navigation-Container";
 
-                        .logo_wrapper { grid-area: Logo-Container; grid-template-areas: "Logo"}
-                        .nav_wrapper { grid-area: Navigation-Container; grid-template-areas: "Navigation"}
-                        .wrapper { display: grid; grid-template-columns: 1fr;}
+                        .logo_wrapper { grid-area: Logo-Container; grid-template-areas: "Logo"; }
+                        .nav_wrapper { grid-area: Navigation-Container; grid-template-areas: "Navigation"; }
+                        .wrapper { display: grid; grid-template-columns: 1fr; }
                     }
                     @else {
                         grid-template-areas:  "Navigation-Container";
 
-                        .nav_wrapper { grid-area: Navigation-Container; grid-template-areas: ". Navigation ."; display: grid; grid-template-columns: 1fr;}
+                        .nav_wrapper { grid-area: Navigation-Container; grid-template-areas: "Navigation"; display: grid; grid-template-columns: 1fr; }
                     }
 
-                    nav { grid-area: Navigation-Container; }
+                    nav { grid-area: Navigation; }
                 }
             }
             

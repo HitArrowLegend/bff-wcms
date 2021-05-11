@@ -32,7 +32,6 @@
         width: 100%;
         gap: 1em; // Add Variable
         justify-content: space-between; // Add Variable
-
     }
     
     .list-item {
@@ -49,32 +48,33 @@
     .burger { 
         display: none;
     }
+}
+#logo {
+    @if ($logo_outside_navigation == 0) {
+        justify-self: start;  // Add Variable
+        align-self: center; 
+        flex: none;
+    }
+    @else {
+        justify-content: center; // Add Variable
+        align-items: center;
+        grid-area: Logo;
+        width: 100%;
+        @include paddings($navigation_padding_top, $navigation_padding_right, $navigation_padding_bottom, $navigation_padding_left); // Add Logo Variable
+        min-height: 50px; // Add Variable
+        display: flex;
+    }
+        
 
-    #logo {
-
-        @if ($logo_outside_navigation == 0) {
-            justify-self: start;
-            align-self: center;
-            grid-area: Logo;
-        }
-        @else {
-            justify-content: center; // Add Variable
-            align-items: center;
-            grid-area: Logo;
-            width: 100%;
-            @include paddings($navigation_padding_top, $navigation_padding_right, $navigation_padding_bottom, $navigation_padding_left); // Add Variable
-            min-height: 50px; // Add Variable
-            display: flex;
-        }
-        a {
-            @include css(color, $logo_color);
-            @include css(font-size, $logo_font_size);
-            @include css(font-weight, $logo_font_weight);
-            transition: font-size 0.2s ease-in-out;
-            font-family: $theme_logo_font_family, sans-serif;
-        }
+    a {
+        @include css(color, $logo_color);
+        @include css(font-size, $logo_font_size);
+        @include css(font-weight, $logo_font_weight);
+        transition: font-size 0.2s ease-in-out;
+        font-family: $theme_logo_font_family, sans-serif;
     }
 }
+
 
 @media all and (max-width: 1180px) { // Add Variable
 
