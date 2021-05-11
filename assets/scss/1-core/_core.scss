@@ -39,6 +39,8 @@ body {
     @include css(background-color, $txt_selection_bg);
 }
 
+img { width: 100%; }
+
 a {
     color: $link_clr;
     text-decoration: none;

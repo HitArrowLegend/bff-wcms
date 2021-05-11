@@ -108,11 +108,10 @@
                 left: 0;
                 height: calc(100vh - #{$navigation_mobile_height});
                 @include navslide($navigation_transition);
+                display: block;
                 
                 // This changes the speed when the nav is closing. 0 makes it disappear instantly.
                 transition: .8s cubic-bezier(0.65, 0.05, 0.36, 1);
-                flex-flow: column;
-                gap: 0;
                 
                  &.active {
                     // This allows changing the speed when the nav is opening
