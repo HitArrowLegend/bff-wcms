@@ -11,6 +11,7 @@
     gap: 1em; // Add Variable
     justify-content: space-between; // Add Variable
     min-height: $navigation_height;
+    grid-area: Navigation;
 
     @if ($layout_type == fixed_Width) {
         @media screen and (max-width: $page_width) {
@@ -48,44 +49,29 @@
     .burger { 
         display: none;
     }
-}
 
-@if ($logo_outside_navigation == 0) {
-    #navigation {
-        #logo { 
+    #logo {
+
+        @if ($logo_outside_navigation == 0) {
             justify-self: start;
             align-self: center;
-            
-            a {
-                @include css(color, $logo_color);
-                @include css(font-size, $logo_font_size);
-                @include css(font-weight, $logo_font_weight);
-                transition: font-size 0.2s ease-in-out;
-                font-family: $theme_logo_font_family, sans-serif;
-                
-            }
+            grid-area: Logo;
         }
-    }
-}
-@else {
-    #logo { 
-        justify-content: center; // Add Variable
-        align-items: center;
-        grid-area: Logo;
-        width: 100%;
-        @include paddings($navigation_padding_top, $navigation_padding_right, $navigation_padding_bottom, $navigation_padding_left); // Add Variable
-        min-height: 50px; // Add Variable
-        display: flex;
-
+        @else {
+            justify-content: center; // Add Variable
+            align-items: center;
+            grid-area: Logo;
+            width: 100%;
+            @include paddings($navigation_padding_top, $navigation_padding_right, $navigation_padding_bottom, $navigation_padding_left); // Add Variable
+            min-height: 50px; // Add Variable
+            display: flex;
+        }
         a {
             @include css(color, $logo_color);
             @include css(font-size, $logo_font_size);
             @include css(font-weight, $logo_font_weight);
             transition: font-size 0.2s ease-in-out;
             font-family: $theme_logo_font_family, sans-serif;
-            // Add Padding Variables
-
-            // Add Variables for responsive
         }
     }
 }

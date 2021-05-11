@@ -1,13 +1,14 @@
 [viewBag]
 ==
 {% if this.theme.logo_outside_navigation == "1" %}
+    <div class="logo_wrapper wrapper">
     <div id="logo">
         <a href="#">{{ this.theme.website_name }}</a>
-    </div>
-{% endif %}
+    </div></div>
+{% endif %}<div class="nav_wrapper wrapper">
 <nav id="navigation">
     {% if this.theme.logo_outside_navigation == "0" %}
-        <div class="logo">
+        <div id="logo">
             <a href="#">{{ this.theme.website_name }}</a>
         </div>
     {% endif %}
@@ -39,4 +40,4 @@
         <div class="slice top"></div>
         <div class="slice bottom"></div>
     </div>
-</nav>
+</nav></div>
