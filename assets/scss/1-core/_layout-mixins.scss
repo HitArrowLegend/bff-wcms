@@ -10,8 +10,7 @@
         }
         #content_layout,
         #footer_layout {
-            display: grid ;
-            grid-template-columns: 1fr $page_width 1fr; 
+            display: grid ; grid-template-columns: 1fr $page_width 1fr; 
         }
         #header_layout {
             @if ($logo_outside_navigation == 1) {
@@ -116,8 +115,7 @@
 
 
             #content_layout {
-                grid-template-areas: ". Main-Container .";
-                grid-template-columns: 1fr $page_width 1fr; 
+                grid-template-areas: ". Main-Container ."; grid-template-columns: 1fr $page_width 1fr; 
 
                 >main { grid-area: Main-Container; }
             }
@@ -166,7 +164,6 @@
 
                         .logo_wrapper { grid-area: Logo-Container; grid-template-areas: "Logo"}
                         .nav_wrapper { grid-area: Navigation-Container; grid-template-areas: "Navigation"}
-            
                         .wrapper { display: grid; grid-template-columns: 1fr;}
                     }
                     @else {
@@ -188,8 +185,7 @@
 
             @if ($custom_footer_type == fixed_width) {
                 #footer_layout {
-                    grid-template-areas: ". Footer-Container .";
-                    grid-template-columns: 1fr $custom_footer_width 1fr;
+                    grid-template-areas: ". Footer-Container ."; grid-template-columns: 1fr $custom_footer_width 1fr;
 
                     div { grid-area: Footer-Container; }
                 }
@@ -232,7 +228,6 @@
         .content_wrapper {
             @include margins($content_wrapper_margin_top, $content_wrapper_margin_right, $content_wrapper_margin_bottom, $content_wrapper_margin_left);
             @include paddings($content_wrapper_padding_top, $content_wrapper_padding_right, $content_wrapper_padding_bottom, $content_wrapper_padding_left);
-
             @include css(background, $content_wrapper_background);
             @include css(box-shadow, $content_wrapper_box_shadow);
             @include css(border, $content_wrapper_border);
@@ -266,47 +261,38 @@
 @mixin sidebar-wrapper {
     @if ($sidebar_activated == 1) {
         @if ($sidebar_content_wrapper == 0) {
-        @if ($sidebar_wrapper == 1) {
-            .sidebar_wrapper {
-                @include margins($sidebar_wrapper_margin_top, $sidebar_wrapper_margin_right, $sidebar_wrapper_margin_bottom, $sidebar_wrapper_margin_left);
-                @include paddings($sidebar_wrapper_padding_top, $sidebar_wrapper_padding_right, $sidebar_wrapper_padding_bottom, $sidebar_wrapper_padding_left);
+            @if ($sidebar_wrapper == 1) {
+                .sidebar_wrapper {
+                    @include margins($sidebar_wrapper_margin_top, $sidebar_wrapper_margin_right, $sidebar_wrapper_margin_bottom, $sidebar_wrapper_margin_left);
+                    @include paddings($sidebar_wrapper_padding_top, $sidebar_wrapper_padding_right, $sidebar_wrapper_padding_bottom, $sidebar_wrapper_padding_left);
+                    @include css(background-color, $sidebar_wrapper_background);
+                    @include css(box-shadow, $sidebar_box_shadow);
+                    @include css(border, $sidebar_border);
 
-                @include css(background-color, $sidebar_wrapper_background);
-                @include css(box-shadow, $sidebar_box_shadow);
-                @include css(border, $sidebar_border);
-
-                @if ($sidebar_wrapper_height == 1) {
-                    height: min-content;
+                    @if ($sidebar_wrapper_height == 1) {
+                        height: min-content;
+                    }
+                    grid-area: Sidebar;
                 }
-
-                grid-area: Sidebar;
+            }
+            @else {
+                .sidebar {
+                    grid-area: Sidebar;
+                }
             }
         }
-        @else {
-            .sidebar {
-                grid-area: Sidebar;
-            }
-        }}
     }
 }
 
 @mixin content-layout {
     @if ($sidebar_position == left) {
-        display: grid;
-        grid-template-columns: $sidebar_width auto;
-        grid-template-areas: "Sidebar Content";
+        display: grid; grid-template-columns: $sidebar_width auto; grid-template-areas: "Sidebar Content";
 
         @include css(gap, $sidebar_space_between_content);
     }
     @else {
-        display: grid;
-        grid-template-columns: auto $sidebar_width;
-        grid-template-areas: "Content Sidebar";
+        display: grid; grid-template-columns: auto $sidebar_width; grid-template-areas: "Content Sidebar";
 
         @include css(gap, $sidebar_space_between_content);
     }
-}
-
-@mixin logo{
-
 }
